@@ -5,6 +5,8 @@
 #include "spinlock.h"
 #include "proc.h"
 #include "defs.h"
+#include "psinfo.h"
+#include <stdlib.h>
 
 struct cpu cpus[NCPU];
 
@@ -288,6 +290,7 @@ fork(void)
     return -1;
   }
   np->sz = p->sz;
+  np->priority = 2;
 
   // copy saved user registers.
   *(np->trapframe) = *(p->trapframe);
@@ -653,4 +656,29 @@ procdump(void)
     printf("%d %s %s", p->pid, state, p->name);
     printf("\n");
   }
+}
+
+int
+ps(struct ps_proc* procs) {
+  struct ps_proc ps_procs[MAX_PROCS];
+  struct proc* p = myproc();
+
+  int total_procs = 0;
+  for (int i = 0; i < NPROC && total_procs < MAX_PROCS; i++) {
+    if (proc[i].state != UNUSED) {
+      strncpy(ps_procs[total_procs].name, proc[i].name, 16);
+      ps_procs[total_procs].memory = proc[i].sz;
+      ps_procs[total_procs].priority = proc[i].priority;
+      ps_procs[total_procs].state = proc[i].state;
+      ps_procs[total_procs].pid = proc[i].pid;
+      
+      total_procs++;
+    }
+  }
+
+  if (copyout(p->pagetable,(uint64)procs, (char*)ps_procs, sizeof(struct ps_proc) * total_procs) < 0) {
+    return -1;
+  }
+
+  return total_procs;
 }
