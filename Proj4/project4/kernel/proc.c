@@ -1,4 +1,3 @@
-#include "psinfo.h"
 #include "types.h"
 #include "param.h"
 #include "memlayout.h"
@@ -289,7 +288,6 @@ fork(void)
     return -1;
   }
   np->sz = p->sz;
-  np->priority = 2;
 
   // copy saved user registers.
   *(np->trapframe) = *(p->trapframe);
@@ -655,8 +653,4 @@ procdump(void)
     printf("%d %s %s", p->pid, state, p->name);
     printf("\n");
   }
-}
-
-uint64 ps(struct ps_proc* procs) {
-  return 0;
 }
