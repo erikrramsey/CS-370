@@ -103,3 +103,12 @@ sys_ps(void) {
     return -1;
   return ps((struct ps_proc*)p);
 }
+
+uint64
+sys_setbkg(void)
+{
+  struct proc* p = myproc();
+  p->priority = 3;
+  yield();
+  return 0;
+}

@@ -8,7 +8,6 @@ void print_proc(struct ps_proc* pr);
 int main(int argc, char** argv) {
     struct ps_proc* procs = malloc(sizeof(struct ps_proc) * 15);
     int total = ps(procs);
-
     printf("Process Status\n");
     char* header = "pid     state     prior memory  process name    ";
     char* div    = "------------------------------------------------";

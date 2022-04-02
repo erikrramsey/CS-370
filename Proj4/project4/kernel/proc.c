@@ -6,7 +6,6 @@
 #include "proc.h"
 #include "defs.h"
 #include "psinfo.h"
-#include <stdlib.h>
 
 struct cpu cpus[NCPU];
 
@@ -444,6 +443,7 @@ scheduler(void)
   struct cpu *c = mycpu();
   
   c->proc = 0;
+  /*
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
@@ -460,6 +460,44 @@ scheduler(void)
 
         // Process is done running for now.
         // It should have changed its p->state before coming back.
+        c->proc = 0;
+      }
+      release(&p->lock);
+    }
+  }
+  */
+
+  // Project 4B scheduler (Round robin with fg bg priority)
+  for(;;){
+    // Avoid deadlock by ensuring that devices can interrupt.
+    intr_on();
+
+    // Schedule any high priority procs first.
+    for(p = proc; p < &proc[NPROC]; p++) {
+      acquire(&p->lock);
+      if(p->priority == 2 && p->state == RUNNABLE) {
+        // Switch to chosen process.  It is the process's job
+        // to release its lock and then reacquire it
+        // before jumping back to us.
+        p->state = RUNNING;
+        c->proc = p;
+        swtch(&c->context, &p->context);
+
+        // Process is done running for now.
+        // It should have changed its p->state before coming back.
+        c->proc = 0;
+      }
+      release(&p->lock);
+    }
+
+    // Do any runnable proc now.
+    for(p = proc; p < &proc[NPROC]; p++) {
+      acquire(&p->lock);
+      if(p->state == RUNNABLE) {
+        p->state = RUNNING;
+        c->proc = p;
+        swtch(&c->context, &p->context);
+
         c->proc = 0;
       }
       release(&p->lock);
@@ -658,6 +696,10 @@ procdump(void)
   }
 }
 
+// Project 4
+// Populates a preallocated array of ps_proc with process
+// related data. See user/psm.c for use.
+// Returns amount of active processes up to MAX_PROCS.
 int
 ps(struct ps_proc* procs) {
   struct ps_proc ps_procs[MAX_PROCS];
@@ -666,11 +708,13 @@ ps(struct ps_proc* procs) {
   int total_procs = 0;
   for (int i = 0; i < NPROC && total_procs < MAX_PROCS; i++) {
     if (proc[i].state != UNUSED) {
+      acquire(&proc[i].lock);
       strncpy(ps_procs[total_procs].name, proc[i].name, 16);
       ps_procs[total_procs].memory = proc[i].sz;
       ps_procs[total_procs].priority = proc[i].priority;
       ps_procs[total_procs].state = proc[i].state;
       ps_procs[total_procs].pid = proc[i].pid;
+      release(&proc[i].lock);
       
       total_procs++;
     }
@@ -682,3 +726,4 @@ ps(struct ps_proc* procs) {
 
   return total_procs;
 }
+

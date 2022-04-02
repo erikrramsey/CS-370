@@ -110,3 +110,8 @@ ps:
  li a7, SYS_ps
  ecall
  ret
+.global setbkg
+setbkg:
+ li a7, SYS_setbkg
+ ecall
+ ret
