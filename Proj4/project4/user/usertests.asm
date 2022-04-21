@@ -29,18 +29,28 @@ Disassembly of section .text:
       3a:	05fe                	slli	a1,a1,0x1f
       3c:	862a                	mv	a2,a0
       3e:	00006517          	auipc	a0,0x6
-      42:	ec250513          	addi	a0,a0,-318 # 5f00 <malloc+0x418>
+      42:	eca50513          	addi	a0,a0,-310 # 5f08 <malloc+0x418>
       46:	00006097          	auipc	ra,0x6
+<<<<<<< HEAD
       4a:	9e4080e7          	jalr	-1564(ra) # 5a2a <printf>
+=======
+      4a:	9ec080e7          	jalr	-1556(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
       4e:	4505                	li	a0,1
       50:	00005097          	auipc	ra,0x5
       54:	65a080e7          	jalr	1626(ra) # 56aa <exit>
 
 0000000000000058 <bsstest>:
       58:	00009797          	auipc	a5,0x9
-      5c:	41878793          	addi	a5,a5,1048 # 9470 <uninit>
+      5c:	42078793          	addi	a5,a5,1056 # 9478 <uninit>
       60:	0000c697          	auipc	a3,0xc
+<<<<<<< HEAD
       64:	b2068693          	addi	a3,a3,-1248 # bb80 <buf>
+=======
+      64:	b2868693          	addi	a3,a3,-1240 # bb88 <buf>
+    if(uninit[i] != '\0'){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
       68:	0007c703          	lbu	a4,0(a5)
       6c:	e709                	bnez	a4,76 <bsstest+0x1e>
       6e:	0785                	addi	a5,a5,1
@@ -52,9 +62,14 @@ Disassembly of section .text:
       7c:	0800                	addi	s0,sp,16
       7e:	85aa                	mv	a1,a0
       80:	00006517          	auipc	a0,0x6
-      84:	ea050513          	addi	a0,a0,-352 # 5f20 <malloc+0x438>
+      84:	ea850513          	addi	a0,a0,-344 # 5f28 <malloc+0x438>
       88:	00006097          	auipc	ra,0x6
+<<<<<<< HEAD
       8c:	9a2080e7          	jalr	-1630(ra) # 5a2a <printf>
+=======
+      8c:	9aa080e7          	jalr	-1622(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
       90:	4505                	li	a0,1
       92:	00005097          	auipc	ra,0x5
       96:	618080e7          	jalr	1560(ra) # 56aa <exit>
@@ -68,7 +83,7 @@ Disassembly of section .text:
       a4:	84aa                	mv	s1,a0
       a6:	4581                	li	a1,0
       a8:	00006517          	auipc	a0,0x6
-      ac:	e9050513          	addi	a0,a0,-368 # 5f38 <malloc+0x450>
+      ac:	e9850513          	addi	a0,a0,-360 # 5f40 <malloc+0x450>
       b0:	00005097          	auipc	ra,0x5
       b4:	63a080e7          	jalr	1594(ra) # 56ea <open>
       b8:	02054663          	bltz	a0,e4 <opentest+0x4a>
@@ -76,7 +91,7 @@ Disassembly of section .text:
       c0:	616080e7          	jalr	1558(ra) # 56d2 <close>
       c4:	4581                	li	a1,0
       c6:	00006517          	auipc	a0,0x6
-      ca:	e9250513          	addi	a0,a0,-366 # 5f58 <malloc+0x470>
+      ca:	e9a50513          	addi	a0,a0,-358 # 5f60 <malloc+0x470>
       ce:	00005097          	auipc	ra,0x5
       d2:	61c080e7          	jalr	1564(ra) # 56ea <open>
       d6:	02055563          	bgez	a0,100 <opentest+0x66>
@@ -87,17 +102,27 @@ Disassembly of section .text:
       e2:	8082                	ret
       e4:	85a6                	mv	a1,s1
       e6:	00006517          	auipc	a0,0x6
-      ea:	e5a50513          	addi	a0,a0,-422 # 5f40 <malloc+0x458>
+      ea:	e6250513          	addi	a0,a0,-414 # 5f48 <malloc+0x458>
       ee:	00006097          	auipc	ra,0x6
+<<<<<<< HEAD
       f2:	93c080e7          	jalr	-1732(ra) # 5a2a <printf>
+=======
+      f2:	944080e7          	jalr	-1724(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
       f6:	4505                	li	a0,1
       f8:	00005097          	auipc	ra,0x5
       fc:	5b2080e7          	jalr	1458(ra) # 56aa <exit>
      100:	85a6                	mv	a1,s1
      102:	00006517          	auipc	a0,0x6
-     106:	e6650513          	addi	a0,a0,-410 # 5f68 <malloc+0x480>
+     106:	e6e50513          	addi	a0,a0,-402 # 5f70 <malloc+0x480>
      10a:	00006097          	auipc	ra,0x6
+<<<<<<< HEAD
      10e:	920080e7          	jalr	-1760(ra) # 5a2a <printf>
+=======
+     10e:	928080e7          	jalr	-1752(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      112:	4505                	li	a0,1
      114:	00005097          	auipc	ra,0x5
      118:	596080e7          	jalr	1430(ra) # 56aa <exit>
@@ -112,36 +137,36 @@ Disassembly of section .text:
      128:	1800                	addi	s0,sp,48
      12a:	89aa                	mv	s3,a0
      12c:	00006517          	auipc	a0,0x6
-     130:	e6450513          	addi	a0,a0,-412 # 5f90 <malloc+0x4a8>
+     130:	e6c50513          	addi	a0,a0,-404 # 5f98 <malloc+0x4a8>
      134:	00005097          	auipc	ra,0x5
      138:	5c6080e7          	jalr	1478(ra) # 56fa <unlink>
      13c:	60100593          	li	a1,1537
      140:	00006517          	auipc	a0,0x6
-     144:	e5050513          	addi	a0,a0,-432 # 5f90 <malloc+0x4a8>
+     144:	e5850513          	addi	a0,a0,-424 # 5f98 <malloc+0x4a8>
      148:	00005097          	auipc	ra,0x5
      14c:	5a2080e7          	jalr	1442(ra) # 56ea <open>
      150:	84aa                	mv	s1,a0
      152:	4611                	li	a2,4
      154:	00006597          	auipc	a1,0x6
-     158:	e4c58593          	addi	a1,a1,-436 # 5fa0 <malloc+0x4b8>
+     158:	e5458593          	addi	a1,a1,-428 # 5fa8 <malloc+0x4b8>
      15c:	00005097          	auipc	ra,0x5
      160:	56e080e7          	jalr	1390(ra) # 56ca <write>
      164:	40100593          	li	a1,1025
      168:	00006517          	auipc	a0,0x6
-     16c:	e2850513          	addi	a0,a0,-472 # 5f90 <malloc+0x4a8>
+     16c:	e3050513          	addi	a0,a0,-464 # 5f98 <malloc+0x4a8>
      170:	00005097          	auipc	ra,0x5
      174:	57a080e7          	jalr	1402(ra) # 56ea <open>
      178:	892a                	mv	s2,a0
      17a:	4605                	li	a2,1
      17c:	00006597          	auipc	a1,0x6
-     180:	e2c58593          	addi	a1,a1,-468 # 5fa8 <malloc+0x4c0>
+     180:	e3458593          	addi	a1,a1,-460 # 5fb0 <malloc+0x4c0>
      184:	8526                	mv	a0,s1
      186:	00005097          	auipc	ra,0x5
      18a:	544080e7          	jalr	1348(ra) # 56ca <write>
      18e:	57fd                	li	a5,-1
      190:	02f51b63          	bne	a0,a5,1c6 <truncate2+0xaa>
      194:	00006517          	auipc	a0,0x6
-     198:	dfc50513          	addi	a0,a0,-516 # 5f90 <malloc+0x4a8>
+     198:	e0450513          	addi	a0,a0,-508 # 5f98 <malloc+0x4a8>
      19c:	00005097          	auipc	ra,0x5
      1a0:	55e080e7          	jalr	1374(ra) # 56fa <unlink>
      1a4:	8526                	mv	a0,s1
@@ -160,9 +185,14 @@ Disassembly of section .text:
      1c6:	862a                	mv	a2,a0
      1c8:	85ce                	mv	a1,s3
      1ca:	00006517          	auipc	a0,0x6
-     1ce:	de650513          	addi	a0,a0,-538 # 5fb0 <malloc+0x4c8>
+     1ce:	dee50513          	addi	a0,a0,-530 # 5fb8 <malloc+0x4c8>
      1d2:	00006097          	auipc	ra,0x6
+<<<<<<< HEAD
      1d6:	858080e7          	jalr	-1960(ra) # 5a2a <printf>
+=======
+     1d6:	860080e7          	jalr	-1952(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      1da:	4505                	li	a0,1
      1dc:	00005097          	auipc	ra,0x5
      1e0:	4ce080e7          	jalr	1230(ra) # 56aa <exit>
@@ -222,14 +252,22 @@ Disassembly of section .text:
      278:	0880                	addi	s0,sp,80
      27a:	8baa                	mv	s7,a0
      27c:	00006517          	auipc	a0,0x6
-     280:	b2450513          	addi	a0,a0,-1244 # 5da0 <malloc+0x2b8>
+     280:	b2c50513          	addi	a0,a0,-1236 # 5da8 <malloc+0x2b8>
      284:	00005097          	auipc	ra,0x5
      288:	476080e7          	jalr	1142(ra) # 56fa <unlink>
      28c:	1f300493          	li	s1,499
      290:	00006a97          	auipc	s5,0x6
+<<<<<<< HEAD
      294:	b10a8a93          	addi	s5,s5,-1264 # 5da0 <malloc+0x2b8>
      298:	0000ca17          	auipc	s4,0xc
      29c:	8e8a0a13          	addi	s4,s4,-1816 # bb80 <buf>
+=======
+     294:	b18a8a93          	addi	s5,s5,-1256 # 5da8 <malloc+0x2b8>
+      int cc = write(fd, buf, sz);
+     298:	0000ca17          	auipc	s4,0xc
+     29c:	8f0a0a13          	addi	s4,s4,-1808 # bb88 <buf>
+  for(sz = 499; sz < (MAXOPBLOCKS+2)*BSIZE; sz += 471){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      2a0:	6b0d                	lui	s6,0x3
      2a2:	1c9b0b13          	addi	s6,s6,457 # 31c9 <subdir+0x171>
      2a6:	20200593          	li	a1,514
@@ -271,9 +309,14 @@ Disassembly of section .text:
      30e:	8082                	ret
      310:	85de                	mv	a1,s7
      312:	00006517          	auipc	a0,0x6
-     316:	cc650513          	addi	a0,a0,-826 # 5fd8 <malloc+0x4f0>
+     316:	cce50513          	addi	a0,a0,-818 # 5fe0 <malloc+0x4f0>
      31a:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      31e:	710080e7          	jalr	1808(ra) # 5a2a <printf>
+=======
+     31e:	718080e7          	jalr	1816(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      322:	4505                	li	a0,1
      324:	00005097          	auipc	ra,0x5
      328:	386080e7          	jalr	902(ra) # 56aa <exit>
@@ -283,9 +326,14 @@ Disassembly of section .text:
      332:	8626                	mv	a2,s1
      334:	85de                	mv	a1,s7
      336:	00006517          	auipc	a0,0x6
-     33a:	cc250513          	addi	a0,a0,-830 # 5ff8 <malloc+0x510>
+     33a:	cca50513          	addi	a0,a0,-822 # 6000 <malloc+0x510>
      33e:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      342:	6ec080e7          	jalr	1772(ra) # 5a2a <printf>
+=======
+     342:	6f4080e7          	jalr	1780(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      346:	4505                	li	a0,1
      348:	00005097          	auipc	ra,0x5
      34c:	362080e7          	jalr	866(ra) # 56aa <exit>
@@ -306,7 +354,12 @@ Disassembly of section .text:
      36a:	fcf43423          	sd	a5,-56(s0)
      36e:	fc040913          	addi	s2,s0,-64
      372:	00006a17          	auipc	s4,0x6
+<<<<<<< HEAD
      376:	c9ea0a13          	addi	s4,s4,-866 # 6010 <malloc+0x528>
+=======
+     376:	ca6a0a13          	addi	s4,s4,-858 # 6018 <malloc+0x528>
+    uint64 addr = addrs[ai];
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      37a:	00093983          	ld	s3,0(s2)
      37e:	20100593          	li	a1,513
      382:	8552                	mv	a0,s4
@@ -359,43 +412,68 @@ Disassembly of section .text:
      41a:	6161                	addi	sp,sp,80
      41c:	8082                	ret
      41e:	00006517          	auipc	a0,0x6
-     422:	bfa50513          	addi	a0,a0,-1030 # 6018 <malloc+0x530>
+     422:	c0250513          	addi	a0,a0,-1022 # 6020 <malloc+0x530>
      426:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      42a:	604080e7          	jalr	1540(ra) # 5a2a <printf>
+=======
+     42a:	60c080e7          	jalr	1548(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      42e:	4505                	li	a0,1
      430:	00005097          	auipc	ra,0x5
      434:	27a080e7          	jalr	634(ra) # 56aa <exit>
      438:	862a                	mv	a2,a0
      43a:	85ce                	mv	a1,s3
      43c:	00006517          	auipc	a0,0x6
-     440:	bf450513          	addi	a0,a0,-1036 # 6030 <malloc+0x548>
+     440:	bfc50513          	addi	a0,a0,-1028 # 6038 <malloc+0x548>
      444:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      448:	5e6080e7          	jalr	1510(ra) # 5a2a <printf>
+=======
+     448:	5ee080e7          	jalr	1518(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      44c:	4505                	li	a0,1
      44e:	00005097          	auipc	ra,0x5
      452:	25c080e7          	jalr	604(ra) # 56aa <exit>
      456:	862a                	mv	a2,a0
      458:	85ce                	mv	a1,s3
      45a:	00006517          	auipc	a0,0x6
-     45e:	c0650513          	addi	a0,a0,-1018 # 6060 <malloc+0x578>
+     45e:	c0e50513          	addi	a0,a0,-1010 # 6068 <malloc+0x578>
      462:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      466:	5c8080e7          	jalr	1480(ra) # 5a2a <printf>
+=======
+     466:	5d0080e7          	jalr	1488(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      46a:	4505                	li	a0,1
      46c:	00005097          	auipc	ra,0x5
      470:	23e080e7          	jalr	574(ra) # 56aa <exit>
      474:	00006517          	auipc	a0,0x6
-     478:	c1c50513          	addi	a0,a0,-996 # 6090 <malloc+0x5a8>
+     478:	c2450513          	addi	a0,a0,-988 # 6098 <malloc+0x5a8>
      47c:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      480:	5ae080e7          	jalr	1454(ra) # 5a2a <printf>
+=======
+     480:	5b6080e7          	jalr	1462(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      484:	4505                	li	a0,1
      486:	00005097          	auipc	ra,0x5
      48a:	224080e7          	jalr	548(ra) # 56aa <exit>
      48e:	862a                	mv	a2,a0
      490:	85ce                	mv	a1,s3
      492:	00006517          	auipc	a0,0x6
-     496:	c0e50513          	addi	a0,a0,-1010 # 60a0 <malloc+0x5b8>
+     496:	c1650513          	addi	a0,a0,-1002 # 60a8 <malloc+0x5b8>
      49a:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      49e:	590080e7          	jalr	1424(ra) # 5a2a <printf>
+=======
+     49e:	598080e7          	jalr	1432(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      4a2:	4505                	li	a0,1
      4a4:	00005097          	auipc	ra,0x5
      4a8:	206080e7          	jalr	518(ra) # 56aa <exit>
@@ -417,9 +495,17 @@ Disassembly of section .text:
      4c8:	faf43c23          	sd	a5,-72(s0)
      4cc:	fb040913          	addi	s2,s0,-80
      4d0:	00006a17          	auipc	s4,0x6
+<<<<<<< HEAD
      4d4:	c00a0a13          	addi	s4,s4,-1024 # 60d0 <malloc+0x5e8>
      4d8:	00006a97          	auipc	s5,0x6
      4dc:	ad0a8a93          	addi	s5,s5,-1328 # 5fa8 <malloc+0x4c0>
+=======
+     4d4:	c08a0a13          	addi	s4,s4,-1016 # 60d8 <malloc+0x5e8>
+    n = write(fds[1], "x", 1);
+     4d8:	00006a97          	auipc	s5,0x6
+     4dc:	ad8a8a93          	addi	s5,s5,-1320 # 5fb0 <malloc+0x4c0>
+    uint64 addr = addrs[ai];
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      4e0:	00093983          	ld	s3,0(s2)
      4e4:	4581                	li	a1,0
      4e6:	8552                	mv	a0,s4
@@ -471,41 +557,66 @@ Disassembly of section .text:
      57a:	6125                	addi	sp,sp,96
      57c:	8082                	ret
      57e:	00006517          	auipc	a0,0x6
-     582:	b5a50513          	addi	a0,a0,-1190 # 60d8 <malloc+0x5f0>
+     582:	b6250513          	addi	a0,a0,-1182 # 60e0 <malloc+0x5f0>
      586:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      58a:	4a4080e7          	jalr	1188(ra) # 5a2a <printf>
+=======
+     58a:	4ac080e7          	jalr	1196(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      58e:	4505                	li	a0,1
      590:	00005097          	auipc	ra,0x5
      594:	11a080e7          	jalr	282(ra) # 56aa <exit>
      598:	862a                	mv	a2,a0
      59a:	85ce                	mv	a1,s3
      59c:	00006517          	auipc	a0,0x6
-     5a0:	b5450513          	addi	a0,a0,-1196 # 60f0 <malloc+0x608>
+     5a0:	b5c50513          	addi	a0,a0,-1188 # 60f8 <malloc+0x608>
      5a4:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      5a8:	486080e7          	jalr	1158(ra) # 5a2a <printf>
+=======
+     5a8:	48e080e7          	jalr	1166(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      5ac:	4505                	li	a0,1
      5ae:	00005097          	auipc	ra,0x5
      5b2:	0fc080e7          	jalr	252(ra) # 56aa <exit>
      5b6:	00006517          	auipc	a0,0x6
-     5ba:	ada50513          	addi	a0,a0,-1318 # 6090 <malloc+0x5a8>
+     5ba:	ae250513          	addi	a0,a0,-1310 # 6098 <malloc+0x5a8>
      5be:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      5c2:	46c080e7          	jalr	1132(ra) # 5a2a <printf>
+=======
+     5c2:	474080e7          	jalr	1140(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      5c6:	4505                	li	a0,1
      5c8:	00005097          	auipc	ra,0x5
      5cc:	0e2080e7          	jalr	226(ra) # 56aa <exit>
      5d0:	00006517          	auipc	a0,0x6
-     5d4:	b5050513          	addi	a0,a0,-1200 # 6120 <malloc+0x638>
+     5d4:	b5850513          	addi	a0,a0,-1192 # 6128 <malloc+0x638>
      5d8:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      5dc:	452080e7          	jalr	1106(ra) # 5a2a <printf>
+=======
+     5dc:	45a080e7          	jalr	1114(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      5e0:	4505                	li	a0,1
      5e2:	00005097          	auipc	ra,0x5
      5e6:	0c8080e7          	jalr	200(ra) # 56aa <exit>
      5ea:	862a                	mv	a2,a0
      5ec:	85ce                	mv	a1,s3
      5ee:	00006517          	auipc	a0,0x6
-     5f2:	b4a50513          	addi	a0,a0,-1206 # 6138 <malloc+0x650>
+     5f2:	b5250513          	addi	a0,a0,-1198 # 6140 <malloc+0x650>
      5f6:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      5fa:	434080e7          	jalr	1076(ra) # 5a2a <printf>
+=======
+     5fa:	43c080e7          	jalr	1084(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      5fe:	4505                	li	a0,1
      600:	00005097          	auipc	ra,0x5
      604:	0aa080e7          	jalr	170(ra) # 56aa <exit>
@@ -522,18 +633,18 @@ Disassembly of section .text:
      618:	1080                	addi	s0,sp,96
      61a:	8aaa                	mv	s5,a0
      61c:	00006517          	auipc	a0,0x6
-     620:	97450513          	addi	a0,a0,-1676 # 5f90 <malloc+0x4a8>
+     620:	97c50513          	addi	a0,a0,-1668 # 5f98 <malloc+0x4a8>
      624:	00005097          	auipc	ra,0x5
      628:	0d6080e7          	jalr	214(ra) # 56fa <unlink>
      62c:	60100593          	li	a1,1537
      630:	00006517          	auipc	a0,0x6
-     634:	96050513          	addi	a0,a0,-1696 # 5f90 <malloc+0x4a8>
+     634:	96850513          	addi	a0,a0,-1688 # 5f98 <malloc+0x4a8>
      638:	00005097          	auipc	ra,0x5
      63c:	0b2080e7          	jalr	178(ra) # 56ea <open>
      640:	84aa                	mv	s1,a0
      642:	4611                	li	a2,4
      644:	00006597          	auipc	a1,0x6
-     648:	95c58593          	addi	a1,a1,-1700 # 5fa0 <malloc+0x4b8>
+     648:	96458593          	addi	a1,a1,-1692 # 5fa8 <malloc+0x4b8>
      64c:	00005097          	auipc	ra,0x5
      650:	07e080e7          	jalr	126(ra) # 56ca <write>
      654:	8526                	mv	a0,s1
@@ -541,7 +652,7 @@ Disassembly of section .text:
      65a:	07c080e7          	jalr	124(ra) # 56d2 <close>
      65e:	4581                	li	a1,0
      660:	00006517          	auipc	a0,0x6
-     664:	93050513          	addi	a0,a0,-1744 # 5f90 <malloc+0x4a8>
+     664:	93850513          	addi	a0,a0,-1736 # 5f98 <malloc+0x4a8>
      668:	00005097          	auipc	ra,0x5
      66c:	082080e7          	jalr	130(ra) # 56ea <open>
      670:	84aa                	mv	s1,a0
@@ -553,13 +664,13 @@ Disassembly of section .text:
      684:	0cf51e63          	bne	a0,a5,760 <truncate1+0x158>
      688:	40100593          	li	a1,1025
      68c:	00006517          	auipc	a0,0x6
-     690:	90450513          	addi	a0,a0,-1788 # 5f90 <malloc+0x4a8>
+     690:	90c50513          	addi	a0,a0,-1780 # 5f98 <malloc+0x4a8>
      694:	00005097          	auipc	ra,0x5
      698:	056080e7          	jalr	86(ra) # 56ea <open>
      69c:	89aa                	mv	s3,a0
      69e:	4581                	li	a1,0
      6a0:	00006517          	auipc	a0,0x6
-     6a4:	8f050513          	addi	a0,a0,-1808 # 5f90 <malloc+0x4a8>
+     6a4:	8f850513          	addi	a0,a0,-1800 # 5f98 <malloc+0x4a8>
      6a8:	00005097          	auipc	ra,0x5
      6ac:	042080e7          	jalr	66(ra) # 56ea <open>
      6b0:	892a                	mv	s2,a0
@@ -578,7 +689,7 @@ Disassembly of section .text:
      6da:	e971                	bnez	a0,7ae <truncate1+0x1a6>
      6dc:	4619                	li	a2,6
      6de:	00006597          	auipc	a1,0x6
-     6e2:	aea58593          	addi	a1,a1,-1302 # 61c8 <malloc+0x6e0>
+     6e2:	af258593          	addi	a1,a1,-1294 # 61d0 <malloc+0x6e0>
      6e6:	854e                	mv	a0,s3
      6e8:	00005097          	auipc	ra,0x5
      6ec:	fe2080e7          	jalr	-30(ra) # 56ca <write>
@@ -597,7 +708,7 @@ Disassembly of section .text:
      71a:	4789                	li	a5,2
      71c:	0ef51063          	bne	a0,a5,7fc <truncate1+0x1f4>
      720:	00006517          	auipc	a0,0x6
-     724:	87050513          	addi	a0,a0,-1936 # 5f90 <malloc+0x4a8>
+     724:	87850513          	addi	a0,a0,-1928 # 5f98 <malloc+0x4a8>
      728:	00005097          	auipc	ra,0x5
      72c:	fd2080e7          	jalr	-46(ra) # 56fa <unlink>
      730:	854e                	mv	a0,s3
@@ -621,55 +732,90 @@ Disassembly of section .text:
      760:	862a                	mv	a2,a0
      762:	85d6                	mv	a1,s5
      764:	00006517          	auipc	a0,0x6
-     768:	a0450513          	addi	a0,a0,-1532 # 6168 <malloc+0x680>
+     768:	a0c50513          	addi	a0,a0,-1524 # 6170 <malloc+0x680>
      76c:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      770:	2be080e7          	jalr	702(ra) # 5a2a <printf>
+=======
+     770:	2c6080e7          	jalr	710(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      774:	4505                	li	a0,1
      776:	00005097          	auipc	ra,0x5
      77a:	f34080e7          	jalr	-204(ra) # 56aa <exit>
      77e:	85ca                	mv	a1,s2
      780:	00006517          	auipc	a0,0x6
-     784:	a0850513          	addi	a0,a0,-1528 # 6188 <malloc+0x6a0>
+     784:	a1050513          	addi	a0,a0,-1520 # 6190 <malloc+0x6a0>
      788:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      78c:	2a2080e7          	jalr	674(ra) # 5a2a <printf>
+=======
+     78c:	2aa080e7          	jalr	682(ra) # 5a32 <printf>
+    printf("%s: read %d bytes, wanted 0\n", s, n);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      790:	8652                	mv	a2,s4
      792:	85d6                	mv	a1,s5
      794:	00006517          	auipc	a0,0x6
-     798:	a0450513          	addi	a0,a0,-1532 # 6198 <malloc+0x6b0>
+     798:	a0c50513          	addi	a0,a0,-1524 # 61a0 <malloc+0x6b0>
      79c:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      7a0:	28e080e7          	jalr	654(ra) # 5a2a <printf>
+=======
+     7a0:	296080e7          	jalr	662(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      7a4:	4505                	li	a0,1
      7a6:	00005097          	auipc	ra,0x5
      7aa:	f04080e7          	jalr	-252(ra) # 56aa <exit>
      7ae:	85a6                	mv	a1,s1
      7b0:	00006517          	auipc	a0,0x6
-     7b4:	a0850513          	addi	a0,a0,-1528 # 61b8 <malloc+0x6d0>
+     7b4:	a1050513          	addi	a0,a0,-1520 # 61c0 <malloc+0x6d0>
      7b8:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      7bc:	272080e7          	jalr	626(ra) # 5a2a <printf>
+=======
+     7bc:	27a080e7          	jalr	634(ra) # 5a32 <printf>
+    printf("%s: read %d bytes, wanted 0\n", s, n);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      7c0:	8652                	mv	a2,s4
      7c2:	85d6                	mv	a1,s5
      7c4:	00006517          	auipc	a0,0x6
-     7c8:	9d450513          	addi	a0,a0,-1580 # 6198 <malloc+0x6b0>
+     7c8:	9dc50513          	addi	a0,a0,-1572 # 61a0 <malloc+0x6b0>
      7cc:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      7d0:	25e080e7          	jalr	606(ra) # 5a2a <printf>
+=======
+     7d0:	266080e7          	jalr	614(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      7d4:	4505                	li	a0,1
      7d6:	00005097          	auipc	ra,0x5
      7da:	ed4080e7          	jalr	-300(ra) # 56aa <exit>
      7de:	862a                	mv	a2,a0
      7e0:	85d6                	mv	a1,s5
      7e2:	00006517          	auipc	a0,0x6
-     7e6:	9ee50513          	addi	a0,a0,-1554 # 61d0 <malloc+0x6e8>
+     7e6:	9f650513          	addi	a0,a0,-1546 # 61d8 <malloc+0x6e8>
      7ea:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      7ee:	240080e7          	jalr	576(ra) # 5a2a <printf>
+=======
+     7ee:	248080e7          	jalr	584(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      7f2:	4505                	li	a0,1
      7f4:	00005097          	auipc	ra,0x5
      7f8:	eb6080e7          	jalr	-330(ra) # 56aa <exit>
      7fc:	862a                	mv	a2,a0
      7fe:	85d6                	mv	a1,s5
      800:	00006517          	auipc	a0,0x6
-     804:	9f050513          	addi	a0,a0,-1552 # 61f0 <malloc+0x708>
+     804:	9f850513          	addi	a0,a0,-1544 # 61f8 <malloc+0x708>
      808:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      80c:	222080e7          	jalr	546(ra) # 5a2a <printf>
+=======
+     80c:	22a080e7          	jalr	554(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      810:	4505                	li	a0,1
      812:	00005097          	auipc	ra,0x5
      816:	e98080e7          	jalr	-360(ra) # 56aa <exit>
@@ -688,16 +834,24 @@ Disassembly of section .text:
      82e:	8b2a                	mv	s6,a0
      830:	20200593          	li	a1,514
      834:	00006517          	auipc	a0,0x6
-     838:	9dc50513          	addi	a0,a0,-1572 # 6210 <malloc+0x728>
+     838:	9e450513          	addi	a0,a0,-1564 # 6218 <malloc+0x728>
      83c:	00005097          	auipc	ra,0x5
      840:	eae080e7          	jalr	-338(ra) # 56ea <open>
      844:	0a054d63          	bltz	a0,8fe <writetest+0xe4>
      848:	892a                	mv	s2,a0
      84a:	4481                	li	s1,0
      84c:	00006997          	auipc	s3,0x6
+<<<<<<< HEAD
      850:	9ec98993          	addi	s3,s3,-1556 # 6238 <malloc+0x750>
      854:	00006a97          	auipc	s5,0x6
      858:	a1ca8a93          	addi	s5,s5,-1508 # 6270 <malloc+0x788>
+=======
+     850:	9f498993          	addi	s3,s3,-1548 # 6240 <malloc+0x750>
+    if(write(fd, "bbbbbbbbbb", SZ) != SZ){
+     854:	00006a97          	auipc	s5,0x6
+     858:	a24a8a93          	addi	s5,s5,-1500 # 6278 <malloc+0x788>
+  for(i = 0; i < N; i++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      85c:	06400a13          	li	s4,100
      860:	4629                	li	a2,10
      862:	85ce                	mv	a1,s3
@@ -720,14 +874,14 @@ Disassembly of section .text:
      894:	e42080e7          	jalr	-446(ra) # 56d2 <close>
      898:	4581                	li	a1,0
      89a:	00006517          	auipc	a0,0x6
-     89e:	97650513          	addi	a0,a0,-1674 # 6210 <malloc+0x728>
+     89e:	97e50513          	addi	a0,a0,-1666 # 6218 <malloc+0x728>
      8a2:	00005097          	auipc	ra,0x5
      8a6:	e48080e7          	jalr	-440(ra) # 56ea <open>
      8aa:	84aa                	mv	s1,a0
      8ac:	0a054563          	bltz	a0,956 <writetest+0x13c>
      8b0:	7d000613          	li	a2,2000
      8b4:	0000b597          	auipc	a1,0xb
-     8b8:	2cc58593          	addi	a1,a1,716 # bb80 <buf>
+     8b8:	2d458593          	addi	a1,a1,724 # bb88 <buf>
      8bc:	00005097          	auipc	ra,0x5
      8c0:	e06080e7          	jalr	-506(ra) # 56c2 <read>
      8c4:	7d000793          	li	a5,2000
@@ -736,7 +890,7 @@ Disassembly of section .text:
      8ce:	00005097          	auipc	ra,0x5
      8d2:	e04080e7          	jalr	-508(ra) # 56d2 <close>
      8d6:	00006517          	auipc	a0,0x6
-     8da:	93a50513          	addi	a0,a0,-1734 # 6210 <malloc+0x728>
+     8da:	94250513          	addi	a0,a0,-1726 # 6218 <malloc+0x728>
      8de:	00005097          	auipc	ra,0x5
      8e2:	e1c080e7          	jalr	-484(ra) # 56fa <unlink>
      8e6:	0a054463          	bltz	a0,98e <writetest+0x174>
@@ -752,51 +906,81 @@ Disassembly of section .text:
      8fc:	8082                	ret
      8fe:	85da                	mv	a1,s6
      900:	00006517          	auipc	a0,0x6
-     904:	91850513          	addi	a0,a0,-1768 # 6218 <malloc+0x730>
+     904:	92050513          	addi	a0,a0,-1760 # 6220 <malloc+0x730>
      908:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      90c:	122080e7          	jalr	290(ra) # 5a2a <printf>
+=======
+     90c:	12a080e7          	jalr	298(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      910:	4505                	li	a0,1
      912:	00005097          	auipc	ra,0x5
      916:	d98080e7          	jalr	-616(ra) # 56aa <exit>
      91a:	8626                	mv	a2,s1
      91c:	85da                	mv	a1,s6
      91e:	00006517          	auipc	a0,0x6
-     922:	92a50513          	addi	a0,a0,-1750 # 6248 <malloc+0x760>
+     922:	93250513          	addi	a0,a0,-1742 # 6250 <malloc+0x760>
      926:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      92a:	104080e7          	jalr	260(ra) # 5a2a <printf>
+=======
+     92a:	10c080e7          	jalr	268(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      92e:	4505                	li	a0,1
      930:	00005097          	auipc	ra,0x5
      934:	d7a080e7          	jalr	-646(ra) # 56aa <exit>
      938:	8626                	mv	a2,s1
      93a:	85da                	mv	a1,s6
      93c:	00006517          	auipc	a0,0x6
-     940:	94450513          	addi	a0,a0,-1724 # 6280 <malloc+0x798>
+     940:	94c50513          	addi	a0,a0,-1716 # 6288 <malloc+0x798>
      944:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      948:	0e6080e7          	jalr	230(ra) # 5a2a <printf>
+=======
+     948:	0ee080e7          	jalr	238(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      94c:	4505                	li	a0,1
      94e:	00005097          	auipc	ra,0x5
      952:	d5c080e7          	jalr	-676(ra) # 56aa <exit>
      956:	85da                	mv	a1,s6
      958:	00006517          	auipc	a0,0x6
-     95c:	95050513          	addi	a0,a0,-1712 # 62a8 <malloc+0x7c0>
+     95c:	95850513          	addi	a0,a0,-1704 # 62b0 <malloc+0x7c0>
      960:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      964:	0ca080e7          	jalr	202(ra) # 5a2a <printf>
+=======
+     964:	0d2080e7          	jalr	210(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      968:	4505                	li	a0,1
      96a:	00005097          	auipc	ra,0x5
      96e:	d40080e7          	jalr	-704(ra) # 56aa <exit>
      972:	85da                	mv	a1,s6
      974:	00006517          	auipc	a0,0x6
-     978:	95450513          	addi	a0,a0,-1708 # 62c8 <malloc+0x7e0>
+     978:	95c50513          	addi	a0,a0,-1700 # 62d0 <malloc+0x7e0>
      97c:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      980:	0ae080e7          	jalr	174(ra) # 5a2a <printf>
+=======
+     980:	0b6080e7          	jalr	182(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      984:	4505                	li	a0,1
      986:	00005097          	auipc	ra,0x5
      98a:	d24080e7          	jalr	-732(ra) # 56aa <exit>
      98e:	85da                	mv	a1,s6
      990:	00006517          	auipc	a0,0x6
-     994:	95050513          	addi	a0,a0,-1712 # 62e0 <malloc+0x7f8>
+     994:	95850513          	addi	a0,a0,-1704 # 62e8 <malloc+0x7f8>
      998:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      99c:	092080e7          	jalr	146(ra) # 5a2a <printf>
+=======
+     99c:	09a080e7          	jalr	154(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      9a0:	4505                	li	a0,1
      9a2:	00005097          	auipc	ra,0x5
      9a6:	d08080e7          	jalr	-760(ra) # 56aa <exit>
@@ -814,13 +998,18 @@ Disassembly of section .text:
      9bc:	8aaa                	mv	s5,a0
      9be:	20200593          	li	a1,514
      9c2:	00006517          	auipc	a0,0x6
-     9c6:	93e50513          	addi	a0,a0,-1730 # 6300 <malloc+0x818>
+     9c6:	94650513          	addi	a0,a0,-1722 # 6308 <malloc+0x818>
      9ca:	00005097          	auipc	ra,0x5
      9ce:	d20080e7          	jalr	-736(ra) # 56ea <open>
      9d2:	89aa                	mv	s3,a0
      9d4:	4481                	li	s1,0
      9d6:	0000b917          	auipc	s2,0xb
+<<<<<<< HEAD
      9da:	1aa90913          	addi	s2,s2,426 # bb80 <buf>
+=======
+     9da:	1b290913          	addi	s2,s2,434 # bb88 <buf>
+  for(i = 0; i < MAXFILE; i++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      9de:	10c00a13          	li	s4,268
      9e2:	06054c63          	bltz	a0,a5a <writebig+0xb0>
      9e6:	00992023          	sw	s1,0(s2)
@@ -838,13 +1027,18 @@ Disassembly of section .text:
      a0e:	cc8080e7          	jalr	-824(ra) # 56d2 <close>
      a12:	4581                	li	a1,0
      a14:	00006517          	auipc	a0,0x6
-     a18:	8ec50513          	addi	a0,a0,-1812 # 6300 <malloc+0x818>
+     a18:	8f450513          	addi	a0,a0,-1804 # 6308 <malloc+0x818>
      a1c:	00005097          	auipc	ra,0x5
      a20:	cce080e7          	jalr	-818(ra) # 56ea <open>
      a24:	89aa                	mv	s3,a0
      a26:	4481                	li	s1,0
      a28:	0000b917          	auipc	s2,0xb
+<<<<<<< HEAD
      a2c:	15890913          	addi	s2,s2,344 # bb80 <buf>
+=======
+     a2c:	16090913          	addi	s2,s2,352 # bb88 <buf>
+  if(fd < 0){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      a30:	06054263          	bltz	a0,a94 <writebig+0xea>
      a34:	40000613          	li	a2,1024
      a38:	85ca                	mv	a1,s2
@@ -860,26 +1054,41 @@ Disassembly of section .text:
      a58:	bff1                	j	a34 <writebig+0x8a>
      a5a:	85d6                	mv	a1,s5
      a5c:	00006517          	auipc	a0,0x6
-     a60:	8ac50513          	addi	a0,a0,-1876 # 6308 <malloc+0x820>
+     a60:	8b450513          	addi	a0,a0,-1868 # 6310 <malloc+0x820>
      a64:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      a68:	fc6080e7          	jalr	-58(ra) # 5a2a <printf>
+=======
+     a68:	fce080e7          	jalr	-50(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      a6c:	4505                	li	a0,1
      a6e:	00005097          	auipc	ra,0x5
      a72:	c3c080e7          	jalr	-964(ra) # 56aa <exit>
      a76:	8626                	mv	a2,s1
      a78:	85d6                	mv	a1,s5
      a7a:	00006517          	auipc	a0,0x6
-     a7e:	8ae50513          	addi	a0,a0,-1874 # 6328 <malloc+0x840>
+     a7e:	8b650513          	addi	a0,a0,-1866 # 6330 <malloc+0x840>
      a82:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      a86:	fa8080e7          	jalr	-88(ra) # 5a2a <printf>
+=======
+     a86:	fb0080e7          	jalr	-80(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      a8a:	4505                	li	a0,1
      a8c:	00005097          	auipc	ra,0x5
      a90:	c1e080e7          	jalr	-994(ra) # 56aa <exit>
      a94:	85d6                	mv	a1,s5
      a96:	00006517          	auipc	a0,0x6
-     a9a:	8ba50513          	addi	a0,a0,-1862 # 6350 <malloc+0x868>
+     a9a:	8c250513          	addi	a0,a0,-1854 # 6358 <malloc+0x868>
      a9e:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      aa2:	f8c080e7          	jalr	-116(ra) # 5a2a <printf>
+=======
+     aa2:	f94080e7          	jalr	-108(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      aa6:	4505                	li	a0,1
      aa8:	00005097          	auipc	ra,0x5
      aac:	c02080e7          	jalr	-1022(ra) # 56aa <exit>
@@ -889,7 +1098,7 @@ Disassembly of section .text:
      aba:	00005097          	auipc	ra,0x5
      abe:	c18080e7          	jalr	-1000(ra) # 56d2 <close>
      ac2:	00006517          	auipc	a0,0x6
-     ac6:	83e50513          	addi	a0,a0,-1986 # 6300 <malloc+0x818>
+     ac6:	84650513          	addi	a0,a0,-1978 # 6308 <malloc+0x818>
      aca:	00005097          	auipc	ra,0x5
      ace:	c30080e7          	jalr	-976(ra) # 56fa <unlink>
      ad2:	06054963          	bltz	a0,b44 <writebig+0x19a>
@@ -905,35 +1114,55 @@ Disassembly of section .text:
      ae8:	10b00613          	li	a2,267
      aec:	85d6                	mv	a1,s5
      aee:	00006517          	auipc	a0,0x6
-     af2:	88250513          	addi	a0,a0,-1918 # 6370 <malloc+0x888>
+     af2:	88a50513          	addi	a0,a0,-1910 # 6378 <malloc+0x888>
      af6:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      afa:	f34080e7          	jalr	-204(ra) # 5a2a <printf>
+=======
+     afa:	f3c080e7          	jalr	-196(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      afe:	4505                	li	a0,1
      b00:	00005097          	auipc	ra,0x5
      b04:	baa080e7          	jalr	-1110(ra) # 56aa <exit>
      b08:	862a                	mv	a2,a0
      b0a:	85d6                	mv	a1,s5
      b0c:	00006517          	auipc	a0,0x6
-     b10:	88c50513          	addi	a0,a0,-1908 # 6398 <malloc+0x8b0>
+     b10:	89450513          	addi	a0,a0,-1900 # 63a0 <malloc+0x8b0>
      b14:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      b18:	f16080e7          	jalr	-234(ra) # 5a2a <printf>
+=======
+     b18:	f1e080e7          	jalr	-226(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      b1c:	4505                	li	a0,1
      b1e:	00005097          	auipc	ra,0x5
      b22:	b8c080e7          	jalr	-1140(ra) # 56aa <exit>
      b26:	8626                	mv	a2,s1
      b28:	85d6                	mv	a1,s5
      b2a:	00006517          	auipc	a0,0x6
-     b2e:	88650513          	addi	a0,a0,-1914 # 63b0 <malloc+0x8c8>
+     b2e:	88e50513          	addi	a0,a0,-1906 # 63b8 <malloc+0x8c8>
      b32:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      b36:	ef8080e7          	jalr	-264(ra) # 5a2a <printf>
+=======
+     b36:	f00080e7          	jalr	-256(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      b3a:	4505                	li	a0,1
      b3c:	00005097          	auipc	ra,0x5
      b40:	b6e080e7          	jalr	-1170(ra) # 56aa <exit>
      b44:	85d6                	mv	a1,s5
      b46:	00006517          	auipc	a0,0x6
-     b4a:	89250513          	addi	a0,a0,-1902 # 63d8 <malloc+0x8f0>
+     b4a:	89a50513          	addi	a0,a0,-1894 # 63e0 <malloc+0x8f0>
      b4e:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      b52:	edc080e7          	jalr	-292(ra) # 5a2a <printf>
+=======
+     b52:	ee4080e7          	jalr	-284(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      b56:	4505                	li	a0,1
      b58:	00005097          	auipc	ra,0x5
      b5c:	b52080e7          	jalr	-1198(ra) # 56aa <exit>
@@ -949,14 +1178,14 @@ Disassembly of section .text:
      b6e:	89aa                	mv	s3,a0
      b70:	20200593          	li	a1,514
      b74:	00005517          	auipc	a0,0x5
-     b78:	1bc50513          	addi	a0,a0,444 # 5d30 <malloc+0x248>
+     b78:	1c450513          	addi	a0,a0,452 # 5d38 <malloc+0x248>
      b7c:	00005097          	auipc	ra,0x5
      b80:	b6e080e7          	jalr	-1170(ra) # 56ea <open>
      b84:	0e054563          	bltz	a0,c6e <unlinkread+0x10e>
      b88:	84aa                	mv	s1,a0
      b8a:	4615                	li	a2,5
      b8c:	00006597          	auipc	a1,0x6
-     b90:	88458593          	addi	a1,a1,-1916 # 6410 <malloc+0x928>
+     b90:	88c58593          	addi	a1,a1,-1908 # 6418 <malloc+0x928>
      b94:	00005097          	auipc	ra,0x5
      b98:	b36080e7          	jalr	-1226(ra) # 56ca <write>
      b9c:	8526                	mv	a0,s1
@@ -964,25 +1193,25 @@ Disassembly of section .text:
      ba2:	b34080e7          	jalr	-1228(ra) # 56d2 <close>
      ba6:	4589                	li	a1,2
      ba8:	00005517          	auipc	a0,0x5
-     bac:	18850513          	addi	a0,a0,392 # 5d30 <malloc+0x248>
+     bac:	19050513          	addi	a0,a0,400 # 5d38 <malloc+0x248>
      bb0:	00005097          	auipc	ra,0x5
      bb4:	b3a080e7          	jalr	-1222(ra) # 56ea <open>
      bb8:	84aa                	mv	s1,a0
      bba:	0c054863          	bltz	a0,c8a <unlinkread+0x12a>
      bbe:	00005517          	auipc	a0,0x5
-     bc2:	17250513          	addi	a0,a0,370 # 5d30 <malloc+0x248>
+     bc2:	17a50513          	addi	a0,a0,378 # 5d38 <malloc+0x248>
      bc6:	00005097          	auipc	ra,0x5
      bca:	b34080e7          	jalr	-1228(ra) # 56fa <unlink>
      bce:	ed61                	bnez	a0,ca6 <unlinkread+0x146>
      bd0:	20200593          	li	a1,514
      bd4:	00005517          	auipc	a0,0x5
-     bd8:	15c50513          	addi	a0,a0,348 # 5d30 <malloc+0x248>
+     bd8:	16450513          	addi	a0,a0,356 # 5d38 <malloc+0x248>
      bdc:	00005097          	auipc	ra,0x5
      be0:	b0e080e7          	jalr	-1266(ra) # 56ea <open>
      be4:	892a                	mv	s2,a0
      be6:	460d                	li	a2,3
      be8:	00006597          	auipc	a1,0x6
-     bec:	87058593          	addi	a1,a1,-1936 # 6458 <malloc+0x970>
+     bec:	87858593          	addi	a1,a1,-1928 # 6460 <malloc+0x970>
      bf0:	00005097          	auipc	ra,0x5
      bf4:	ada080e7          	jalr	-1318(ra) # 56ca <write>
      bf8:	854a                	mv	a0,s2
@@ -990,19 +1219,19 @@ Disassembly of section .text:
      bfe:	ad8080e7          	jalr	-1320(ra) # 56d2 <close>
      c02:	660d                	lui	a2,0x3
      c04:	0000b597          	auipc	a1,0xb
-     c08:	f7c58593          	addi	a1,a1,-132 # bb80 <buf>
+     c08:	f8458593          	addi	a1,a1,-124 # bb88 <buf>
      c0c:	8526                	mv	a0,s1
      c0e:	00005097          	auipc	ra,0x5
      c12:	ab4080e7          	jalr	-1356(ra) # 56c2 <read>
      c16:	4795                	li	a5,5
      c18:	0af51563          	bne	a0,a5,cc2 <unlinkread+0x162>
      c1c:	0000b717          	auipc	a4,0xb
-     c20:	f6474703          	lbu	a4,-156(a4) # bb80 <buf>
+     c20:	f6c74703          	lbu	a4,-148(a4) # bb88 <buf>
      c24:	06800793          	li	a5,104
      c28:	0af71b63          	bne	a4,a5,cde <unlinkread+0x17e>
      c2c:	4629                	li	a2,10
      c2e:	0000b597          	auipc	a1,0xb
-     c32:	f5258593          	addi	a1,a1,-174 # bb80 <buf>
+     c32:	f5a58593          	addi	a1,a1,-166 # bb88 <buf>
      c36:	8526                	mv	a0,s1
      c38:	00005097          	auipc	ra,0x5
      c3c:	a92080e7          	jalr	-1390(ra) # 56ca <write>
@@ -1012,7 +1241,7 @@ Disassembly of section .text:
      c48:	00005097          	auipc	ra,0x5
      c4c:	a8a080e7          	jalr	-1398(ra) # 56d2 <close>
      c50:	00005517          	auipc	a0,0x5
-     c54:	0e050513          	addi	a0,a0,224 # 5d30 <malloc+0x248>
+     c54:	0e850513          	addi	a0,a0,232 # 5d38 <malloc+0x248>
      c58:	00005097          	auipc	ra,0x5
      c5c:	aa2080e7          	jalr	-1374(ra) # 56fa <unlink>
      c60:	70a2                	ld	ra,40(sp)
@@ -1024,49 +1253,79 @@ Disassembly of section .text:
      c6c:	8082                	ret
      c6e:	85ce                	mv	a1,s3
      c70:	00005517          	auipc	a0,0x5
-     c74:	78050513          	addi	a0,a0,1920 # 63f0 <malloc+0x908>
+     c74:	78850513          	addi	a0,a0,1928 # 63f8 <malloc+0x908>
      c78:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      c7c:	db2080e7          	jalr	-590(ra) # 5a2a <printf>
+=======
+     c7c:	dba080e7          	jalr	-582(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      c80:	4505                	li	a0,1
      c82:	00005097          	auipc	ra,0x5
      c86:	a28080e7          	jalr	-1496(ra) # 56aa <exit>
      c8a:	85ce                	mv	a1,s3
      c8c:	00005517          	auipc	a0,0x5
-     c90:	78c50513          	addi	a0,a0,1932 # 6418 <malloc+0x930>
+     c90:	79450513          	addi	a0,a0,1940 # 6420 <malloc+0x930>
      c94:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      c98:	d96080e7          	jalr	-618(ra) # 5a2a <printf>
+=======
+     c98:	d9e080e7          	jalr	-610(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      c9c:	4505                	li	a0,1
      c9e:	00005097          	auipc	ra,0x5
      ca2:	a0c080e7          	jalr	-1524(ra) # 56aa <exit>
      ca6:	85ce                	mv	a1,s3
      ca8:	00005517          	auipc	a0,0x5
-     cac:	79050513          	addi	a0,a0,1936 # 6438 <malloc+0x950>
+     cac:	79850513          	addi	a0,a0,1944 # 6440 <malloc+0x950>
      cb0:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      cb4:	d7a080e7          	jalr	-646(ra) # 5a2a <printf>
+=======
+     cb4:	d82080e7          	jalr	-638(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      cb8:	4505                	li	a0,1
      cba:	00005097          	auipc	ra,0x5
      cbe:	9f0080e7          	jalr	-1552(ra) # 56aa <exit>
      cc2:	85ce                	mv	a1,s3
      cc4:	00005517          	auipc	a0,0x5
-     cc8:	79c50513          	addi	a0,a0,1948 # 6460 <malloc+0x978>
+     cc8:	7a450513          	addi	a0,a0,1956 # 6468 <malloc+0x978>
      ccc:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      cd0:	d5e080e7          	jalr	-674(ra) # 5a2a <printf>
+=======
+     cd0:	d66080e7          	jalr	-666(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      cd4:	4505                	li	a0,1
      cd6:	00005097          	auipc	ra,0x5
      cda:	9d4080e7          	jalr	-1580(ra) # 56aa <exit>
      cde:	85ce                	mv	a1,s3
      ce0:	00005517          	auipc	a0,0x5
-     ce4:	7a050513          	addi	a0,a0,1952 # 6480 <malloc+0x998>
+     ce4:	7a850513          	addi	a0,a0,1960 # 6488 <malloc+0x998>
      ce8:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      cec:	d42080e7          	jalr	-702(ra) # 5a2a <printf>
+=======
+     cec:	d4a080e7          	jalr	-694(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      cf0:	4505                	li	a0,1
      cf2:	00005097          	auipc	ra,0x5
      cf6:	9b8080e7          	jalr	-1608(ra) # 56aa <exit>
      cfa:	85ce                	mv	a1,s3
      cfc:	00005517          	auipc	a0,0x5
-     d00:	7a450513          	addi	a0,a0,1956 # 64a0 <malloc+0x9b8>
+     d00:	7ac50513          	addi	a0,a0,1964 # 64a8 <malloc+0x9b8>
      d04:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      d08:	d26080e7          	jalr	-730(ra) # 5a2a <printf>
+=======
+     d08:	d2e080e7          	jalr	-722(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      d0c:	4505                	li	a0,1
      d0e:	00005097          	auipc	ra,0x5
      d12:	99c080e7          	jalr	-1636(ra) # 56aa <exit>
@@ -1080,23 +1339,23 @@ Disassembly of section .text:
      d20:	1000                	addi	s0,sp,32
      d22:	892a                	mv	s2,a0
      d24:	00005517          	auipc	a0,0x5
-     d28:	79c50513          	addi	a0,a0,1948 # 64c0 <malloc+0x9d8>
+     d28:	7a450513          	addi	a0,a0,1956 # 64c8 <malloc+0x9d8>
      d2c:	00005097          	auipc	ra,0x5
      d30:	9ce080e7          	jalr	-1586(ra) # 56fa <unlink>
      d34:	00005517          	auipc	a0,0x5
-     d38:	79450513          	addi	a0,a0,1940 # 64c8 <malloc+0x9e0>
+     d38:	79c50513          	addi	a0,a0,1948 # 64d0 <malloc+0x9e0>
      d3c:	00005097          	auipc	ra,0x5
      d40:	9be080e7          	jalr	-1602(ra) # 56fa <unlink>
      d44:	20200593          	li	a1,514
      d48:	00005517          	auipc	a0,0x5
-     d4c:	77850513          	addi	a0,a0,1912 # 64c0 <malloc+0x9d8>
+     d4c:	78050513          	addi	a0,a0,1920 # 64c8 <malloc+0x9d8>
      d50:	00005097          	auipc	ra,0x5
      d54:	99a080e7          	jalr	-1638(ra) # 56ea <open>
      d58:	10054763          	bltz	a0,e66 <linktest+0x150>
      d5c:	84aa                	mv	s1,a0
      d5e:	4615                	li	a2,5
      d60:	00005597          	auipc	a1,0x5
-     d64:	6b058593          	addi	a1,a1,1712 # 6410 <malloc+0x928>
+     d64:	6b858593          	addi	a1,a1,1720 # 6418 <malloc+0x928>
      d68:	00005097          	auipc	ra,0x5
      d6c:	962080e7          	jalr	-1694(ra) # 56ca <write>
      d70:	4795                	li	a5,5
@@ -1105,32 +1364,32 @@ Disassembly of section .text:
      d78:	00005097          	auipc	ra,0x5
      d7c:	95a080e7          	jalr	-1702(ra) # 56d2 <close>
      d80:	00005597          	auipc	a1,0x5
-     d84:	74858593          	addi	a1,a1,1864 # 64c8 <malloc+0x9e0>
+     d84:	75058593          	addi	a1,a1,1872 # 64d0 <malloc+0x9e0>
      d88:	00005517          	auipc	a0,0x5
-     d8c:	73850513          	addi	a0,a0,1848 # 64c0 <malloc+0x9d8>
+     d8c:	74050513          	addi	a0,a0,1856 # 64c8 <malloc+0x9d8>
      d90:	00005097          	auipc	ra,0x5
      d94:	97a080e7          	jalr	-1670(ra) # 570a <link>
      d98:	10054363          	bltz	a0,e9e <linktest+0x188>
      d9c:	00005517          	auipc	a0,0x5
-     da0:	72450513          	addi	a0,a0,1828 # 64c0 <malloc+0x9d8>
+     da0:	72c50513          	addi	a0,a0,1836 # 64c8 <malloc+0x9d8>
      da4:	00005097          	auipc	ra,0x5
      da8:	956080e7          	jalr	-1706(ra) # 56fa <unlink>
      dac:	4581                	li	a1,0
      dae:	00005517          	auipc	a0,0x5
-     db2:	71250513          	addi	a0,a0,1810 # 64c0 <malloc+0x9d8>
+     db2:	71a50513          	addi	a0,a0,1818 # 64c8 <malloc+0x9d8>
      db6:	00005097          	auipc	ra,0x5
      dba:	934080e7          	jalr	-1740(ra) # 56ea <open>
      dbe:	0e055e63          	bgez	a0,eba <linktest+0x1a4>
      dc2:	4581                	li	a1,0
      dc4:	00005517          	auipc	a0,0x5
-     dc8:	70450513          	addi	a0,a0,1796 # 64c8 <malloc+0x9e0>
+     dc8:	70c50513          	addi	a0,a0,1804 # 64d0 <malloc+0x9e0>
      dcc:	00005097          	auipc	ra,0x5
      dd0:	91e080e7          	jalr	-1762(ra) # 56ea <open>
      dd4:	84aa                	mv	s1,a0
      dd6:	10054063          	bltz	a0,ed6 <linktest+0x1c0>
      dda:	660d                	lui	a2,0x3
      ddc:	0000b597          	auipc	a1,0xb
-     de0:	da458593          	addi	a1,a1,-604 # bb80 <buf>
+     de0:	dac58593          	addi	a1,a1,-596 # bb88 <buf>
      de4:	00005097          	auipc	ra,0x5
      de8:	8de080e7          	jalr	-1826(ra) # 56c2 <read>
      dec:	4795                	li	a5,5
@@ -1139,26 +1398,26 @@ Disassembly of section .text:
      df4:	00005097          	auipc	ra,0x5
      df8:	8de080e7          	jalr	-1826(ra) # 56d2 <close>
      dfc:	00005597          	auipc	a1,0x5
-     e00:	6cc58593          	addi	a1,a1,1740 # 64c8 <malloc+0x9e0>
+     e00:	6d458593          	addi	a1,a1,1748 # 64d0 <malloc+0x9e0>
      e04:	852e                	mv	a0,a1
      e06:	00005097          	auipc	ra,0x5
      e0a:	904080e7          	jalr	-1788(ra) # 570a <link>
      e0e:	10055063          	bgez	a0,f0e <linktest+0x1f8>
      e12:	00005517          	auipc	a0,0x5
-     e16:	6b650513          	addi	a0,a0,1718 # 64c8 <malloc+0x9e0>
+     e16:	6be50513          	addi	a0,a0,1726 # 64d0 <malloc+0x9e0>
      e1a:	00005097          	auipc	ra,0x5
      e1e:	8e0080e7          	jalr	-1824(ra) # 56fa <unlink>
      e22:	00005597          	auipc	a1,0x5
-     e26:	69e58593          	addi	a1,a1,1694 # 64c0 <malloc+0x9d8>
+     e26:	6a658593          	addi	a1,a1,1702 # 64c8 <malloc+0x9d8>
      e2a:	00005517          	auipc	a0,0x5
-     e2e:	69e50513          	addi	a0,a0,1694 # 64c8 <malloc+0x9e0>
+     e2e:	6a650513          	addi	a0,a0,1702 # 64d0 <malloc+0x9e0>
      e32:	00005097          	auipc	ra,0x5
      e36:	8d8080e7          	jalr	-1832(ra) # 570a <link>
      e3a:	0e055863          	bgez	a0,f2a <linktest+0x214>
      e3e:	00005597          	auipc	a1,0x5
-     e42:	68258593          	addi	a1,a1,1666 # 64c0 <malloc+0x9d8>
+     e42:	68a58593          	addi	a1,a1,1674 # 64c8 <malloc+0x9d8>
      e46:	00005517          	auipc	a0,0x5
-     e4a:	78a50513          	addi	a0,a0,1930 # 65d0 <malloc+0xae8>
+     e4a:	79250513          	addi	a0,a0,1938 # 65d8 <malloc+0xae8>
      e4e:	00005097          	auipc	ra,0x5
      e52:	8bc080e7          	jalr	-1860(ra) # 570a <link>
      e56:	0e055863          	bgez	a0,f46 <linktest+0x230>
@@ -1170,73 +1429,118 @@ Disassembly of section .text:
      e64:	8082                	ret
      e66:	85ca                	mv	a1,s2
      e68:	00005517          	auipc	a0,0x5
-     e6c:	66850513          	addi	a0,a0,1640 # 64d0 <malloc+0x9e8>
+     e6c:	67050513          	addi	a0,a0,1648 # 64d8 <malloc+0x9e8>
      e70:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      e74:	bba080e7          	jalr	-1094(ra) # 5a2a <printf>
+=======
+     e74:	bc2080e7          	jalr	-1086(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      e78:	4505                	li	a0,1
      e7a:	00005097          	auipc	ra,0x5
      e7e:	830080e7          	jalr	-2000(ra) # 56aa <exit>
      e82:	85ca                	mv	a1,s2
      e84:	00005517          	auipc	a0,0x5
-     e88:	66450513          	addi	a0,a0,1636 # 64e8 <malloc+0xa00>
+     e88:	66c50513          	addi	a0,a0,1644 # 64f0 <malloc+0xa00>
      e8c:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      e90:	b9e080e7          	jalr	-1122(ra) # 5a2a <printf>
+=======
+     e90:	ba6080e7          	jalr	-1114(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      e94:	4505                	li	a0,1
      e96:	00005097          	auipc	ra,0x5
      e9a:	814080e7          	jalr	-2028(ra) # 56aa <exit>
      e9e:	85ca                	mv	a1,s2
      ea0:	00005517          	auipc	a0,0x5
-     ea4:	66050513          	addi	a0,a0,1632 # 6500 <malloc+0xa18>
+     ea4:	66850513          	addi	a0,a0,1640 # 6508 <malloc+0xa18>
      ea8:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      eac:	b82080e7          	jalr	-1150(ra) # 5a2a <printf>
+=======
+     eac:	b8a080e7          	jalr	-1142(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      eb0:	4505                	li	a0,1
      eb2:	00004097          	auipc	ra,0x4
      eb6:	7f8080e7          	jalr	2040(ra) # 56aa <exit>
      eba:	85ca                	mv	a1,s2
      ebc:	00005517          	auipc	a0,0x5
-     ec0:	66450513          	addi	a0,a0,1636 # 6520 <malloc+0xa38>
+     ec0:	66c50513          	addi	a0,a0,1644 # 6528 <malloc+0xa38>
      ec4:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      ec8:	b66080e7          	jalr	-1178(ra) # 5a2a <printf>
+=======
+     ec8:	b6e080e7          	jalr	-1170(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      ecc:	4505                	li	a0,1
      ece:	00004097          	auipc	ra,0x4
      ed2:	7dc080e7          	jalr	2012(ra) # 56aa <exit>
      ed6:	85ca                	mv	a1,s2
      ed8:	00005517          	auipc	a0,0x5
-     edc:	67850513          	addi	a0,a0,1656 # 6550 <malloc+0xa68>
+     edc:	68050513          	addi	a0,a0,1664 # 6558 <malloc+0xa68>
      ee0:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      ee4:	b4a080e7          	jalr	-1206(ra) # 5a2a <printf>
+=======
+     ee4:	b52080e7          	jalr	-1198(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      ee8:	4505                	li	a0,1
      eea:	00004097          	auipc	ra,0x4
      eee:	7c0080e7          	jalr	1984(ra) # 56aa <exit>
      ef2:	85ca                	mv	a1,s2
      ef4:	00005517          	auipc	a0,0x5
-     ef8:	67450513          	addi	a0,a0,1652 # 6568 <malloc+0xa80>
+     ef8:	67c50513          	addi	a0,a0,1660 # 6570 <malloc+0xa80>
      efc:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      f00:	b2e080e7          	jalr	-1234(ra) # 5a2a <printf>
+=======
+     f00:	b36080e7          	jalr	-1226(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      f04:	4505                	li	a0,1
      f06:	00004097          	auipc	ra,0x4
      f0a:	7a4080e7          	jalr	1956(ra) # 56aa <exit>
      f0e:	85ca                	mv	a1,s2
      f10:	00005517          	auipc	a0,0x5
-     f14:	67050513          	addi	a0,a0,1648 # 6580 <malloc+0xa98>
+     f14:	67850513          	addi	a0,a0,1656 # 6588 <malloc+0xa98>
      f18:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      f1c:	b12080e7          	jalr	-1262(ra) # 5a2a <printf>
+=======
+     f1c:	b1a080e7          	jalr	-1254(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      f20:	4505                	li	a0,1
      f22:	00004097          	auipc	ra,0x4
      f26:	788080e7          	jalr	1928(ra) # 56aa <exit>
      f2a:	85ca                	mv	a1,s2
      f2c:	00005517          	auipc	a0,0x5
-     f30:	67c50513          	addi	a0,a0,1660 # 65a8 <malloc+0xac0>
+     f30:	68450513          	addi	a0,a0,1668 # 65b0 <malloc+0xac0>
      f34:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      f38:	af6080e7          	jalr	-1290(ra) # 5a2a <printf>
+=======
+     f38:	afe080e7          	jalr	-1282(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      f3c:	4505                	li	a0,1
      f3e:	00004097          	auipc	ra,0x4
      f42:	76c080e7          	jalr	1900(ra) # 56aa <exit>
      f46:	85ca                	mv	a1,s2
      f48:	00005517          	auipc	a0,0x5
-     f4c:	69050513          	addi	a0,a0,1680 # 65d8 <malloc+0xaf0>
+     f4c:	69850513          	addi	a0,a0,1688 # 65e0 <malloc+0xaf0>
      f50:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
      f54:	ada080e7          	jalr	-1318(ra) # 5a2a <printf>
+=======
+     f54:	ae2080e7          	jalr	-1310(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      f58:	4505                	li	a0,1
      f5a:	00004097          	auipc	ra,0x4
      f5e:	750080e7          	jalr	1872(ra) # 56aa <exit>
@@ -1254,12 +1558,12 @@ Disassembly of section .text:
      f74:	0880                	addi	s0,sp,80
      f76:	89aa                	mv	s3,a0
      f78:	00005517          	auipc	a0,0x5
-     f7c:	68050513          	addi	a0,a0,1664 # 65f8 <malloc+0xb10>
+     f7c:	68850513          	addi	a0,a0,1672 # 6600 <malloc+0xb10>
      f80:	00004097          	auipc	ra,0x4
      f84:	77a080e7          	jalr	1914(ra) # 56fa <unlink>
      f88:	20000593          	li	a1,512
      f8c:	00005517          	auipc	a0,0x5
-     f90:	66c50513          	addi	a0,a0,1644 # 65f8 <malloc+0xb10>
+     f90:	67450513          	addi	a0,a0,1652 # 6600 <malloc+0xb10>
      f94:	00004097          	auipc	ra,0x4
      f98:	756080e7          	jalr	1878(ra) # 56ea <open>
      f9c:	0c054963          	bltz	a0,106e <bigdir+0x10c>
@@ -1268,7 +1572,12 @@ Disassembly of section .text:
      fa8:	4901                	li	s2,0
      faa:	07800a93          	li	s5,120
      fae:	00005a17          	auipc	s4,0x5
+<<<<<<< HEAD
      fb2:	64aa0a13          	addi	s4,s4,1610 # 65f8 <malloc+0xb10>
+=======
+     fb2:	652a0a13          	addi	s4,s4,1618 # 6600 <malloc+0xb10>
+  for(i = 0; i < N; i++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
      fb6:	1f400b13          	li	s6,500
      fba:	fb540823          	sb	s5,-80(s0)
      fbe:	41f9579b          	sraiw	a5,s2,0x1f
@@ -1291,7 +1600,7 @@ Disassembly of section .text:
      ffa:	2905                	addiw	s2,s2,1
      ffc:	fb691fe3          	bne	s2,s6,fba <bigdir+0x58>
     1000:	00005517          	auipc	a0,0x5
-    1004:	5f850513          	addi	a0,a0,1528 # 65f8 <malloc+0xb10>
+    1004:	60050513          	addi	a0,a0,1536 # 6600 <malloc+0xb10>
     1008:	00004097          	auipc	ra,0x4
     100c:	6f2080e7          	jalr	1778(ra) # 56fa <unlink>
     1010:	07800913          	li	s2,120
@@ -1326,26 +1635,41 @@ Disassembly of section .text:
     106c:	8082                	ret
     106e:	85ce                	mv	a1,s3
     1070:	00005517          	auipc	a0,0x5
-    1074:	59050513          	addi	a0,a0,1424 # 6600 <malloc+0xb18>
+    1074:	59850513          	addi	a0,a0,1432 # 6608 <malloc+0xb18>
     1078:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
     107c:	9b2080e7          	jalr	-1614(ra) # 5a2a <printf>
+=======
+    107c:	9ba080e7          	jalr	-1606(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1080:	4505                	li	a0,1
     1082:	00004097          	auipc	ra,0x4
     1086:	628080e7          	jalr	1576(ra) # 56aa <exit>
     108a:	fb040613          	addi	a2,s0,-80
     108e:	85ce                	mv	a1,s3
     1090:	00005517          	auipc	a0,0x5
-    1094:	59050513          	addi	a0,a0,1424 # 6620 <malloc+0xb38>
+    1094:	59850513          	addi	a0,a0,1432 # 6628 <malloc+0xb38>
     1098:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
     109c:	992080e7          	jalr	-1646(ra) # 5a2a <printf>
+=======
+    109c:	99a080e7          	jalr	-1638(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     10a0:	4505                	li	a0,1
     10a2:	00004097          	auipc	ra,0x4
     10a6:	608080e7          	jalr	1544(ra) # 56aa <exit>
     10aa:	85ce                	mv	a1,s3
     10ac:	00005517          	auipc	a0,0x5
-    10b0:	59450513          	addi	a0,a0,1428 # 6640 <malloc+0xb58>
+    10b0:	59c50513          	addi	a0,a0,1436 # 6648 <malloc+0xb58>
     10b4:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
     10b8:	976080e7          	jalr	-1674(ra) # 5a2a <printf>
+=======
+    10b8:	97e080e7          	jalr	-1666(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     10bc:	4505                	li	a0,1
     10be:	00004097          	auipc	ra,0x4
     10c2:	5ec080e7          	jalr	1516(ra) # 56aa <exit>
@@ -1364,7 +1688,7 @@ Disassembly of section .text:
     10da:	8b2a                	mv	s6,a0
     10dc:	4481                	li	s1,0
     10de:	00005997          	auipc	s3,0x5
-    10e2:	58298993          	addi	s3,s3,1410 # 6660 <malloc+0xb78>
+    10e2:	58a98993          	addi	s3,s3,1418 # 6668 <malloc+0xb78>
     10e6:	597d                	li	s2,-1
     10e8:	6a85                	lui	s5,0x1
     10ea:	00114a37          	lui	s4,0x114
@@ -1387,9 +1711,14 @@ Disassembly of section .text:
     1116:	8082                	ret
     1118:	85da                	mv	a1,s6
     111a:	00005517          	auipc	a0,0x5
-    111e:	55650513          	addi	a0,a0,1366 # 6670 <malloc+0xb88>
+    111e:	55e50513          	addi	a0,a0,1374 # 6678 <malloc+0xb88>
     1122:	00005097          	auipc	ra,0x5
+<<<<<<< HEAD
     1126:	908080e7          	jalr	-1784(ra) # 5a2a <printf>
+=======
+    1126:	910080e7          	jalr	-1776(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     112a:	4505                	li	a0,1
     112c:	00004097          	auipc	ra,0x4
     1130:	57e080e7          	jalr	1406(ra) # 56aa <exit>
@@ -1402,7 +1731,7 @@ Disassembly of section .text:
     113c:	1800                	addi	s0,sp,48
     113e:	fc043c23          	sd	zero,-40(s0)
     1142:	00007497          	auipc	s1,0x7
-    1146:	20e4b483          	ld	s1,526(s1) # 8350 <__SDATA_BEGIN__>
+    1146:	2164b483          	ld	s1,534(s1) # 8358 <__SDATA_BEGIN__>
     114a:	fd840593          	addi	a1,s0,-40
     114e:	8526                	mv	a0,s1
     1150:	00004097          	auipc	ra,0x4
@@ -1423,11 +1752,23 @@ Disassembly of section .text:
     1176:	ec4e                	sd	s3,24(sp)
     1178:	0080                	addi	s0,sp,64
     117a:	64b1                	lui	s1,0xc
+<<<<<<< HEAD
     117c:	35048493          	addi	s1,s1,848 # c350 <buf+0x7d0>
+=======
+    117c:	35048493          	addi	s1,s1,848 # c350 <buf+0x7c8>
+  for(int i = 0; i < 50000; i++){
+    char *argv[2];
+    argv[0] = (char*)0xffffffff;
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1180:	597d                	li	s2,-1
     1182:	02095913          	srli	s2,s2,0x20
     1186:	00005997          	auipc	s3,0x5
+<<<<<<< HEAD
     118a:	db298993          	addi	s3,s3,-590 # 5f38 <malloc+0x450>
+=======
+    118a:	dba98993          	addi	s3,s3,-582 # 5f40 <malloc+0x450>
+    argv[0] = (char*)0xffffffff;
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     118e:	fd243023          	sd	s2,-64(s0)
     1192:	fc043423          	sd	zero,-56(s0)
     1196:	fc040593          	addi	a1,s0,-64
@@ -1470,7 +1811,7 @@ Disassembly of section .text:
     120a:	57fd                	li	a5,-1
     120c:	0ef51b63          	bne	a0,a5,1302 <copyinstr2+0x150>
     1210:	00006797          	auipc	a5,0x6
-    1214:	63078793          	addi	a5,a5,1584 # 7840 <malloc+0x1d58>
+    1214:	63878793          	addi	a5,a5,1592 # 7848 <malloc+0x1d58>
     1218:	f4f43c23          	sd	a5,-168(s0)
     121c:	f6043023          	sd	zero,-160(s0)
     1220:	f5840593          	addi	a1,s0,-168
@@ -1484,17 +1825,27 @@ Disassembly of section .text:
     123e:	10054363          	bltz	a0,1344 <copyinstr2+0x192>
     1242:	12051463          	bnez	a0,136a <copyinstr2+0x1b8>
     1246:	00007797          	auipc	a5,0x7
-    124a:	22278793          	addi	a5,a5,546 # 8468 <big.1267>
+    124a:	22a78793          	addi	a5,a5,554 # 8470 <big.1269>
     124e:	00008697          	auipc	a3,0x8
+<<<<<<< HEAD
     1252:	21a68693          	addi	a3,a3,538 # 9468 <__global_pointer$+0x918>
+=======
+    1252:	22268693          	addi	a3,a3,546 # 9470 <__global_pointer$+0x918>
+      big[i] = 'x';
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1256:	07800713          	li	a4,120
     125a:	00e78023          	sb	a4,0(a5)
     125e:	0785                	addi	a5,a5,1
     1260:	fed79de3          	bne	a5,a3,125a <copyinstr2+0xa8>
     1264:	00008797          	auipc	a5,0x8
+<<<<<<< HEAD
     1268:	20078223          	sb	zero,516(a5) # 9468 <__global_pointer$+0x918>
+=======
+    1268:	20078623          	sb	zero,524(a5) # 9470 <__global_pointer$+0x918>
+    char *args2[] = { big, big, big, 0 };
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     126c:	00007797          	auipc	a5,0x7
-    1270:	ce478793          	addi	a5,a5,-796 # 7f50 <malloc+0x2468>
+    1270:	cec78793          	addi	a5,a5,-788 # 7f58 <malloc+0x2468>
     1274:	6390                	ld	a2,0(a5)
     1276:	6794                	ld	a3,8(a5)
     1278:	6b98                	ld	a4,16(a5)
@@ -1505,34 +1856,49 @@ Disassembly of section .text:
     1288:	f4f43423          	sd	a5,-184(s0)
     128c:	f3040593          	addi	a1,s0,-208
     1290:	00005517          	auipc	a0,0x5
-    1294:	ca850513          	addi	a0,a0,-856 # 5f38 <malloc+0x450>
+    1294:	cb050513          	addi	a0,a0,-848 # 5f40 <malloc+0x450>
     1298:	00004097          	auipc	ra,0x4
     129c:	44a080e7          	jalr	1098(ra) # 56e2 <exec>
     12a0:	57fd                	li	a5,-1
     12a2:	0af50e63          	beq	a0,a5,135e <copyinstr2+0x1ac>
     12a6:	55fd                	li	a1,-1
     12a8:	00005517          	auipc	a0,0x5
-    12ac:	47050513          	addi	a0,a0,1136 # 6718 <malloc+0xc30>
+    12ac:	47850513          	addi	a0,a0,1144 # 6720 <malloc+0xc30>
     12b0:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     12b4:	77a080e7          	jalr	1914(ra) # 5a2a <printf>
+=======
+    12b4:	782080e7          	jalr	1922(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     12b8:	4505                	li	a0,1
     12ba:	00004097          	auipc	ra,0x4
     12be:	3f0080e7          	jalr	1008(ra) # 56aa <exit>
     12c2:	862a                	mv	a2,a0
     12c4:	f6840593          	addi	a1,s0,-152
     12c8:	00005517          	auipc	a0,0x5
-    12cc:	3c850513          	addi	a0,a0,968 # 6690 <malloc+0xba8>
+    12cc:	3d050513          	addi	a0,a0,976 # 6698 <malloc+0xba8>
     12d0:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     12d4:	75a080e7          	jalr	1882(ra) # 5a2a <printf>
+=======
+    12d4:	762080e7          	jalr	1890(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     12d8:	4505                	li	a0,1
     12da:	00004097          	auipc	ra,0x4
     12de:	3d0080e7          	jalr	976(ra) # 56aa <exit>
     12e2:	862a                	mv	a2,a0
     12e4:	f6840593          	addi	a1,s0,-152
     12e8:	00005517          	auipc	a0,0x5
-    12ec:	3c850513          	addi	a0,a0,968 # 66b0 <malloc+0xbc8>
+    12ec:	3d050513          	addi	a0,a0,976 # 66b8 <malloc+0xbc8>
     12f0:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     12f4:	73a080e7          	jalr	1850(ra) # 5a2a <printf>
+=======
+    12f4:	742080e7          	jalr	1858(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     12f8:	4505                	li	a0,1
     12fa:	00004097          	auipc	ra,0x4
     12fe:	3b0080e7          	jalr	944(ra) # 56aa <exit>
@@ -1540,25 +1906,40 @@ Disassembly of section .text:
     1304:	f6840613          	addi	a2,s0,-152
     1308:	85b2                	mv	a1,a2
     130a:	00005517          	auipc	a0,0x5
-    130e:	3c650513          	addi	a0,a0,966 # 66d0 <malloc+0xbe8>
+    130e:	3ce50513          	addi	a0,a0,974 # 66d8 <malloc+0xbe8>
     1312:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1316:	718080e7          	jalr	1816(ra) # 5a2a <printf>
+=======
+    1316:	720080e7          	jalr	1824(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     131a:	4505                	li	a0,1
     131c:	00004097          	auipc	ra,0x4
     1320:	38e080e7          	jalr	910(ra) # 56aa <exit>
     1324:	567d                	li	a2,-1
     1326:	f6840593          	addi	a1,s0,-152
     132a:	00005517          	auipc	a0,0x5
-    132e:	3ce50513          	addi	a0,a0,974 # 66f8 <malloc+0xc10>
+    132e:	3d650513          	addi	a0,a0,982 # 6700 <malloc+0xc10>
     1332:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1336:	6f8080e7          	jalr	1784(ra) # 5a2a <printf>
+=======
+    1336:	700080e7          	jalr	1792(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     133a:	4505                	li	a0,1
     133c:	00004097          	auipc	ra,0x4
     1340:	36e080e7          	jalr	878(ra) # 56aa <exit>
     1344:	00006517          	auipc	a0,0x6
-    1348:	83450513          	addi	a0,a0,-1996 # 6b78 <malloc+0x1090>
+    1348:	83c50513          	addi	a0,a0,-1988 # 6b80 <malloc+0x1090>
     134c:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1350:	6de080e7          	jalr	1758(ra) # 5a2a <printf>
+=======
+    1350:	6e6080e7          	jalr	1766(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1354:	4505                	li	a0,1
     1356:	00004097          	auipc	ra,0x4
     135a:	354080e7          	jalr	852(ra) # 56aa <exit>
@@ -1577,9 +1958,14 @@ Disassembly of section .text:
     138a:	6169                	addi	sp,sp,208
     138c:	8082                	ret
     138e:	00005517          	auipc	a0,0x5
-    1392:	3b250513          	addi	a0,a0,946 # 6740 <malloc+0xc58>
+    1392:	3ba50513          	addi	a0,a0,954 # 6748 <malloc+0xc58>
     1396:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     139a:	694080e7          	jalr	1684(ra) # 5a2a <printf>
+=======
+    139a:	69c080e7          	jalr	1692(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     139e:	4505                	li	a0,1
     13a0:	00004097          	auipc	ra,0x4
     13a4:	30a080e7          	jalr	778(ra) # 56aa <exit>
@@ -1597,7 +1983,7 @@ Disassembly of section .text:
     13ba:	892a                	mv	s2,a0
     13bc:	60100593          	li	a1,1537
     13c0:	00005517          	auipc	a0,0x5
-    13c4:	bd050513          	addi	a0,a0,-1072 # 5f90 <malloc+0x4a8>
+    13c4:	bd850513          	addi	a0,a0,-1064 # 5f98 <malloc+0x4a8>
     13c8:	00004097          	auipc	ra,0x4
     13cc:	322080e7          	jalr	802(ra) # 56ea <open>
     13d0:	00004097          	auipc	ra,0x4
@@ -1608,9 +1994,17 @@ Disassembly of section .text:
     13e4:	e969                	bnez	a0,14b6 <truncate3+0x10e>
     13e6:	06400993          	li	s3,100
     13ea:	00005a17          	auipc	s4,0x5
+<<<<<<< HEAD
     13ee:	ba6a0a13          	addi	s4,s4,-1114 # 5f90 <malloc+0x4a8>
     13f2:	00005a97          	auipc	s5,0x5
     13f6:	3aea8a93          	addi	s5,s5,942 # 67a0 <malloc+0xcb8>
+=======
+    13ee:	baea0a13          	addi	s4,s4,-1106 # 5f98 <malloc+0x4a8>
+      int n = write(fd, "1234567890", 10);
+    13f2:	00005a97          	auipc	s5,0x5
+    13f6:	3b6a8a93          	addi	s5,s5,950 # 67a8 <malloc+0xcb8>
+      int fd = open("truncfile", O_WRONLY);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     13fa:	4585                	li	a1,1
     13fc:	8552                	mv	a0,s4
     13fe:	00004097          	auipc	ra,0x4
@@ -1645,34 +2039,57 @@ Disassembly of section .text:
     145c:	252080e7          	jalr	594(ra) # 56aa <exit>
     1460:	85ca                	mv	a1,s2
     1462:	00005517          	auipc	a0,0x5
-    1466:	30e50513          	addi	a0,a0,782 # 6770 <malloc+0xc88>
+    1466:	31650513          	addi	a0,a0,790 # 6778 <malloc+0xc88>
     146a:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     146e:	5c0080e7          	jalr	1472(ra) # 5a2a <printf>
+=======
+    146e:	5c8080e7          	jalr	1480(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1472:	4505                	li	a0,1
     1474:	00004097          	auipc	ra,0x4
     1478:	236080e7          	jalr	566(ra) # 56aa <exit>
     147c:	85ca                	mv	a1,s2
     147e:	00005517          	auipc	a0,0x5
-    1482:	30a50513          	addi	a0,a0,778 # 6788 <malloc+0xca0>
+    1482:	31250513          	addi	a0,a0,786 # 6790 <malloc+0xca0>
     1486:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     148a:	5a4080e7          	jalr	1444(ra) # 5a2a <printf>
+=======
+    148a:	5ac080e7          	jalr	1452(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     148e:	4505                	li	a0,1
     1490:	00004097          	auipc	ra,0x4
     1494:	21a080e7          	jalr	538(ra) # 56aa <exit>
     1498:	862a                	mv	a2,a0
     149a:	85ca                	mv	a1,s2
     149c:	00005517          	auipc	a0,0x5
-    14a0:	31450513          	addi	a0,a0,788 # 67b0 <malloc+0xcc8>
+    14a0:	31c50513          	addi	a0,a0,796 # 67b8 <malloc+0xcc8>
     14a4:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     14a8:	586080e7          	jalr	1414(ra) # 5a2a <printf>
+=======
+    14a8:	58e080e7          	jalr	1422(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     14ac:	4505                	li	a0,1
     14ae:	00004097          	auipc	ra,0x4
     14b2:	1fc080e7          	jalr	508(ra) # 56aa <exit>
     14b6:	09600993          	li	s3,150
     14ba:	00005a17          	auipc	s4,0x5
+<<<<<<< HEAD
     14be:	ad6a0a13          	addi	s4,s4,-1322 # 5f90 <malloc+0x4a8>
     14c2:	00005a97          	auipc	s5,0x5
     14c6:	30ea8a93          	addi	s5,s5,782 # 67d0 <malloc+0xce8>
+=======
+    14be:	adea0a13          	addi	s4,s4,-1314 # 5f98 <malloc+0x4a8>
+    int n = write(fd, "xxx", 3);
+    14c2:	00005a97          	auipc	s5,0x5
+    14c6:	316a8a93          	addi	s5,s5,790 # 67d8 <malloc+0xce8>
+    int fd = open("truncfile", O_CREATE|O_WRONLY|O_TRUNC);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     14ca:	60100593          	li	a1,1537
     14ce:	8552                	mv	a0,s4
     14d0:	00004097          	auipc	ra,0x4
@@ -1694,7 +2111,7 @@ Disassembly of section .text:
     1504:	00004097          	auipc	ra,0x4
     1508:	1ae080e7          	jalr	430(ra) # 56b2 <wait>
     150c:	00005517          	auipc	a0,0x5
-    1510:	a8450513          	addi	a0,a0,-1404 # 5f90 <malloc+0x4a8>
+    1510:	a8c50513          	addi	a0,a0,-1396 # 5f98 <malloc+0x4a8>
     1514:	00004097          	auipc	ra,0x4
     1518:	1e6080e7          	jalr	486(ra) # 56fa <unlink>
     151c:	fbc42503          	lw	a0,-68(s0)
@@ -1702,18 +2119,28 @@ Disassembly of section .text:
     1524:	18a080e7          	jalr	394(ra) # 56aa <exit>
     1528:	85ca                	mv	a1,s2
     152a:	00005517          	auipc	a0,0x5
-    152e:	25e50513          	addi	a0,a0,606 # 6788 <malloc+0xca0>
+    152e:	26650513          	addi	a0,a0,614 # 6790 <malloc+0xca0>
     1532:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1536:	4f8080e7          	jalr	1272(ra) # 5a2a <printf>
+=======
+    1536:	500080e7          	jalr	1280(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     153a:	4505                	li	a0,1
     153c:	00004097          	auipc	ra,0x4
     1540:	16e080e7          	jalr	366(ra) # 56aa <exit>
     1544:	862a                	mv	a2,a0
     1546:	85ca                	mv	a1,s2
     1548:	00005517          	auipc	a0,0x5
-    154c:	29050513          	addi	a0,a0,656 # 67d8 <malloc+0xcf0>
+    154c:	29850513          	addi	a0,a0,664 # 67e0 <malloc+0xcf0>
     1550:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1554:	4da080e7          	jalr	1242(ra) # 5a2a <printf>
+=======
+    1554:	4e2080e7          	jalr	1250(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1558:	4505                	li	a0,1
     155a:	00004097          	auipc	ra,0x4
     155e:	150080e7          	jalr	336(ra) # 56aa <exit>
@@ -1727,14 +2154,14 @@ Disassembly of section .text:
     156c:	0880                	addi	s0,sp,80
     156e:	892a                	mv	s2,a0
     1570:	00005797          	auipc	a5,0x5
-    1574:	9c878793          	addi	a5,a5,-1592 # 5f38 <malloc+0x450>
+    1574:	9d078793          	addi	a5,a5,-1584 # 5f40 <malloc+0x450>
     1578:	fcf43023          	sd	a5,-64(s0)
     157c:	00005797          	auipc	a5,0x5
-    1580:	27c78793          	addi	a5,a5,636 # 67f8 <malloc+0xd10>
+    1580:	28478793          	addi	a5,a5,644 # 6800 <malloc+0xd10>
     1584:	fcf43423          	sd	a5,-56(s0)
     1588:	fc043823          	sd	zero,-48(s0)
     158c:	00005517          	auipc	a0,0x5
-    1590:	27450513          	addi	a0,a0,628 # 6800 <malloc+0xd18>
+    1590:	27c50513          	addi	a0,a0,636 # 6808 <malloc+0xd18>
     1594:	00004097          	auipc	ra,0x4
     1598:	166080e7          	jalr	358(ra) # 56fa <unlink>
     159c:	00004097          	auipc	ra,0x4
@@ -1747,7 +2174,7 @@ Disassembly of section .text:
     15b2:	124080e7          	jalr	292(ra) # 56d2 <close>
     15b6:	20100593          	li	a1,513
     15ba:	00005517          	auipc	a0,0x5
-    15be:	24650513          	addi	a0,a0,582 # 6800 <malloc+0xd18>
+    15be:	24e50513          	addi	a0,a0,590 # 6808 <malloc+0xd18>
     15c2:	00004097          	auipc	ra,0x4
     15c6:	128080e7          	jalr	296(ra) # 56ea <open>
     15ca:	04054163          	bltz	a0,160c <exectest+0xaa>
@@ -1755,31 +2182,46 @@ Disassembly of section .text:
     15d0:	04f50c63          	beq	a0,a5,1628 <exectest+0xc6>
     15d4:	85ca                	mv	a1,s2
     15d6:	00005517          	auipc	a0,0x5
-    15da:	24a50513          	addi	a0,a0,586 # 6820 <malloc+0xd38>
+    15da:	25250513          	addi	a0,a0,594 # 6828 <malloc+0xd38>
     15de:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     15e2:	44c080e7          	jalr	1100(ra) # 5a2a <printf>
+=======
+    15e2:	454080e7          	jalr	1108(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     15e6:	4505                	li	a0,1
     15e8:	00004097          	auipc	ra,0x4
     15ec:	0c2080e7          	jalr	194(ra) # 56aa <exit>
     15f0:	85ca                	mv	a1,s2
     15f2:	00005517          	auipc	a0,0x5
-    15f6:	17e50513          	addi	a0,a0,382 # 6770 <malloc+0xc88>
+    15f6:	18650513          	addi	a0,a0,390 # 6778 <malloc+0xc88>
     15fa:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     15fe:	430080e7          	jalr	1072(ra) # 5a2a <printf>
+=======
+    15fe:	438080e7          	jalr	1080(ra) # 5a32 <printf>
+     exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1602:	4505                	li	a0,1
     1604:	00004097          	auipc	ra,0x4
     1608:	0a6080e7          	jalr	166(ra) # 56aa <exit>
     160c:	85ca                	mv	a1,s2
     160e:	00005517          	auipc	a0,0x5
-    1612:	1fa50513          	addi	a0,a0,506 # 6808 <malloc+0xd20>
+    1612:	20250513          	addi	a0,a0,514 # 6810 <malloc+0xd20>
     1616:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     161a:	414080e7          	jalr	1044(ra) # 5a2a <printf>
+=======
+    161a:	41c080e7          	jalr	1052(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     161e:	4505                	li	a0,1
     1620:	00004097          	auipc	ra,0x4
     1624:	08a080e7          	jalr	138(ra) # 56aa <exit>
     1628:	fc040593          	addi	a1,s0,-64
     162c:	00005517          	auipc	a0,0x5
-    1630:	90c50513          	addi	a0,a0,-1780 # 5f38 <malloc+0x450>
+    1630:	91450513          	addi	a0,a0,-1772 # 5f40 <malloc+0x450>
     1634:	00004097          	auipc	ra,0x4
     1638:	0ae080e7          	jalr	174(ra) # 56e2 <exec>
     163c:	02054163          	bltz	a0,165e <exectest+0xfc>
@@ -1793,21 +2235,26 @@ Disassembly of section .text:
     165a:	054080e7          	jalr	84(ra) # 56aa <exit>
     165e:	85ca                	mv	a1,s2
     1660:	00005517          	auipc	a0,0x5
-    1664:	1d050513          	addi	a0,a0,464 # 6830 <malloc+0xd48>
+    1664:	1d850513          	addi	a0,a0,472 # 6838 <malloc+0xd48>
     1668:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     166c:	3c2080e7          	jalr	962(ra) # 5a2a <printf>
+=======
+    166c:	3ca080e7          	jalr	970(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1670:	4505                	li	a0,1
     1672:	00004097          	auipc	ra,0x4
     1676:	038080e7          	jalr	56(ra) # 56aa <exit>
     167a:	85ca                	mv	a1,s2
     167c:	00005517          	auipc	a0,0x5
-    1680:	1cc50513          	addi	a0,a0,460 # 6848 <malloc+0xd60>
+    1680:	1d450513          	addi	a0,a0,468 # 6850 <malloc+0xd60>
     1684:	00004097          	auipc	ra,0x4
-    1688:	3a6080e7          	jalr	934(ra) # 5a2a <printf>
+    1688:	3ae080e7          	jalr	942(ra) # 5a32 <printf>
     168c:	b7d1                	j	1650 <exectest+0xee>
     168e:	4581                	li	a1,0
     1690:	00005517          	auipc	a0,0x5
-    1694:	17050513          	addi	a0,a0,368 # 6800 <malloc+0xd18>
+    1694:	17850513          	addi	a0,a0,376 # 6808 <malloc+0xd18>
     1698:	00004097          	auipc	ra,0x4
     169c:	052080e7          	jalr	82(ra) # 56ea <open>
     16a0:	02054a63          	bltz	a0,16d4 <exectest+0x172>
@@ -1819,22 +2266,32 @@ Disassembly of section .text:
     16b4:	02f50e63          	beq	a0,a5,16f0 <exectest+0x18e>
     16b8:	85ca                	mv	a1,s2
     16ba:	00005517          	auipc	a0,0x5
-    16be:	c0e50513          	addi	a0,a0,-1010 # 62c8 <malloc+0x7e0>
+    16be:	c1650513          	addi	a0,a0,-1002 # 62d0 <malloc+0x7e0>
     16c2:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     16c6:	368080e7          	jalr	872(ra) # 5a2a <printf>
+=======
+    16c6:	370080e7          	jalr	880(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     16ca:	4505                	li	a0,1
     16cc:	00004097          	auipc	ra,0x4
     16d0:	fde080e7          	jalr	-34(ra) # 56aa <exit>
     16d4:	85ca                	mv	a1,s2
     16d6:	00005517          	auipc	a0,0x5
-    16da:	0b250513          	addi	a0,a0,178 # 6788 <malloc+0xca0>
+    16da:	0ba50513          	addi	a0,a0,186 # 6790 <malloc+0xca0>
     16de:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     16e2:	34c080e7          	jalr	844(ra) # 5a2a <printf>
+=======
+    16e2:	354080e7          	jalr	852(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     16e6:	4505                	li	a0,1
     16e8:	00004097          	auipc	ra,0x4
     16ec:	fc2080e7          	jalr	-62(ra) # 56aa <exit>
     16f0:	00005517          	auipc	a0,0x5
-    16f4:	11050513          	addi	a0,a0,272 # 6800 <malloc+0xd18>
+    16f4:	11850513          	addi	a0,a0,280 # 6808 <malloc+0xd18>
     16f8:	00004097          	auipc	ra,0x4
     16fc:	002080e7          	jalr	2(ra) # 56fa <unlink>
     1700:	fb844703          	lbu	a4,-72(s0)
@@ -1845,9 +2302,14 @@ Disassembly of section .text:
     1714:	02f70063          	beq	a4,a5,1734 <exectest+0x1d2>
     1718:	85ca                	mv	a1,s2
     171a:	00005517          	auipc	a0,0x5
-    171e:	14650513          	addi	a0,a0,326 # 6860 <malloc+0xd78>
+    171e:	14e50513          	addi	a0,a0,334 # 6868 <malloc+0xd78>
     1722:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1726:	308080e7          	jalr	776(ra) # 5a2a <printf>
+=======
+    1726:	310080e7          	jalr	784(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     172a:	4505                	li	a0,1
     172c:	00004097          	auipc	ra,0x4
     1730:	f7e080e7          	jalr	-130(ra) # 56aa <exit>
@@ -1884,7 +2346,12 @@ Disassembly of section .text:
     1782:	8a26                	mv	s4,s1
     1784:	4985                	li	s3,1
     1786:	0000aa97          	auipc	s5,0xa
+<<<<<<< HEAD
     178a:	3faa8a93          	addi	s5,s5,1018 # bb80 <buf>
+=======
+    178a:	402a8a93          	addi	s5,s5,1026 # bb88 <buf>
+      if(cc > sizeof(buf))
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     178e:	6b0d                	lui	s6,0x3
     1790:	864e                	mv	a2,s3
     1792:	85d6                	mv	a1,s5
@@ -1893,7 +2360,7 @@ Disassembly of section .text:
     179c:	f2a080e7          	jalr	-214(ra) # 56c2 <read>
     17a0:	10a05263          	blez	a0,18a4 <pipe1+0x166>
     17a4:	0000a717          	auipc	a4,0xa
-    17a8:	3dc70713          	addi	a4,a4,988 # bb80 <buf>
+    17a8:	3e470713          	addi	a4,a4,996 # bb88 <buf>
     17ac:	00a4863b          	addw	a2,s1,a0
     17b0:	00074683          	lbu	a3,0(a4)
     17b4:	0ff4f793          	andi	a5,s1,255
@@ -1910,9 +2377,14 @@ Disassembly of section .text:
     17d8:	bf65                	j	1790 <pipe1+0x52>
     17da:	85ca                	mv	a1,s2
     17dc:	00005517          	auipc	a0,0x5
-    17e0:	09c50513          	addi	a0,a0,156 # 6878 <malloc+0xd90>
+    17e0:	0a450513          	addi	a0,a0,164 # 6880 <malloc+0xd90>
     17e4:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     17e8:	246080e7          	jalr	582(ra) # 5a2a <printf>
+=======
+    17e8:	24e080e7          	jalr	590(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     17ec:	4505                	li	a0,1
     17ee:	00004097          	auipc	ra,0x4
     17f2:	ebc080e7          	jalr	-324(ra) # 56aa <exit>
@@ -1920,7 +2392,7 @@ Disassembly of section .text:
     17fa:	00004097          	auipc	ra,0x4
     17fe:	ed8080e7          	jalr	-296(ra) # 56d2 <close>
     1802:	0000ab17          	auipc	s6,0xa
-    1806:	37eb0b13          	addi	s6,s6,894 # bb80 <buf>
+    1806:	386b0b13          	addi	s6,s6,902 # bb88 <buf>
     180a:	416004bb          	negw	s1,s6
     180e:	0ff4f493          	andi	s1,s1,255
     1812:	409b0993          	addi	s3,s6,1033
@@ -1948,17 +2420,27 @@ Disassembly of section .text:
     185c:	e52080e7          	jalr	-430(ra) # 56aa <exit>
     1860:	85ca                	mv	a1,s2
     1862:	00005517          	auipc	a0,0x5
-    1866:	02e50513          	addi	a0,a0,46 # 6890 <malloc+0xda8>
+    1866:	03650513          	addi	a0,a0,54 # 6898 <malloc+0xda8>
     186a:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     186e:	1c0080e7          	jalr	448(ra) # 5a2a <printf>
+=======
+    186e:	1c8080e7          	jalr	456(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1872:	4505                	li	a0,1
     1874:	00004097          	auipc	ra,0x4
     1878:	e36080e7          	jalr	-458(ra) # 56aa <exit>
     187c:	85ca                	mv	a1,s2
     187e:	00005517          	auipc	a0,0x5
-    1882:	02a50513          	addi	a0,a0,42 # 68a8 <malloc+0xdc0>
+    1882:	03250513          	addi	a0,a0,50 # 68b0 <malloc+0xdc0>
     1886:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     188a:	1a4080e7          	jalr	420(ra) # 5a2a <printf>
+=======
+    188a:	1ac080e7          	jalr	428(ra) # 5a32 <printf>
+}
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     188e:	60e6                	ld	ra,88(sp)
     1890:	6446                	ld	s0,80(sp)
     1892:	64a6                	ld	s1,72(sp)
@@ -1975,9 +2457,14 @@ Disassembly of section .text:
     18aa:	02fa0063          	beq	s4,a5,18ca <pipe1+0x18c>
     18ae:	85d2                	mv	a1,s4
     18b0:	00005517          	auipc	a0,0x5
-    18b4:	01050513          	addi	a0,a0,16 # 68c0 <malloc+0xdd8>
+    18b4:	01850513          	addi	a0,a0,24 # 68c8 <malloc+0xdd8>
     18b8:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     18bc:	172080e7          	jalr	370(ra) # 5a2a <printf>
+=======
+    18bc:	17a080e7          	jalr	378(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     18c0:	4505                	li	a0,1
     18c2:	00004097          	auipc	ra,0x4
     18c6:	de8080e7          	jalr	-536(ra) # 56aa <exit>
@@ -1992,9 +2479,14 @@ Disassembly of section .text:
     18ea:	dc4080e7          	jalr	-572(ra) # 56aa <exit>
     18ee:	85ca                	mv	a1,s2
     18f0:	00005517          	auipc	a0,0x5
-    18f4:	ff050513          	addi	a0,a0,-16 # 68e0 <malloc+0xdf8>
+    18f4:	ff850513          	addi	a0,a0,-8 # 68e8 <malloc+0xdf8>
     18f8:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     18fc:	132080e7          	jalr	306(ra) # 5a2a <printf>
+=======
+    18fc:	13a080e7          	jalr	314(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1900:	4505                	li	a0,1
     1902:	00004097          	auipc	ra,0x4
     1906:	da8080e7          	jalr	-600(ra) # 56aa <exit>
@@ -2034,25 +2526,40 @@ Disassembly of section .text:
     195e:	8082                	ret
     1960:	85d2                	mv	a1,s4
     1962:	00005517          	auipc	a0,0x5
-    1966:	e0e50513          	addi	a0,a0,-498 # 6770 <malloc+0xc88>
+    1966:	e1650513          	addi	a0,a0,-490 # 6778 <malloc+0xc88>
     196a:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     196e:	0c0080e7          	jalr	192(ra) # 5a2a <printf>
+=======
+    196e:	0c8080e7          	jalr	200(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1972:	4505                	li	a0,1
     1974:	00004097          	auipc	ra,0x4
     1978:	d36080e7          	jalr	-714(ra) # 56aa <exit>
     197c:	85d2                	mv	a1,s4
     197e:	00005517          	auipc	a0,0x5
-    1982:	f7a50513          	addi	a0,a0,-134 # 68f8 <malloc+0xe10>
+    1982:	f8250513          	addi	a0,a0,-126 # 6900 <malloc+0xe10>
     1986:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     198a:	0a4080e7          	jalr	164(ra) # 5a2a <printf>
+=======
+    198a:	0ac080e7          	jalr	172(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     198e:	4505                	li	a0,1
     1990:	00004097          	auipc	ra,0x4
     1994:	d1a080e7          	jalr	-742(ra) # 56aa <exit>
     1998:	85d2                	mv	a1,s4
     199a:	00005517          	auipc	a0,0x5
-    199e:	f7650513          	addi	a0,a0,-138 # 6910 <malloc+0xe28>
+    199e:	f7e50513          	addi	a0,a0,-130 # 6918 <malloc+0xe28>
     19a2:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     19a6:	088080e7          	jalr	136(ra) # 5a2a <printf>
+=======
+    19a6:	090080e7          	jalr	144(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     19aa:	4505                	li	a0,1
     19ac:	00004097          	auipc	ra,0x4
     19b0:	cfe080e7          	jalr	-770(ra) # 56aa <exit>
@@ -2093,9 +2600,14 @@ Disassembly of section .text:
     1a0e:	8082                	ret
     1a10:	85ca                	mv	a1,s2
     1a12:	00005517          	auipc	a0,0x5
-    1a16:	d5e50513          	addi	a0,a0,-674 # 6770 <malloc+0xc88>
+    1a16:	d6650513          	addi	a0,a0,-666 # 6778 <malloc+0xc88>
     1a1a:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1a1e:	010080e7          	jalr	16(ra) # 5a2a <printf>
+=======
+    1a1e:	018080e7          	jalr	24(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1a22:	4505                	li	a0,1
     1a24:	00004097          	auipc	ra,0x4
     1a28:	c86080e7          	jalr	-890(ra) # 56aa <exit>
@@ -2103,9 +2615,14 @@ Disassembly of section .text:
     1a30:	c7e080e7          	jalr	-898(ra) # 56aa <exit>
     1a34:	85ca                	mv	a1,s2
     1a36:	00005517          	auipc	a0,0x5
-    1a3a:	d3a50513          	addi	a0,a0,-710 # 6770 <malloc+0xc88>
+    1a3a:	d4250513          	addi	a0,a0,-702 # 6778 <malloc+0xc88>
     1a3e:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1a42:	fec080e7          	jalr	-20(ra) # 5a2a <printf>
+=======
+    1a42:	ff4080e7          	jalr	-12(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1a46:	4505                	li	a0,1
     1a48:	00004097          	auipc	ra,0x4
     1a4c:	c62080e7          	jalr	-926(ra) # 56aa <exit>
@@ -2144,9 +2661,14 @@ Disassembly of section .text:
     1aac:	8082                	ret
     1aae:	85a6                	mv	a1,s1
     1ab0:	00005517          	auipc	a0,0x5
-    1ab4:	e8050513          	addi	a0,a0,-384 # 6930 <malloc+0xe48>
+    1ab4:	e8850513          	addi	a0,a0,-376 # 6938 <malloc+0xe48>
     1ab8:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1abc:	f72080e7          	jalr	-142(ra) # 5a2a <printf>
+=======
+    1abc:	f7a080e7          	jalr	-134(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1ac0:	4505                	li	a0,1
     1ac2:	00004097          	auipc	ra,0x4
     1ac6:	be8080e7          	jalr	-1048(ra) # 56aa <exit>
@@ -2170,9 +2692,14 @@ Disassembly of section .text:
     1b02:	bac080e7          	jalr	-1108(ra) # 56aa <exit>
     1b06:	85a6                	mv	a1,s1
     1b08:	00005517          	auipc	a0,0x5
-    1b0c:	e3850513          	addi	a0,a0,-456 # 6940 <malloc+0xe58>
+    1b0c:	e4050513          	addi	a0,a0,-448 # 6948 <malloc+0xe58>
     1b10:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1b14:	f1a080e7          	jalr	-230(ra) # 5a2a <printf>
+=======
+    1b14:	f22080e7          	jalr	-222(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1b18:	4505                	li	a0,1
     1b1a:	00004097          	auipc	ra,0x4
     1b1e:	b90080e7          	jalr	-1136(ra) # 56aa <exit>
@@ -2197,9 +2724,14 @@ Disassembly of section .text:
     1b4e:	00004097          	auipc	ra,0x4
     1b52:	b5c080e7          	jalr	-1188(ra) # 56aa <exit>
     1b56:	00005517          	auipc	a0,0x5
-    1b5a:	02250513          	addi	a0,a0,34 # 6b78 <malloc+0x1090>
+    1b5a:	02a50513          	addi	a0,a0,42 # 6b80 <malloc+0x1090>
     1b5e:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1b62:	ecc080e7          	jalr	-308(ra) # 5a2a <printf>
+=======
+    1b62:	ed4080e7          	jalr	-300(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1b66:	4505                	li	a0,1
     1b68:	00004097          	auipc	ra,0x4
     1b6c:	b42080e7          	jalr	-1214(ra) # 56aa <exit>
@@ -2253,9 +2785,14 @@ Disassembly of section .text:
     1bf0:	a29d                	j	1d56 <createdelete+0x1cc>
     1bf2:	85e6                	mv	a1,s9
     1bf4:	00005517          	auipc	a0,0x5
-    1bf8:	f8450513          	addi	a0,a0,-124 # 6b78 <malloc+0x1090>
+    1bf8:	f8c50513          	addi	a0,a0,-116 # 6b80 <malloc+0x1090>
     1bfc:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1c00:	e2e080e7          	jalr	-466(ra) # 5a2a <printf>
+=======
+    1c00:	e36080e7          	jalr	-458(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1c04:	4505                	li	a0,1
     1c06:	00004097          	auipc	ra,0x4
     1c0a:	aa4080e7          	jalr	-1372(ra) # 56aa <exit>
@@ -2266,9 +2803,14 @@ Disassembly of section .text:
     1c1c:	a015                	j	1c40 <createdelete+0xb6>
     1c1e:	85e6                	mv	a1,s9
     1c20:	00005517          	auipc	a0,0x5
-    1c24:	be850513          	addi	a0,a0,-1048 # 6808 <malloc+0xd20>
+    1c24:	bf050513          	addi	a0,a0,-1040 # 6810 <malloc+0xd20>
     1c28:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1c2c:	e02080e7          	jalr	-510(ra) # 5a2a <printf>
+=======
+    1c2c:	e0a080e7          	jalr	-502(ra) # 5a32 <printf>
+          exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1c30:	4505                	li	a0,1
     1c32:	00004097          	auipc	ra,0x4
     1c36:	a78080e7          	jalr	-1416(ra) # 56aa <exit>
@@ -2297,9 +2839,14 @@ Disassembly of section .text:
     1c8c:	fa0557e3          	bgez	a0,1c3a <createdelete+0xb0>
     1c90:	85e6                	mv	a1,s9
     1c92:	00005517          	auipc	a0,0x5
-    1c96:	cce50513          	addi	a0,a0,-818 # 6960 <malloc+0xe78>
+    1c96:	cd650513          	addi	a0,a0,-810 # 6968 <malloc+0xe78>
     1c9a:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1c9e:	d90080e7          	jalr	-624(ra) # 5a2a <printf>
+=======
+    1c9e:	d98080e7          	jalr	-616(ra) # 5a32 <printf>
+            exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1ca2:	4505                	li	a0,1
     1ca4:	00004097          	auipc	ra,0x4
     1ca8:	a06080e7          	jalr	-1530(ra) # 56aa <exit>
@@ -2312,9 +2859,14 @@ Disassembly of section .text:
     1cc0:	f8040613          	addi	a2,s0,-128
     1cc4:	85e6                	mv	a1,s9
     1cc6:	00005517          	auipc	a0,0x5
-    1cca:	cb250513          	addi	a0,a0,-846 # 6978 <malloc+0xe90>
+    1cca:	cba50513          	addi	a0,a0,-838 # 6980 <malloc+0xe90>
     1cce:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1cd2:	d5c080e7          	jalr	-676(ra) # 5a2a <printf>
+=======
+    1cd2:	d64080e7          	jalr	-668(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1cd6:	4505                	li	a0,1
     1cd8:	00004097          	auipc	ra,0x4
     1cdc:	9d2080e7          	jalr	-1582(ra) # 56aa <exit>
@@ -2340,9 +2892,14 @@ Disassembly of section .text:
     1d26:	f8040613          	addi	a2,s0,-128
     1d2a:	85e6                	mv	a1,s9
     1d2c:	00005517          	auipc	a0,0x5
-    1d30:	c7450513          	addi	a0,a0,-908 # 69a0 <malloc+0xeb8>
+    1d30:	c7c50513          	addi	a0,a0,-900 # 69a8 <malloc+0xeb8>
     1d34:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1d38:	cf6080e7          	jalr	-778(ra) # 5a2a <printf>
+=======
+    1d38:	cfe080e7          	jalr	-770(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1d3c:	4505                	li	a0,1
     1d3e:	00004097          	auipc	ra,0x4
     1d42:	96c080e7          	jalr	-1684(ra) # 56aa <exit>
@@ -2403,7 +2960,7 @@ Disassembly of section .text:
     1dc8:	1080                	addi	s0,sp,96
     1dca:	84aa                	mv	s1,a0
     1dcc:	00004517          	auipc	a0,0x4
-    1dd0:	1dc50513          	addi	a0,a0,476 # 5fa8 <malloc+0x4c0>
+    1dd0:	1e450513          	addi	a0,a0,484 # 5fb0 <malloc+0x4c0>
     1dd4:	00004097          	auipc	ra,0x4
     1dd8:	926080e7          	jalr	-1754(ra) # 56fa <unlink>
     1ddc:	00004097          	auipc	ra,0x4
@@ -2421,15 +2978,25 @@ Disassembly of section .text:
     1e04:	4a0d                	li	s4,3
     1e06:	4b05                	li	s6,1
     1e08:	00004a97          	auipc	s5,0x4
+<<<<<<< HEAD
     1e0c:	1a0a8a93          	addi	s5,s5,416 # 5fa8 <malloc+0x4c0>
+=======
+    1e0c:	1a8a8a93          	addi	s5,s5,424 # 5fb0 <malloc+0x4c0>
+      link("cat", "x");
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1e10:	00005b97          	auipc	s7,0x5
-    1e14:	bb8b8b93          	addi	s7,s7,-1096 # 69c8 <malloc+0xee0>
+    1e14:	bc0b8b93          	addi	s7,s7,-1088 # 69d0 <malloc+0xee0>
     1e18:	a091                	j	1e5c <linkunlink+0xac>
     1e1a:	85a6                	mv	a1,s1
     1e1c:	00005517          	auipc	a0,0x5
-    1e20:	95450513          	addi	a0,a0,-1708 # 6770 <malloc+0xc88>
+    1e20:	95c50513          	addi	a0,a0,-1700 # 6778 <malloc+0xc88>
     1e24:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1e28:	c06080e7          	jalr	-1018(ra) # 5a2a <printf>
+=======
+    1e28:	c0e080e7          	jalr	-1010(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1e2c:	4505                	li	a0,1
     1e2e:	00004097          	auipc	ra,0x4
     1e32:	87c080e7          	jalr	-1924(ra) # 56aa <exit>
@@ -2512,9 +3079,14 @@ Disassembly of section .text:
     1f02:	00003097          	auipc	ra,0x3
     1f06:	7a8080e7          	jalr	1960(ra) # 56aa <exit>
     1f0a:	00005517          	auipc	a0,0x5
-    1f0e:	c6e50513          	addi	a0,a0,-914 # 6b78 <malloc+0x1090>
+    1f0e:	c7650513          	addi	a0,a0,-906 # 6b80 <malloc+0x1090>
     1f12:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1f16:	b18080e7          	jalr	-1256(ra) # 5a2a <printf>
+=======
+    1f16:	b20080e7          	jalr	-1248(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1f1a:	4505                	li	a0,1
     1f1c:	00003097          	auipc	ra,0x3
     1f20:	78e080e7          	jalr	1934(ra) # 56aa <exit>
@@ -2528,7 +3100,12 @@ Disassembly of section .text:
     1f40:	7be080e7          	jalr	1982(ra) # 56fa <unlink>
     1f44:	4b79                	li	s6,30
     1f46:	0000ab97          	auipc	s7,0xa
+<<<<<<< HEAD
     1f4a:	c3ab8b93          	addi	s7,s7,-966 # bb80 <buf>
+=======
+    1f4a:	c42b8b93          	addi	s7,s7,-958 # bb88 <buf>
+        for(int i = 0; i < ci+1; i++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1f4e:	8a26                	mv	s4,s1
     1f50:	02094e63          	bltz	s2,1f8c <manywrites+0xda>
     1f54:	20200593          	li	a1,514
@@ -2562,9 +3139,14 @@ Disassembly of section .text:
     1fb4:	fa840613          	addi	a2,s0,-88
     1fb8:	85d6                	mv	a1,s5
     1fba:	00005517          	auipc	a0,0x5
-    1fbe:	a1650513          	addi	a0,a0,-1514 # 69d0 <malloc+0xee8>
+    1fbe:	a1e50513          	addi	a0,a0,-1506 # 69d8 <malloc+0xee8>
     1fc2:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1fc6:	a68080e7          	jalr	-1432(ra) # 5a2a <printf>
+=======
+    1fc6:	a70080e7          	jalr	-1424(ra) # 5a32 <printf>
+            exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1fca:	4505                	li	a0,1
     1fcc:	00003097          	auipc	ra,0x3
     1fd0:	6de080e7          	jalr	1758(ra) # 56aa <exit>
@@ -2572,9 +3154,14 @@ Disassembly of section .text:
     1fd6:	660d                	lui	a2,0x3
     1fd8:	85d6                	mv	a1,s5
     1fda:	00004517          	auipc	a0,0x4
-    1fde:	01e50513          	addi	a0,a0,30 # 5ff8 <malloc+0x510>
+    1fde:	02650513          	addi	a0,a0,38 # 6000 <malloc+0x510>
     1fe2:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     1fe6:	a48080e7          	jalr	-1464(ra) # 5a2a <printf>
+=======
+    1fe6:	a50080e7          	jalr	-1456(ra) # 5a32 <printf>
+            exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     1fea:	4505                	li	a0,1
     1fec:	00003097          	auipc	ra,0x3
     1ff0:	6be080e7          	jalr	1726(ra) # 56aa <exit>
@@ -2600,9 +3187,14 @@ Disassembly of section .text:
     2022:	ff2498e3          	bne	s1,s2,2012 <forktest+0x16>
     2026:	85ce                	mv	a1,s3
     2028:	00005517          	auipc	a0,0x5
-    202c:	9d850513          	addi	a0,a0,-1576 # 6a00 <malloc+0xf18>
+    202c:	9e050513          	addi	a0,a0,-1568 # 6a08 <malloc+0xf18>
     2030:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     2034:	9fa080e7          	jalr	-1542(ra) # 5a2a <printf>
+=======
+    2034:	a02080e7          	jalr	-1534(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2038:	4505                	li	a0,1
     203a:	00003097          	auipc	ra,0x3
     203e:	670080e7          	jalr	1648(ra) # 56aa <exit>
@@ -2632,25 +3224,40 @@ Disassembly of section .text:
     2086:	8082                	ret
     2088:	85ce                	mv	a1,s3
     208a:	00005517          	auipc	a0,0x5
-    208e:	95e50513          	addi	a0,a0,-1698 # 69e8 <malloc+0xf00>
+    208e:	96650513          	addi	a0,a0,-1690 # 69f0 <malloc+0xf00>
     2092:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     2096:	998080e7          	jalr	-1640(ra) # 5a2a <printf>
+=======
+    2096:	9a0080e7          	jalr	-1632(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     209a:	4505                	li	a0,1
     209c:	00003097          	auipc	ra,0x3
     20a0:	60e080e7          	jalr	1550(ra) # 56aa <exit>
     20a4:	85ce                	mv	a1,s3
     20a6:	00005517          	auipc	a0,0x5
-    20aa:	98250513          	addi	a0,a0,-1662 # 6a28 <malloc+0xf40>
+    20aa:	98a50513          	addi	a0,a0,-1654 # 6a30 <malloc+0xf40>
     20ae:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     20b2:	97c080e7          	jalr	-1668(ra) # 5a2a <printf>
+=======
+    20b2:	984080e7          	jalr	-1660(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     20b6:	4505                	li	a0,1
     20b8:	00003097          	auipc	ra,0x3
     20bc:	5f2080e7          	jalr	1522(ra) # 56aa <exit>
     20c0:	85ce                	mv	a1,s3
     20c2:	00005517          	auipc	a0,0x5
-    20c6:	97e50513          	addi	a0,a0,-1666 # 6a40 <malloc+0xf58>
+    20c6:	98650513          	addi	a0,a0,-1658 # 6a48 <malloc+0xf58>
     20ca:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     20ce:	960080e7          	jalr	-1696(ra) # 5a2a <printf>
+=======
+    20ce:	968080e7          	jalr	-1688(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     20d2:	4505                	li	a0,1
     20d4:	00003097          	auipc	ra,0x3
     20d8:	5d6080e7          	jalr	1494(ra) # 56aa <exit>
@@ -2670,10 +3277,15 @@ Disassembly of section .text:
     20f2:	04fe                	slli	s1,s1,0x1f
     20f4:	5afd                	li	s5,-1
     20f6:	69b1                	lui	s3,0xc
-    20f8:	35098993          	addi	s3,s3,848 # c350 <buf+0x7d0>
+    20f8:	35098993          	addi	s3,s3,848 # c350 <buf+0x7c8>
     20fc:	1003d937          	lui	s2,0x1003d
     2100:	090e                	slli	s2,s2,0x3
+<<<<<<< HEAD
     2102:	48090913          	addi	s2,s2,1152 # 1003d480 <__BSS_END__+0x1002e8f0>
+=======
+    2102:	48090913          	addi	s2,s2,1152 # 1003d480 <__BSS_END__+0x1002e8e8>
+    pid = fork();
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2106:	00003097          	auipc	ra,0x3
     210a:	59c080e7          	jalr	1436(ra) # 56a2 <fork>
     210e:	02054963          	bltz	a0,2140 <kernmem+0x64>
@@ -2696,9 +3308,14 @@ Disassembly of section .text:
     213e:	8082                	ret
     2140:	85d2                	mv	a1,s4
     2142:	00004517          	auipc	a0,0x4
-    2146:	62e50513          	addi	a0,a0,1582 # 6770 <malloc+0xc88>
+    2146:	63650513          	addi	a0,a0,1590 # 6778 <malloc+0xc88>
     214a:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     214e:	8e0080e7          	jalr	-1824(ra) # 5a2a <printf>
+=======
+    214e:	8e8080e7          	jalr	-1816(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2152:	4505                	li	a0,1
     2154:	00003097          	auipc	ra,0x3
     2158:	556080e7          	jalr	1366(ra) # 56aa <exit>
@@ -2706,9 +3323,14 @@ Disassembly of section .text:
     2160:	8626                	mv	a2,s1
     2162:	85d2                	mv	a1,s4
     2164:	00005517          	auipc	a0,0x5
-    2168:	8f450513          	addi	a0,a0,-1804 # 6a58 <malloc+0xf70>
+    2168:	8fc50513          	addi	a0,a0,-1796 # 6a60 <malloc+0xf70>
     216c:	00004097          	auipc	ra,0x4
+<<<<<<< HEAD
     2170:	8be080e7          	jalr	-1858(ra) # 5a2a <printf>
+=======
+    2170:	8c6080e7          	jalr	-1850(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2174:	4505                	li	a0,1
     2176:	00003097          	auipc	ra,0x3
     217a:	534080e7          	jalr	1332(ra) # 56aa <exit>
@@ -2724,7 +3346,7 @@ Disassembly of section .text:
     2190:	1800                	addi	s0,sp,48
     2192:	84aa                	mv	s1,a0
     2194:	00005517          	auipc	a0,0x5
-    2198:	8e450513          	addi	a0,a0,-1820 # 6a78 <malloc+0xf90>
+    2198:	8ec50513          	addi	a0,a0,-1812 # 6a80 <malloc+0xf90>
     219c:	00003097          	auipc	ra,0x3
     21a0:	55e080e7          	jalr	1374(ra) # 56fa <unlink>
     21a4:	00003097          	auipc	ra,0x3
@@ -2738,7 +3360,7 @@ Disassembly of section .text:
     21c2:	e545                	bnez	a0,226a <bigargtest+0xe2>
     21c4:	4581                	li	a1,0
     21c6:	00005517          	auipc	a0,0x5
-    21ca:	8b250513          	addi	a0,a0,-1870 # 6a78 <malloc+0xf90>
+    21ca:	8ba50513          	addi	a0,a0,-1862 # 6a80 <malloc+0xf90>
     21ce:	00003097          	auipc	ra,0x3
     21d2:	51c080e7          	jalr	1308(ra) # 56ea <open>
     21d6:	08054e63          	bltz	a0,2272 <bigargtest+0xea>
@@ -2750,24 +3372,29 @@ Disassembly of section .text:
     21e8:	6145                	addi	sp,sp,48
     21ea:	8082                	ret
     21ec:	00006797          	auipc	a5,0x6
-    21f0:	17c78793          	addi	a5,a5,380 # 8368 <args.1847>
+    21f0:	18478793          	addi	a5,a5,388 # 8370 <args.1849>
     21f4:	00006697          	auipc	a3,0x6
+<<<<<<< HEAD
     21f8:	26c68693          	addi	a3,a3,620 # 8460 <args.1847+0xf8>
+=======
+    21f8:	27468693          	addi	a3,a3,628 # 8468 <args.1849+0xf8>
+      args[i] = "bigargs test: failed\n                                                                                                                                                                                                       ";
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     21fc:	00005717          	auipc	a4,0x5
-    2200:	88c70713          	addi	a4,a4,-1908 # 6a88 <malloc+0xfa0>
+    2200:	89470713          	addi	a4,a4,-1900 # 6a90 <malloc+0xfa0>
     2204:	e398                	sd	a4,0(a5)
     2206:	07a1                	addi	a5,a5,8
     2208:	fed79ee3          	bne	a5,a3,2204 <bigargtest+0x7c>
     220c:	00006597          	auipc	a1,0x6
-    2210:	15c58593          	addi	a1,a1,348 # 8368 <args.1847>
+    2210:	16458593          	addi	a1,a1,356 # 8370 <args.1849>
     2214:	0e05bc23          	sd	zero,248(a1)
     2218:	00004517          	auipc	a0,0x4
-    221c:	d2050513          	addi	a0,a0,-736 # 5f38 <malloc+0x450>
+    221c:	d2850513          	addi	a0,a0,-728 # 5f40 <malloc+0x450>
     2220:	00003097          	auipc	ra,0x3
     2224:	4c2080e7          	jalr	1218(ra) # 56e2 <exec>
     2228:	20000593          	li	a1,512
     222c:	00005517          	auipc	a0,0x5
-    2230:	84c50513          	addi	a0,a0,-1972 # 6a78 <malloc+0xf90>
+    2230:	85450513          	addi	a0,a0,-1964 # 6a80 <malloc+0xf90>
     2234:	00003097          	auipc	ra,0x3
     2238:	4b6080e7          	jalr	1206(ra) # 56ea <open>
     223c:	00003097          	auipc	ra,0x3
@@ -2777,9 +3404,14 @@ Disassembly of section .text:
     224a:	464080e7          	jalr	1124(ra) # 56aa <exit>
     224e:	85a6                	mv	a1,s1
     2250:	00005517          	auipc	a0,0x5
-    2254:	91850513          	addi	a0,a0,-1768 # 6b68 <malloc+0x1080>
+    2254:	92050513          	addi	a0,a0,-1760 # 6b70 <malloc+0x1080>
     2258:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     225c:	7d2080e7          	jalr	2002(ra) # 5a2a <printf>
+=======
+    225c:	7da080e7          	jalr	2010(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2260:	4505                	li	a0,1
     2262:	00003097          	auipc	ra,0x3
     2266:	448080e7          	jalr	1096(ra) # 56aa <exit>
@@ -2787,9 +3419,14 @@ Disassembly of section .text:
     226e:	440080e7          	jalr	1088(ra) # 56aa <exit>
     2272:	85a6                	mv	a1,s1
     2274:	00005517          	auipc	a0,0x5
-    2278:	91450513          	addi	a0,a0,-1772 # 6b88 <malloc+0x10a0>
+    2278:	91c50513          	addi	a0,a0,-1764 # 6b90 <malloc+0x10a0>
     227c:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2280:	7ae080e7          	jalr	1966(ra) # 5a2a <printf>
+=======
+    2280:	7b6080e7          	jalr	1974(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2284:	4505                	li	a0,1
     2286:	00003097          	auipc	ra,0x3
     228a:	424080e7          	jalr	1060(ra) # 56aa <exit>
@@ -2816,20 +3453,30 @@ Disassembly of section .text:
     22c6:	870a                	mv	a4,sp
     22c8:	77fd                	lui	a5,0xfffff
     22ca:	97ba                	add	a5,a5,a4
-    22cc:	0007c603          	lbu	a2,0(a5) # fffffffffffff000 <__BSS_END__+0xffffffffffff0470>
+    22cc:	0007c603          	lbu	a2,0(a5) # fffffffffffff000 <__BSS_END__+0xffffffffffff0468>
     22d0:	85a6                	mv	a1,s1
     22d2:	00005517          	auipc	a0,0x5
-    22d6:	8d650513          	addi	a0,a0,-1834 # 6ba8 <malloc+0x10c0>
+    22d6:	8de50513          	addi	a0,a0,-1826 # 6bb0 <malloc+0x10c0>
     22da:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     22de:	750080e7          	jalr	1872(ra) # 5a2a <printf>
+=======
+    22de:	758080e7          	jalr	1880(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     22e2:	4505                	li	a0,1
     22e4:	00003097          	auipc	ra,0x3
     22e8:	3c6080e7          	jalr	966(ra) # 56aa <exit>
     22ec:	85a6                	mv	a1,s1
     22ee:	00004517          	auipc	a0,0x4
-    22f2:	48250513          	addi	a0,a0,1154 # 6770 <malloc+0xc88>
+    22f2:	48a50513          	addi	a0,a0,1162 # 6778 <malloc+0xc88>
     22f6:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     22fa:	734080e7          	jalr	1844(ra) # 5a2a <printf>
+=======
+    22fa:	73c080e7          	jalr	1852(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     22fe:	4505                	li	a0,1
     2300:	00003097          	auipc	ra,0x3
     2304:	3aa080e7          	jalr	938(ra) # 56aa <exit>
@@ -2877,7 +3524,7 @@ Disassembly of section .text:
     2382:	57fd                	li	a5,-1
     2384:	08f51e63          	bne	a0,a5,2420 <copyinstr3+0x10e>
     2388:	00005797          	auipc	a5,0x5
-    238c:	4b878793          	addi	a5,a5,1208 # 7840 <malloc+0x1d58>
+    238c:	4c078793          	addi	a5,a5,1216 # 7848 <malloc+0x1d58>
     2390:	fcf43823          	sd	a5,-48(s0)
     2394:	fc043c23          	sd	zero,-40(s0)
     2398:	fd040593          	addi	a1,s0,-48
@@ -2898,27 +3545,42 @@ Disassembly of section .text:
     23c4:	372080e7          	jalr	882(ra) # 5732 <sbrk>
     23c8:	b7bd                	j	2336 <copyinstr3+0x24>
     23ca:	00005517          	auipc	a0,0x5
-    23ce:	80650513          	addi	a0,a0,-2042 # 6bd0 <malloc+0x10e8>
+    23ce:	80e50513          	addi	a0,a0,-2034 # 6bd8 <malloc+0x10e8>
     23d2:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     23d6:	658080e7          	jalr	1624(ra) # 5a2a <printf>
+=======
+    23d6:	660080e7          	jalr	1632(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     23da:	4505                	li	a0,1
     23dc:	00003097          	auipc	ra,0x3
     23e0:	2ce080e7          	jalr	718(ra) # 56aa <exit>
     23e4:	862a                	mv	a2,a0
     23e6:	85a6                	mv	a1,s1
     23e8:	00004517          	auipc	a0,0x4
-    23ec:	2a850513          	addi	a0,a0,680 # 6690 <malloc+0xba8>
+    23ec:	2b050513          	addi	a0,a0,688 # 6698 <malloc+0xba8>
     23f0:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     23f4:	63a080e7          	jalr	1594(ra) # 5a2a <printf>
+=======
+    23f4:	642080e7          	jalr	1602(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     23f8:	4505                	li	a0,1
     23fa:	00003097          	auipc	ra,0x3
     23fe:	2b0080e7          	jalr	688(ra) # 56aa <exit>
     2402:	862a                	mv	a2,a0
     2404:	85a6                	mv	a1,s1
     2406:	00004517          	auipc	a0,0x4
-    240a:	2aa50513          	addi	a0,a0,682 # 66b0 <malloc+0xbc8>
+    240a:	2b250513          	addi	a0,a0,690 # 66b8 <malloc+0xbc8>
     240e:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2412:	61c080e7          	jalr	1564(ra) # 5a2a <printf>
+=======
+    2412:	624080e7          	jalr	1572(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2416:	4505                	li	a0,1
     2418:	00003097          	auipc	ra,0x3
     241c:	292080e7          	jalr	658(ra) # 56aa <exit>
@@ -2926,18 +3588,28 @@ Disassembly of section .text:
     2422:	8626                	mv	a2,s1
     2424:	85a6                	mv	a1,s1
     2426:	00004517          	auipc	a0,0x4
-    242a:	2aa50513          	addi	a0,a0,682 # 66d0 <malloc+0xbe8>
+    242a:	2b250513          	addi	a0,a0,690 # 66d8 <malloc+0xbe8>
     242e:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2432:	5fc080e7          	jalr	1532(ra) # 5a2a <printf>
+=======
+    2432:	604080e7          	jalr	1540(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2436:	4505                	li	a0,1
     2438:	00003097          	auipc	ra,0x3
     243c:	272080e7          	jalr	626(ra) # 56aa <exit>
     2440:	567d                	li	a2,-1
     2442:	85a6                	mv	a1,s1
     2444:	00004517          	auipc	a0,0x4
-    2448:	2b450513          	addi	a0,a0,692 # 66f8 <malloc+0xc10>
+    2448:	2bc50513          	addi	a0,a0,700 # 6700 <malloc+0xc10>
     244c:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2450:	5de080e7          	jalr	1502(ra) # 5a2a <printf>
+=======
+    2450:	5e6080e7          	jalr	1510(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2454:	4505                	li	a0,1
     2456:	00003097          	auipc	ra,0x3
     245a:	254080e7          	jalr	596(ra) # 56aa <exit>
@@ -2962,7 +3634,7 @@ Disassembly of section .text:
     2488:	06f50763          	beq	a0,a5,24f6 <rwsbrk+0x98>
     248c:	20100593          	li	a1,513
     2490:	00003517          	auipc	a0,0x3
-    2494:	7b850513          	addi	a0,a0,1976 # 5c48 <malloc+0x160>
+    2494:	7c050513          	addi	a0,a0,1984 # 5c50 <malloc+0x160>
     2498:	00003097          	auipc	ra,0x3
     249c:	252080e7          	jalr	594(ra) # 56ea <open>
     24a0:	892a                	mv	s2,a0
@@ -2978,30 +3650,50 @@ Disassembly of section .text:
     24bc:	06054763          	bltz	a0,252a <rwsbrk+0xcc>
     24c0:	85a6                	mv	a1,s1
     24c2:	00004517          	auipc	a0,0x4
-    24c6:	76650513          	addi	a0,a0,1894 # 6c28 <malloc+0x1140>
+    24c6:	76e50513          	addi	a0,a0,1902 # 6c30 <malloc+0x1140>
     24ca:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     24ce:	560080e7          	jalr	1376(ra) # 5a2a <printf>
+=======
+    24ce:	568080e7          	jalr	1384(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     24d2:	4505                	li	a0,1
     24d4:	00003097          	auipc	ra,0x3
     24d8:	1d6080e7          	jalr	470(ra) # 56aa <exit>
     24dc:	00004517          	auipc	a0,0x4
-    24e0:	6fc50513          	addi	a0,a0,1788 # 6bd8 <malloc+0x10f0>
+    24e0:	70450513          	addi	a0,a0,1796 # 6be0 <malloc+0x10f0>
     24e4:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     24e8:	546080e7          	jalr	1350(ra) # 5a2a <printf>
+=======
+    24e8:	54e080e7          	jalr	1358(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     24ec:	4505                	li	a0,1
     24ee:	00003097          	auipc	ra,0x3
     24f2:	1bc080e7          	jalr	444(ra) # 56aa <exit>
     24f6:	00004517          	auipc	a0,0x4
-    24fa:	6fa50513          	addi	a0,a0,1786 # 6bf0 <malloc+0x1108>
+    24fa:	70250513          	addi	a0,a0,1794 # 6bf8 <malloc+0x1108>
     24fe:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2502:	52c080e7          	jalr	1324(ra) # 5a2a <printf>
+=======
+    2502:	534080e7          	jalr	1332(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2506:	4505                	li	a0,1
     2508:	00003097          	auipc	ra,0x3
     250c:	1a2080e7          	jalr	418(ra) # 56aa <exit>
     2510:	00004517          	auipc	a0,0x4
-    2514:	70050513          	addi	a0,a0,1792 # 6c10 <malloc+0x1128>
+    2514:	70850513          	addi	a0,a0,1800 # 6c18 <malloc+0x1128>
     2518:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     251c:	512080e7          	jalr	1298(ra) # 5a2a <printf>
+=======
+    251c:	51a080e7          	jalr	1306(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2520:	4505                	li	a0,1
     2522:	00003097          	auipc	ra,0x3
     2526:	188080e7          	jalr	392(ra) # 56aa <exit>
@@ -3009,12 +3701,12 @@ Disassembly of section .text:
     252c:	00003097          	auipc	ra,0x3
     2530:	1a6080e7          	jalr	422(ra) # 56d2 <close>
     2534:	00003517          	auipc	a0,0x3
-    2538:	71450513          	addi	a0,a0,1812 # 5c48 <malloc+0x160>
+    2538:	71c50513          	addi	a0,a0,1820 # 5c50 <malloc+0x160>
     253c:	00003097          	auipc	ra,0x3
     2540:	1be080e7          	jalr	446(ra) # 56fa <unlink>
     2544:	4581                	li	a1,0
     2546:	00004517          	auipc	a0,0x4
-    254a:	b8a50513          	addi	a0,a0,-1142 # 60d0 <malloc+0x5e8>
+    254a:	b9250513          	addi	a0,a0,-1134 # 60d8 <malloc+0x5e8>
     254e:	00003097          	auipc	ra,0x3
     2552:	19c080e7          	jalr	412(ra) # 56ea <open>
     2556:	892a                	mv	s2,a0
@@ -3027,16 +3719,26 @@ Disassembly of section .text:
     256a:	02054d63          	bltz	a0,25a4 <rwsbrk+0x146>
     256e:	85a6                	mv	a1,s1
     2570:	00004517          	auipc	a0,0x4
-    2574:	6e850513          	addi	a0,a0,1768 # 6c58 <malloc+0x1170>
+    2574:	6f050513          	addi	a0,a0,1776 # 6c60 <malloc+0x1170>
     2578:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     257c:	4b2080e7          	jalr	1202(ra) # 5a2a <printf>
+=======
+    257c:	4ba080e7          	jalr	1210(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2580:	4505                	li	a0,1
     2582:	00003097          	auipc	ra,0x3
     2586:	128080e7          	jalr	296(ra) # 56aa <exit>
     258a:	00004517          	auipc	a0,0x4
-    258e:	68650513          	addi	a0,a0,1670 # 6c10 <malloc+0x1128>
+    258e:	68e50513          	addi	a0,a0,1678 # 6c18 <malloc+0x1128>
     2592:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2596:	498080e7          	jalr	1176(ra) # 5a2a <printf>
+=======
+    2596:	4a0080e7          	jalr	1184(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     259a:	4505                	li	a0,1
     259c:	00003097          	auipc	ra,0x3
     25a0:	10e080e7          	jalr	270(ra) # 56aa <exit>
@@ -3071,16 +3773,27 @@ Disassembly of section .text:
     25f0:	97aa                	add	a5,a5,a0
     25f2:	06300693          	li	a3,99
     25f6:	6705                	lui	a4,0x1
+<<<<<<< HEAD
     25f8:	00d50023          	sb	a3,0(a0) # 40000000 <__BSS_END__+0x3fff1470>
+=======
+      *b = 99;
+    25f8:	00d50023          	sb	a3,0(a0) # 40000000 <__BSS_END__+0x3fff1468>
+    for(b = a; b < a+TOOMUCH; b += 4096){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     25fc:	953a                	add	a0,a0,a4
     25fe:	fef51de3          	bne	a0,a5,25f8 <sbrkbasic+0x40>
     2602:	4505                	li	a0,1
     2604:	00003097          	auipc	ra,0x3
     2608:	0a6080e7          	jalr	166(ra) # 56aa <exit>
     260c:	00004517          	auipc	a0,0x4
-    2610:	67450513          	addi	a0,a0,1652 # 6c80 <malloc+0x1198>
+    2610:	67c50513          	addi	a0,a0,1660 # 6c88 <malloc+0x1198>
     2614:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2618:	416080e7          	jalr	1046(ra) # 5a2a <printf>
+=======
+    2618:	41e080e7          	jalr	1054(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     261c:	4505                	li	a0,1
     261e:	00003097          	auipc	ra,0x3
     2622:	08c080e7          	jalr	140(ra) # 56aa <exit>
@@ -3104,9 +3817,14 @@ Disassembly of section .text:
     265c:	a005                	j	267c <sbrkbasic+0xc4>
     265e:	85d2                	mv	a1,s4
     2660:	00004517          	auipc	a0,0x4
-    2664:	64050513          	addi	a0,a0,1600 # 6ca0 <malloc+0x11b8>
+    2664:	64850513          	addi	a0,a0,1608 # 6ca8 <malloc+0x11b8>
     2668:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     266c:	3c2080e7          	jalr	962(ra) # 5a2a <printf>
+=======
+    266c:	3ca080e7          	jalr	970(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2670:	4505                	li	a0,1
     2672:	00003097          	auipc	ra,0x3
     2676:	038080e7          	jalr	56(ra) # 56aa <exit>
@@ -3133,9 +3851,14 @@ Disassembly of section .text:
     26bc:	04a48e63          	beq	s1,a0,2718 <sbrkbasic+0x160>
     26c0:	85d2                	mv	a1,s4
     26c2:	00004517          	auipc	a0,0x4
-    26c6:	63e50513          	addi	a0,a0,1598 # 6d00 <malloc+0x1218>
+    26c6:	64650513          	addi	a0,a0,1606 # 6d08 <malloc+0x1218>
     26ca:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     26ce:	360080e7          	jalr	864(ra) # 5a2a <printf>
+=======
+    26ce:	368080e7          	jalr	872(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     26d2:	4505                	li	a0,1
     26d4:	00003097          	auipc	ra,0x3
     26d8:	fd6080e7          	jalr	-42(ra) # 56aa <exit>
@@ -3143,17 +3866,27 @@ Disassembly of section .text:
     26de:	8626                	mv	a2,s1
     26e0:	85ca                	mv	a1,s2
     26e2:	00004517          	auipc	a0,0x4
-    26e6:	5de50513          	addi	a0,a0,1502 # 6cc0 <malloc+0x11d8>
+    26e6:	5e650513          	addi	a0,a0,1510 # 6cc8 <malloc+0x11d8>
     26ea:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     26ee:	340080e7          	jalr	832(ra) # 5a2a <printf>
+=======
+    26ee:	348080e7          	jalr	840(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     26f2:	4505                	li	a0,1
     26f4:	00003097          	auipc	ra,0x3
     26f8:	fb6080e7          	jalr	-74(ra) # 56aa <exit>
     26fc:	85d2                	mv	a1,s4
     26fe:	00004517          	auipc	a0,0x4
-    2702:	5e250513          	addi	a0,a0,1506 # 6ce0 <malloc+0x11f8>
+    2702:	5ea50513          	addi	a0,a0,1514 # 6ce8 <malloc+0x11f8>
     2706:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     270a:	324080e7          	jalr	804(ra) # 5a2a <printf>
+=======
+    270a:	32c080e7          	jalr	812(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     270e:	4505                	li	a0,1
     2710:	00003097          	auipc	ra,0x3
     2714:	f9a080e7          	jalr	-102(ra) # 56aa <exit>
@@ -3203,7 +3936,12 @@ Disassembly of section .text:
     2794:	fef4ede3          	bltu	s1,a5,278e <sbrkmuch+0x50>
     2798:	064007b7          	lui	a5,0x6400
     279c:	06300713          	li	a4,99
+<<<<<<< HEAD
     27a0:	fee78fa3          	sb	a4,-1(a5) # 63fffff <__BSS_END__+0x63f146f>
+=======
+    27a0:	fee78fa3          	sb	a4,-1(a5) # 63fffff <__BSS_END__+0x63f1467>
+  a = sbrk(0);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     27a4:	4501                	li	a0,0
     27a6:	00003097          	auipc	ra,0x3
     27aa:	f8c080e7          	jalr	-116(ra) # 5732 <sbrk>
@@ -3235,7 +3973,7 @@ Disassembly of section .text:
     27fa:	97a6                	add	a5,a5,s1
     27fc:	0af51163          	bne	a0,a5,289e <sbrkmuch+0x160>
     2800:	064007b7          	lui	a5,0x6400
-    2804:	fff7c703          	lbu	a4,-1(a5) # 63fffff <__BSS_END__+0x63f146f>
+    2804:	fff7c703          	lbu	a4,-1(a5) # 63fffff <__BSS_END__+0x63f1467>
     2808:	06300793          	li	a5,99
     280c:	0af70963          	beq	a4,a5,28be <sbrkmuch+0x180>
     2810:	4501                	li	a0,0
@@ -3259,17 +3997,27 @@ Disassembly of section .text:
     2844:	8082                	ret
     2846:	85ce                	mv	a1,s3
     2848:	00004517          	auipc	a0,0x4
-    284c:	4d850513          	addi	a0,a0,1240 # 6d20 <malloc+0x1238>
+    284c:	4e050513          	addi	a0,a0,1248 # 6d28 <malloc+0x1238>
     2850:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2854:	1da080e7          	jalr	474(ra) # 5a2a <printf>
+=======
+    2854:	1e2080e7          	jalr	482(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2858:	4505                	li	a0,1
     285a:	00003097          	auipc	ra,0x3
     285e:	e50080e7          	jalr	-432(ra) # 56aa <exit>
     2862:	85ce                	mv	a1,s3
     2864:	00004517          	auipc	a0,0x4
-    2868:	50450513          	addi	a0,a0,1284 # 6d68 <malloc+0x1280>
+    2868:	50c50513          	addi	a0,a0,1292 # 6d70 <malloc+0x1280>
     286c:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2870:	1be080e7          	jalr	446(ra) # 5a2a <printf>
+=======
+    2870:	1c6080e7          	jalr	454(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2874:	4505                	li	a0,1
     2876:	00003097          	auipc	ra,0x3
     287a:	e34080e7          	jalr	-460(ra) # 56aa <exit>
@@ -3277,9 +4025,14 @@ Disassembly of section .text:
     2880:	8626                	mv	a2,s1
     2882:	85ce                	mv	a1,s3
     2884:	00004517          	auipc	a0,0x4
-    2888:	50450513          	addi	a0,a0,1284 # 6d88 <malloc+0x12a0>
+    2888:	50c50513          	addi	a0,a0,1292 # 6d90 <malloc+0x12a0>
     288c:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2890:	19e080e7          	jalr	414(ra) # 5a2a <printf>
+=======
+    2890:	1a6080e7          	jalr	422(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2894:	4505                	li	a0,1
     2896:	00003097          	auipc	ra,0x3
     289a:	e14080e7          	jalr	-492(ra) # 56aa <exit>
@@ -3287,17 +4040,27 @@ Disassembly of section .text:
     28a0:	8626                	mv	a2,s1
     28a2:	85ce                	mv	a1,s3
     28a4:	00004517          	auipc	a0,0x4
-    28a8:	52450513          	addi	a0,a0,1316 # 6dc8 <malloc+0x12e0>
+    28a8:	52c50513          	addi	a0,a0,1324 # 6dd0 <malloc+0x12e0>
     28ac:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     28b0:	17e080e7          	jalr	382(ra) # 5a2a <printf>
+=======
+    28b0:	186080e7          	jalr	390(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     28b4:	4505                	li	a0,1
     28b6:	00003097          	auipc	ra,0x3
     28ba:	df4080e7          	jalr	-524(ra) # 56aa <exit>
     28be:	85ce                	mv	a1,s3
     28c0:	00004517          	auipc	a0,0x4
-    28c4:	53850513          	addi	a0,a0,1336 # 6df8 <malloc+0x1310>
+    28c4:	54050513          	addi	a0,a0,1344 # 6e00 <malloc+0x1310>
     28c8:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     28cc:	162080e7          	jalr	354(ra) # 5a2a <printf>
+=======
+    28cc:	16a080e7          	jalr	362(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     28d0:	4505                	li	a0,1
     28d2:	00003097          	auipc	ra,0x3
     28d6:	dd8080e7          	jalr	-552(ra) # 56aa <exit>
@@ -3305,9 +4068,14 @@ Disassembly of section .text:
     28dc:	8626                	mv	a2,s1
     28de:	85ce                	mv	a1,s3
     28e0:	00004517          	auipc	a0,0x4
-    28e4:	55050513          	addi	a0,a0,1360 # 6e30 <malloc+0x1348>
+    28e4:	55850513          	addi	a0,a0,1368 # 6e38 <malloc+0x1348>
     28e8:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     28ec:	142080e7          	jalr	322(ra) # 5a2a <printf>
+=======
+    28ec:	14a080e7          	jalr	330(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     28f0:	4505                	li	a0,1
     28f2:	00003097          	auipc	ra,0x3
     28f6:	db8080e7          	jalr	-584(ra) # 56aa <exit>
@@ -3327,12 +4095,12 @@ Disassembly of section .text:
     2914:	892a                	mv	s2,a0
     2916:	20100593          	li	a1,513
     291a:	00004517          	auipc	a0,0x4
-    291e:	53e50513          	addi	a0,a0,1342 # 6e58 <malloc+0x1370>
+    291e:	54650513          	addi	a0,a0,1350 # 6e60 <malloc+0x1370>
     2922:	00003097          	auipc	ra,0x3
     2926:	dc8080e7          	jalr	-568(ra) # 56ea <open>
     292a:	84aa                	mv	s1,a0
     292c:	00004517          	auipc	a0,0x4
-    2930:	52c50513          	addi	a0,a0,1324 # 6e58 <malloc+0x1370>
+    2930:	53450513          	addi	a0,a0,1332 # 6e60 <malloc+0x1370>
     2934:	00003097          	auipc	ra,0x3
     2938:	dc6080e7          	jalr	-570(ra) # 56fa <unlink>
     293c:	0404c163          	bltz	s1,297e <sbrkarg+0x84>
@@ -3360,25 +4128,40 @@ Disassembly of section .text:
     297c:	8082                	ret
     297e:	85ce                	mv	a1,s3
     2980:	00004517          	auipc	a0,0x4
-    2984:	4e050513          	addi	a0,a0,1248 # 6e60 <malloc+0x1378>
+    2984:	4e850513          	addi	a0,a0,1256 # 6e68 <malloc+0x1378>
     2988:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     298c:	0a2080e7          	jalr	162(ra) # 5a2a <printf>
+=======
+    298c:	0aa080e7          	jalr	170(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2990:	4505                	li	a0,1
     2992:	00003097          	auipc	ra,0x3
     2996:	d18080e7          	jalr	-744(ra) # 56aa <exit>
     299a:	85ce                	mv	a1,s3
     299c:	00004517          	auipc	a0,0x4
-    29a0:	4dc50513          	addi	a0,a0,1244 # 6e78 <malloc+0x1390>
+    29a0:	4e450513          	addi	a0,a0,1252 # 6e80 <malloc+0x1390>
     29a4:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     29a8:	086080e7          	jalr	134(ra) # 5a2a <printf>
+=======
+    29a8:	08e080e7          	jalr	142(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     29ac:	4505                	li	a0,1
     29ae:	00003097          	auipc	ra,0x3
     29b2:	cfc080e7          	jalr	-772(ra) # 56aa <exit>
     29b6:	85ce                	mv	a1,s3
     29b8:	00004517          	auipc	a0,0x4
-    29bc:	ec050513          	addi	a0,a0,-320 # 6878 <malloc+0xd90>
+    29bc:	ec850513          	addi	a0,a0,-312 # 6880 <malloc+0xd90>
     29c0:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     29c4:	06a080e7          	jalr	106(ra) # 5a2a <printf>
+=======
+    29c4:	072080e7          	jalr	114(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     29c8:	4505                	li	a0,1
     29ca:	00003097          	auipc	ra,0x3
     29ce:	ce0080e7          	jalr	-800(ra) # 56aa <exit>
@@ -3393,7 +4176,7 @@ Disassembly of section .text:
     29de:	892a                	mv	s2,a0
     29e0:	4581                	li	a1,0
     29e2:	00004517          	auipc	a0,0x4
-    29e6:	4ae50513          	addi	a0,a0,1198 # 6e90 <malloc+0x13a8>
+    29e6:	4b650513          	addi	a0,a0,1206 # 6e98 <malloc+0x13a8>
     29ea:	00003097          	auipc	ra,0x3
     29ee:	d00080e7          	jalr	-768(ra) # 56ea <open>
     29f2:	02054b63          	bltz	a0,2a28 <argptest+0x56>
@@ -3417,9 +4200,14 @@ Disassembly of section .text:
     2a26:	8082                	ret
     2a28:	85ca                	mv	a1,s2
     2a2a:	00004517          	auipc	a0,0x4
-    2a2e:	d5e50513          	addi	a0,a0,-674 # 6788 <malloc+0xca0>
+    2a2e:	d6650513          	addi	a0,a0,-666 # 6790 <malloc+0xca0>
     2a32:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2a36:	ff8080e7          	jalr	-8(ra) # 5a2a <printf>
+=======
+    2a36:	000080e7          	jalr	ra # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2a3a:	4505                	li	a0,1
     2a3c:	00003097          	auipc	ra,0x3
     2a40:	c6e080e7          	jalr	-914(ra) # 56aa <exit>
@@ -3442,9 +4230,14 @@ Disassembly of section .text:
     2a70:	00003097          	auipc	ra,0x3
     2a74:	c3a080e7          	jalr	-966(ra) # 56aa <exit>
     2a78:	00004517          	auipc	a0,0x4
-    2a7c:	10050513          	addi	a0,a0,256 # 6b78 <malloc+0x1090>
+    2a7c:	10850513          	addi	a0,a0,264 # 6b80 <malloc+0x1090>
     2a80:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2a84:	faa080e7          	jalr	-86(ra) # 5a2a <printf>
+=======
+    2a84:	fb2080e7          	jalr	-78(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2a88:	4505                	li	a0,1
     2a8a:	00003097          	auipc	ra,0x3
     2a8e:	c20080e7          	jalr	-992(ra) # 56aa <exit>
@@ -3466,9 +4259,14 @@ Disassembly of section .text:
     2ac6:	00003097          	auipc	ra,0x3
     2aca:	be4080e7          	jalr	-1052(ra) # 56aa <exit>
     2ace:	00004517          	auipc	a0,0x4
-    2ad2:	0aa50513          	addi	a0,a0,170 # 6b78 <malloc+0x1090>
+    2ad2:	0b250513          	addi	a0,a0,178 # 6b80 <malloc+0x1090>
     2ad6:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2ada:	f54080e7          	jalr	-172(ra) # 5a2a <printf>
+=======
+    2ada:	f5c080e7          	jalr	-164(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2ade:	4505                	li	a0,1
     2ae0:	00003097          	auipc	ra,0x3
     2ae4:	bca080e7          	jalr	-1078(ra) # 56aa <exit>
@@ -3493,9 +4291,14 @@ Disassembly of section .text:
     2b26:	00003097          	auipc	ra,0x3
     2b2a:	b84080e7          	jalr	-1148(ra) # 56aa <exit>
     2b2e:	00004517          	auipc	a0,0x4
-    2b32:	04a50513          	addi	a0,a0,74 # 6b78 <malloc+0x1090>
+    2b32:	05250513          	addi	a0,a0,82 # 6b80 <malloc+0x1090>
     2b36:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2b3a:	ef4080e7          	jalr	-268(ra) # 5a2a <printf>
+=======
+    2b3a:	efc080e7          	jalr	-260(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2b3e:	4505                	li	a0,1
     2b40:	00003097          	auipc	ra,0x3
     2b44:	b6a080e7          	jalr	-1174(ra) # 56aa <exit>
@@ -3531,9 +4334,14 @@ Disassembly of section .text:
     2b92:	00003097          	auipc	ra,0x3
     2b96:	b18080e7          	jalr	-1256(ra) # 56aa <exit>
     2b9a:	00004517          	auipc	a0,0x4
-    2b9e:	fde50513          	addi	a0,a0,-34 # 6b78 <malloc+0x1090>
+    2b9e:	fe650513          	addi	a0,a0,-26 # 6b80 <malloc+0x1090>
     2ba2:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2ba6:	e88080e7          	jalr	-376(ra) # 5a2a <printf>
+=======
+    2ba6:	e90080e7          	jalr	-368(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2baa:	4505                	li	a0,1
     2bac:	00003097          	auipc	ra,0x3
     2bb0:	afe080e7          	jalr	-1282(ra) # 56aa <exit>
@@ -3557,10 +4365,10 @@ Disassembly of section .text:
     2be6:	00003097          	auipc	ra,0x3
     2bea:	aec080e7          	jalr	-1300(ra) # 56d2 <close>
     2bee:	00003517          	auipc	a0,0x3
-    2bf2:	34a50513          	addi	a0,a0,842 # 5f38 <malloc+0x450>
+    2bf2:	35250513          	addi	a0,a0,850 # 5f40 <malloc+0x450>
     2bf6:	faa43c23          	sd	a0,-72(s0)
     2bfa:	00003797          	auipc	a5,0x3
-    2bfe:	3ae78793          	addi	a5,a5,942 # 5fa8 <malloc+0x4c0>
+    2bfe:	3b678793          	addi	a5,a5,950 # 5fb0 <malloc+0x4c0>
     2c02:	fcf43023          	sd	a5,-64(s0)
     2c06:	fc043423          	sd	zero,-56(s0)
     2c0a:	fb840593          	addi	a1,s0,-72
@@ -3578,18 +4386,18 @@ Disassembly of section .text:
     2c28:	1000                	addi	s0,sp,32
     2c2a:	84aa                	mv	s1,a0
     2c2c:	00004517          	auipc	a0,0x4
-    2c30:	43c50513          	addi	a0,a0,1084 # 7068 <malloc+0x1580>
+    2c30:	44450513          	addi	a0,a0,1092 # 7070 <malloc+0x1580>
     2c34:	00003097          	auipc	ra,0x3
     2c38:	ade080e7          	jalr	-1314(ra) # 5712 <mkdir>
     2c3c:	e165                	bnez	a0,2d1c <fourteen+0xfc>
     2c3e:	00004517          	auipc	a0,0x4
-    2c42:	28250513          	addi	a0,a0,642 # 6ec0 <malloc+0x13d8>
+    2c42:	28a50513          	addi	a0,a0,650 # 6ec8 <malloc+0x13d8>
     2c46:	00003097          	auipc	ra,0x3
     2c4a:	acc080e7          	jalr	-1332(ra) # 5712 <mkdir>
     2c4e:	e56d                	bnez	a0,2d38 <fourteen+0x118>
     2c50:	20000593          	li	a1,512
     2c54:	00004517          	auipc	a0,0x4
-    2c58:	2c450513          	addi	a0,a0,708 # 6f18 <malloc+0x1430>
+    2c58:	2cc50513          	addi	a0,a0,716 # 6f20 <malloc+0x1430>
     2c5c:	00003097          	auipc	ra,0x3
     2c60:	a8e080e7          	jalr	-1394(ra) # 56ea <open>
     2c64:	0e054863          	bltz	a0,2d54 <fourteen+0x134>
@@ -3597,44 +4405,44 @@ Disassembly of section .text:
     2c6c:	a6a080e7          	jalr	-1430(ra) # 56d2 <close>
     2c70:	4581                	li	a1,0
     2c72:	00004517          	auipc	a0,0x4
-    2c76:	31e50513          	addi	a0,a0,798 # 6f90 <malloc+0x14a8>
+    2c76:	32650513          	addi	a0,a0,806 # 6f98 <malloc+0x14a8>
     2c7a:	00003097          	auipc	ra,0x3
     2c7e:	a70080e7          	jalr	-1424(ra) # 56ea <open>
     2c82:	0e054763          	bltz	a0,2d70 <fourteen+0x150>
     2c86:	00003097          	auipc	ra,0x3
     2c8a:	a4c080e7          	jalr	-1460(ra) # 56d2 <close>
     2c8e:	00004517          	auipc	a0,0x4
-    2c92:	37250513          	addi	a0,a0,882 # 7000 <malloc+0x1518>
+    2c92:	37a50513          	addi	a0,a0,890 # 7008 <malloc+0x1518>
     2c96:	00003097          	auipc	ra,0x3
     2c9a:	a7c080e7          	jalr	-1412(ra) # 5712 <mkdir>
     2c9e:	c57d                	beqz	a0,2d8c <fourteen+0x16c>
     2ca0:	00004517          	auipc	a0,0x4
-    2ca4:	3b850513          	addi	a0,a0,952 # 7058 <malloc+0x1570>
+    2ca4:	3c050513          	addi	a0,a0,960 # 7060 <malloc+0x1570>
     2ca8:	00003097          	auipc	ra,0x3
     2cac:	a6a080e7          	jalr	-1430(ra) # 5712 <mkdir>
     2cb0:	cd65                	beqz	a0,2da8 <fourteen+0x188>
     2cb2:	00004517          	auipc	a0,0x4
-    2cb6:	3a650513          	addi	a0,a0,934 # 7058 <malloc+0x1570>
+    2cb6:	3ae50513          	addi	a0,a0,942 # 7060 <malloc+0x1570>
     2cba:	00003097          	auipc	ra,0x3
     2cbe:	a40080e7          	jalr	-1472(ra) # 56fa <unlink>
     2cc2:	00004517          	auipc	a0,0x4
-    2cc6:	33e50513          	addi	a0,a0,830 # 7000 <malloc+0x1518>
+    2cc6:	34650513          	addi	a0,a0,838 # 7008 <malloc+0x1518>
     2cca:	00003097          	auipc	ra,0x3
     2cce:	a30080e7          	jalr	-1488(ra) # 56fa <unlink>
     2cd2:	00004517          	auipc	a0,0x4
-    2cd6:	2be50513          	addi	a0,a0,702 # 6f90 <malloc+0x14a8>
+    2cd6:	2c650513          	addi	a0,a0,710 # 6f98 <malloc+0x14a8>
     2cda:	00003097          	auipc	ra,0x3
     2cde:	a20080e7          	jalr	-1504(ra) # 56fa <unlink>
     2ce2:	00004517          	auipc	a0,0x4
-    2ce6:	23650513          	addi	a0,a0,566 # 6f18 <malloc+0x1430>
+    2ce6:	23e50513          	addi	a0,a0,574 # 6f20 <malloc+0x1430>
     2cea:	00003097          	auipc	ra,0x3
     2cee:	a10080e7          	jalr	-1520(ra) # 56fa <unlink>
     2cf2:	00004517          	auipc	a0,0x4
-    2cf6:	1ce50513          	addi	a0,a0,462 # 6ec0 <malloc+0x13d8>
+    2cf6:	1d650513          	addi	a0,a0,470 # 6ec8 <malloc+0x13d8>
     2cfa:	00003097          	auipc	ra,0x3
     2cfe:	a00080e7          	jalr	-1536(ra) # 56fa <unlink>
     2d02:	00004517          	auipc	a0,0x4
-    2d06:	36650513          	addi	a0,a0,870 # 7068 <malloc+0x1580>
+    2d06:	36e50513          	addi	a0,a0,878 # 7070 <malloc+0x1580>
     2d0a:	00003097          	auipc	ra,0x3
     2d0e:	9f0080e7          	jalr	-1552(ra) # 56fa <unlink>
     2d12:	60e2                	ld	ra,24(sp)
@@ -3644,49 +4452,79 @@ Disassembly of section .text:
     2d1a:	8082                	ret
     2d1c:	85a6                	mv	a1,s1
     2d1e:	00004517          	auipc	a0,0x4
-    2d22:	17a50513          	addi	a0,a0,378 # 6e98 <malloc+0x13b0>
+    2d22:	18250513          	addi	a0,a0,386 # 6ea0 <malloc+0x13b0>
     2d26:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2d2a:	d04080e7          	jalr	-764(ra) # 5a2a <printf>
+=======
+    2d2a:	d0c080e7          	jalr	-756(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2d2e:	4505                	li	a0,1
     2d30:	00003097          	auipc	ra,0x3
     2d34:	97a080e7          	jalr	-1670(ra) # 56aa <exit>
     2d38:	85a6                	mv	a1,s1
     2d3a:	00004517          	auipc	a0,0x4
-    2d3e:	1a650513          	addi	a0,a0,422 # 6ee0 <malloc+0x13f8>
+    2d3e:	1ae50513          	addi	a0,a0,430 # 6ee8 <malloc+0x13f8>
     2d42:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2d46:	ce8080e7          	jalr	-792(ra) # 5a2a <printf>
+=======
+    2d46:	cf0080e7          	jalr	-784(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2d4a:	4505                	li	a0,1
     2d4c:	00003097          	auipc	ra,0x3
     2d50:	95e080e7          	jalr	-1698(ra) # 56aa <exit>
     2d54:	85a6                	mv	a1,s1
     2d56:	00004517          	auipc	a0,0x4
-    2d5a:	1f250513          	addi	a0,a0,498 # 6f48 <malloc+0x1460>
+    2d5a:	1fa50513          	addi	a0,a0,506 # 6f50 <malloc+0x1460>
     2d5e:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2d62:	ccc080e7          	jalr	-820(ra) # 5a2a <printf>
+=======
+    2d62:	cd4080e7          	jalr	-812(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2d66:	4505                	li	a0,1
     2d68:	00003097          	auipc	ra,0x3
     2d6c:	942080e7          	jalr	-1726(ra) # 56aa <exit>
     2d70:	85a6                	mv	a1,s1
     2d72:	00004517          	auipc	a0,0x4
-    2d76:	24e50513          	addi	a0,a0,590 # 6fc0 <malloc+0x14d8>
+    2d76:	25650513          	addi	a0,a0,598 # 6fc8 <malloc+0x14d8>
     2d7a:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2d7e:	cb0080e7          	jalr	-848(ra) # 5a2a <printf>
+=======
+    2d7e:	cb8080e7          	jalr	-840(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2d82:	4505                	li	a0,1
     2d84:	00003097          	auipc	ra,0x3
     2d88:	926080e7          	jalr	-1754(ra) # 56aa <exit>
     2d8c:	85a6                	mv	a1,s1
     2d8e:	00004517          	auipc	a0,0x4
-    2d92:	29250513          	addi	a0,a0,658 # 7020 <malloc+0x1538>
+    2d92:	29a50513          	addi	a0,a0,666 # 7028 <malloc+0x1538>
     2d96:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2d9a:	c94080e7          	jalr	-876(ra) # 5a2a <printf>
+=======
+    2d9a:	c9c080e7          	jalr	-868(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2d9e:	4505                	li	a0,1
     2da0:	00003097          	auipc	ra,0x3
     2da4:	90a080e7          	jalr	-1782(ra) # 56aa <exit>
     2da8:	85a6                	mv	a1,s1
     2daa:	00004517          	auipc	a0,0x4
-    2dae:	2ce50513          	addi	a0,a0,718 # 7078 <malloc+0x1590>
+    2dae:	2d650513          	addi	a0,a0,726 # 7080 <malloc+0x1590>
     2db2:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2db6:	c78080e7          	jalr	-904(ra) # 5a2a <printf>
+=======
+    2db6:	c80080e7          	jalr	-896(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2dba:	4505                	li	a0,1
     2dbc:	00003097          	auipc	ra,0x3
     2dc0:	8ee080e7          	jalr	-1810(ra) # 56aa <exit>
@@ -3699,22 +4537,22 @@ Disassembly of section .text:
     2dcc:	1000                	addi	s0,sp,32
     2dce:	84aa                	mv	s1,a0
     2dd0:	00004517          	auipc	a0,0x4
-    2dd4:	2e050513          	addi	a0,a0,736 # 70b0 <malloc+0x15c8>
+    2dd4:	2e850513          	addi	a0,a0,744 # 70b8 <malloc+0x15c8>
     2dd8:	00003097          	auipc	ra,0x3
     2ddc:	93a080e7          	jalr	-1734(ra) # 5712 <mkdir>
     2de0:	04054563          	bltz	a0,2e2a <iputtest+0x66>
     2de4:	00004517          	auipc	a0,0x4
-    2de8:	2cc50513          	addi	a0,a0,716 # 70b0 <malloc+0x15c8>
+    2de8:	2d450513          	addi	a0,a0,724 # 70b8 <malloc+0x15c8>
     2dec:	00003097          	auipc	ra,0x3
     2df0:	92e080e7          	jalr	-1746(ra) # 571a <chdir>
     2df4:	04054963          	bltz	a0,2e46 <iputtest+0x82>
     2df8:	00004517          	auipc	a0,0x4
-    2dfc:	2f850513          	addi	a0,a0,760 # 70f0 <malloc+0x1608>
+    2dfc:	30050513          	addi	a0,a0,768 # 70f8 <malloc+0x1608>
     2e00:	00003097          	auipc	ra,0x3
     2e04:	8fa080e7          	jalr	-1798(ra) # 56fa <unlink>
     2e08:	04054d63          	bltz	a0,2e62 <iputtest+0x9e>
     2e0c:	00004517          	auipc	a0,0x4
-    2e10:	31450513          	addi	a0,a0,788 # 7120 <malloc+0x1638>
+    2e10:	31c50513          	addi	a0,a0,796 # 7128 <malloc+0x1638>
     2e14:	00003097          	auipc	ra,0x3
     2e18:	906080e7          	jalr	-1786(ra) # 571a <chdir>
     2e1c:	06054163          	bltz	a0,2e7e <iputtest+0xba>
@@ -3725,33 +4563,53 @@ Disassembly of section .text:
     2e28:	8082                	ret
     2e2a:	85a6                	mv	a1,s1
     2e2c:	00004517          	auipc	a0,0x4
-    2e30:	28c50513          	addi	a0,a0,652 # 70b8 <malloc+0x15d0>
+    2e30:	29450513          	addi	a0,a0,660 # 70c0 <malloc+0x15d0>
     2e34:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2e38:	bf6080e7          	jalr	-1034(ra) # 5a2a <printf>
+=======
+    2e38:	bfe080e7          	jalr	-1026(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2e3c:	4505                	li	a0,1
     2e3e:	00003097          	auipc	ra,0x3
     2e42:	86c080e7          	jalr	-1940(ra) # 56aa <exit>
     2e46:	85a6                	mv	a1,s1
     2e48:	00004517          	auipc	a0,0x4
-    2e4c:	28850513          	addi	a0,a0,648 # 70d0 <malloc+0x15e8>
+    2e4c:	29050513          	addi	a0,a0,656 # 70d8 <malloc+0x15e8>
     2e50:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2e54:	bda080e7          	jalr	-1062(ra) # 5a2a <printf>
+=======
+    2e54:	be2080e7          	jalr	-1054(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2e58:	4505                	li	a0,1
     2e5a:	00003097          	auipc	ra,0x3
     2e5e:	850080e7          	jalr	-1968(ra) # 56aa <exit>
     2e62:	85a6                	mv	a1,s1
     2e64:	00004517          	auipc	a0,0x4
-    2e68:	29c50513          	addi	a0,a0,668 # 7100 <malloc+0x1618>
+    2e68:	2a450513          	addi	a0,a0,676 # 7108 <malloc+0x1618>
     2e6c:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2e70:	bbe080e7          	jalr	-1090(ra) # 5a2a <printf>
+=======
+    2e70:	bc6080e7          	jalr	-1082(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2e74:	4505                	li	a0,1
     2e76:	00003097          	auipc	ra,0x3
     2e7a:	834080e7          	jalr	-1996(ra) # 56aa <exit>
     2e7e:	85a6                	mv	a1,s1
     2e80:	00004517          	auipc	a0,0x4
-    2e84:	2a850513          	addi	a0,a0,680 # 7128 <malloc+0x1640>
+    2e84:	2b050513          	addi	a0,a0,688 # 7130 <malloc+0x1640>
     2e88:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2e8c:	ba2080e7          	jalr	-1118(ra) # 5a2a <printf>
+=======
+    2e8c:	baa080e7          	jalr	-1110(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2e90:	4505                	li	a0,1
     2e92:	00003097          	auipc	ra,0x3
     2e96:	818080e7          	jalr	-2024(ra) # 56aa <exit>
@@ -3768,17 +4626,17 @@ Disassembly of section .text:
     2eae:	04054663          	bltz	a0,2efa <exitiputtest+0x60>
     2eb2:	ed45                	bnez	a0,2f6a <exitiputtest+0xd0>
     2eb4:	00004517          	auipc	a0,0x4
-    2eb8:	1fc50513          	addi	a0,a0,508 # 70b0 <malloc+0x15c8>
+    2eb8:	20450513          	addi	a0,a0,516 # 70b8 <malloc+0x15c8>
     2ebc:	00003097          	auipc	ra,0x3
     2ec0:	856080e7          	jalr	-1962(ra) # 5712 <mkdir>
     2ec4:	04054963          	bltz	a0,2f16 <exitiputtest+0x7c>
     2ec8:	00004517          	auipc	a0,0x4
-    2ecc:	1e850513          	addi	a0,a0,488 # 70b0 <malloc+0x15c8>
+    2ecc:	1f050513          	addi	a0,a0,496 # 70b8 <malloc+0x15c8>
     2ed0:	00003097          	auipc	ra,0x3
     2ed4:	84a080e7          	jalr	-1974(ra) # 571a <chdir>
     2ed8:	04054d63          	bltz	a0,2f32 <exitiputtest+0x98>
     2edc:	00004517          	auipc	a0,0x4
-    2ee0:	21450513          	addi	a0,a0,532 # 70f0 <malloc+0x1608>
+    2ee0:	21c50513          	addi	a0,a0,540 # 70f8 <malloc+0x1608>
     2ee4:	00003097          	auipc	ra,0x3
     2ee8:	816080e7          	jalr	-2026(ra) # 56fa <unlink>
     2eec:	06054163          	bltz	a0,2f4e <exitiputtest+0xb4>
@@ -3787,33 +4645,53 @@ Disassembly of section .text:
     2ef6:	7b8080e7          	jalr	1976(ra) # 56aa <exit>
     2efa:	85a6                	mv	a1,s1
     2efc:	00004517          	auipc	a0,0x4
-    2f00:	87450513          	addi	a0,a0,-1932 # 6770 <malloc+0xc88>
+    2f00:	87c50513          	addi	a0,a0,-1924 # 6778 <malloc+0xc88>
     2f04:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2f08:	b26080e7          	jalr	-1242(ra) # 5a2a <printf>
+=======
+    2f08:	b2e080e7          	jalr	-1234(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2f0c:	4505                	li	a0,1
     2f0e:	00002097          	auipc	ra,0x2
     2f12:	79c080e7          	jalr	1948(ra) # 56aa <exit>
     2f16:	85a6                	mv	a1,s1
     2f18:	00004517          	auipc	a0,0x4
-    2f1c:	1a050513          	addi	a0,a0,416 # 70b8 <malloc+0x15d0>
+    2f1c:	1a850513          	addi	a0,a0,424 # 70c0 <malloc+0x15d0>
     2f20:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2f24:	b0a080e7          	jalr	-1270(ra) # 5a2a <printf>
+=======
+    2f24:	b12080e7          	jalr	-1262(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2f28:	4505                	li	a0,1
     2f2a:	00002097          	auipc	ra,0x2
     2f2e:	780080e7          	jalr	1920(ra) # 56aa <exit>
     2f32:	85a6                	mv	a1,s1
     2f34:	00004517          	auipc	a0,0x4
-    2f38:	20c50513          	addi	a0,a0,524 # 7140 <malloc+0x1658>
+    2f38:	21450513          	addi	a0,a0,532 # 7148 <malloc+0x1658>
     2f3c:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2f40:	aee080e7          	jalr	-1298(ra) # 5a2a <printf>
+=======
+    2f40:	af6080e7          	jalr	-1290(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2f44:	4505                	li	a0,1
     2f46:	00002097          	auipc	ra,0x2
     2f4a:	764080e7          	jalr	1892(ra) # 56aa <exit>
     2f4e:	85a6                	mv	a1,s1
     2f50:	00004517          	auipc	a0,0x4
-    2f54:	1b050513          	addi	a0,a0,432 # 7100 <malloc+0x1618>
+    2f54:	1b850513          	addi	a0,a0,440 # 7108 <malloc+0x1618>
     2f58:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2f5c:	ad2080e7          	jalr	-1326(ra) # 5a2a <printf>
+=======
+    2f5c:	ada080e7          	jalr	-1318(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2f60:	4505                	li	a0,1
     2f62:	00002097          	auipc	ra,0x2
     2f66:	748080e7          	jalr	1864(ra) # 56aa <exit>
@@ -3832,22 +4710,22 @@ Disassembly of section .text:
     2f8a:	1000                	addi	s0,sp,32
     2f8c:	84aa                	mv	s1,a0
     2f8e:	00004517          	auipc	a0,0x4
-    2f92:	1ca50513          	addi	a0,a0,458 # 7158 <malloc+0x1670>
+    2f92:	1d250513          	addi	a0,a0,466 # 7160 <malloc+0x1670>
     2f96:	00002097          	auipc	ra,0x2
     2f9a:	77c080e7          	jalr	1916(ra) # 5712 <mkdir>
     2f9e:	04054563          	bltz	a0,2fe8 <dirtest+0x66>
     2fa2:	00004517          	auipc	a0,0x4
-    2fa6:	1b650513          	addi	a0,a0,438 # 7158 <malloc+0x1670>
+    2fa6:	1be50513          	addi	a0,a0,446 # 7160 <malloc+0x1670>
     2faa:	00002097          	auipc	ra,0x2
     2fae:	770080e7          	jalr	1904(ra) # 571a <chdir>
     2fb2:	04054963          	bltz	a0,3004 <dirtest+0x82>
     2fb6:	00004517          	auipc	a0,0x4
-    2fba:	1c250513          	addi	a0,a0,450 # 7178 <malloc+0x1690>
+    2fba:	1ca50513          	addi	a0,a0,458 # 7180 <malloc+0x1690>
     2fbe:	00002097          	auipc	ra,0x2
     2fc2:	75c080e7          	jalr	1884(ra) # 571a <chdir>
     2fc6:	04054d63          	bltz	a0,3020 <dirtest+0x9e>
     2fca:	00004517          	auipc	a0,0x4
-    2fce:	18e50513          	addi	a0,a0,398 # 7158 <malloc+0x1670>
+    2fce:	19650513          	addi	a0,a0,406 # 7160 <malloc+0x1670>
     2fd2:	00002097          	auipc	ra,0x2
     2fd6:	728080e7          	jalr	1832(ra) # 56fa <unlink>
     2fda:	06054163          	bltz	a0,303c <dirtest+0xba>
@@ -3858,33 +4736,53 @@ Disassembly of section .text:
     2fe6:	8082                	ret
     2fe8:	85a6                	mv	a1,s1
     2fea:	00004517          	auipc	a0,0x4
-    2fee:	0ce50513          	addi	a0,a0,206 # 70b8 <malloc+0x15d0>
+    2fee:	0d650513          	addi	a0,a0,214 # 70c0 <malloc+0x15d0>
     2ff2:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     2ff6:	a38080e7          	jalr	-1480(ra) # 5a2a <printf>
+=======
+    2ff6:	a40080e7          	jalr	-1472(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     2ffa:	4505                	li	a0,1
     2ffc:	00002097          	auipc	ra,0x2
     3000:	6ae080e7          	jalr	1710(ra) # 56aa <exit>
     3004:	85a6                	mv	a1,s1
     3006:	00004517          	auipc	a0,0x4
-    300a:	15a50513          	addi	a0,a0,346 # 7160 <malloc+0x1678>
+    300a:	16250513          	addi	a0,a0,354 # 7168 <malloc+0x1678>
     300e:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     3012:	a1c080e7          	jalr	-1508(ra) # 5a2a <printf>
+=======
+    3012:	a24080e7          	jalr	-1500(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3016:	4505                	li	a0,1
     3018:	00002097          	auipc	ra,0x2
     301c:	692080e7          	jalr	1682(ra) # 56aa <exit>
     3020:	85a6                	mv	a1,s1
     3022:	00004517          	auipc	a0,0x4
-    3026:	15e50513          	addi	a0,a0,350 # 7180 <malloc+0x1698>
+    3026:	16650513          	addi	a0,a0,358 # 7188 <malloc+0x1698>
     302a:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     302e:	a00080e7          	jalr	-1536(ra) # 5a2a <printf>
+=======
+    302e:	a08080e7          	jalr	-1528(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3032:	4505                	li	a0,1
     3034:	00002097          	auipc	ra,0x2
     3038:	676080e7          	jalr	1654(ra) # 56aa <exit>
     303c:	85a6                	mv	a1,s1
     303e:	00004517          	auipc	a0,0x4
-    3042:	15a50513          	addi	a0,a0,346 # 7198 <malloc+0x16b0>
+    3042:	16250513          	addi	a0,a0,354 # 71a0 <malloc+0x16b0>
     3046:	00003097          	auipc	ra,0x3
+<<<<<<< HEAD
     304a:	9e4080e7          	jalr	-1564(ra) # 5a2a <printf>
+=======
+    304a:	9ec080e7          	jalr	-1556(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     304e:	4505                	li	a0,1
     3050:	00002097          	auipc	ra,0x2
     3054:	65a080e7          	jalr	1626(ra) # 56aa <exit>
@@ -3898,49 +4796,49 @@ Disassembly of section .text:
     3062:	1000                	addi	s0,sp,32
     3064:	892a                	mv	s2,a0
     3066:	00004517          	auipc	a0,0x4
-    306a:	27a50513          	addi	a0,a0,634 # 72e0 <malloc+0x17f8>
+    306a:	28250513          	addi	a0,a0,642 # 72e8 <malloc+0x17f8>
     306e:	00002097          	auipc	ra,0x2
     3072:	68c080e7          	jalr	1676(ra) # 56fa <unlink>
     3076:	00004517          	auipc	a0,0x4
-    307a:	13a50513          	addi	a0,a0,314 # 71b0 <malloc+0x16c8>
+    307a:	14250513          	addi	a0,a0,322 # 71b8 <malloc+0x16c8>
     307e:	00002097          	auipc	ra,0x2
     3082:	694080e7          	jalr	1684(ra) # 5712 <mkdir>
     3086:	38051663          	bnez	a0,3412 <subdir+0x3ba>
     308a:	20200593          	li	a1,514
     308e:	00004517          	auipc	a0,0x4
-    3092:	14250513          	addi	a0,a0,322 # 71d0 <malloc+0x16e8>
+    3092:	14a50513          	addi	a0,a0,330 # 71d8 <malloc+0x16e8>
     3096:	00002097          	auipc	ra,0x2
     309a:	654080e7          	jalr	1620(ra) # 56ea <open>
     309e:	84aa                	mv	s1,a0
     30a0:	38054763          	bltz	a0,342e <subdir+0x3d6>
     30a4:	4609                	li	a2,2
     30a6:	00004597          	auipc	a1,0x4
-    30aa:	23a58593          	addi	a1,a1,570 # 72e0 <malloc+0x17f8>
+    30aa:	24258593          	addi	a1,a1,578 # 72e8 <malloc+0x17f8>
     30ae:	00002097          	auipc	ra,0x2
     30b2:	61c080e7          	jalr	1564(ra) # 56ca <write>
     30b6:	8526                	mv	a0,s1
     30b8:	00002097          	auipc	ra,0x2
     30bc:	61a080e7          	jalr	1562(ra) # 56d2 <close>
     30c0:	00004517          	auipc	a0,0x4
-    30c4:	0f050513          	addi	a0,a0,240 # 71b0 <malloc+0x16c8>
+    30c4:	0f850513          	addi	a0,a0,248 # 71b8 <malloc+0x16c8>
     30c8:	00002097          	auipc	ra,0x2
     30cc:	632080e7          	jalr	1586(ra) # 56fa <unlink>
     30d0:	36055d63          	bgez	a0,344a <subdir+0x3f2>
     30d4:	00004517          	auipc	a0,0x4
-    30d8:	15450513          	addi	a0,a0,340 # 7228 <malloc+0x1740>
+    30d8:	15c50513          	addi	a0,a0,348 # 7230 <malloc+0x1740>
     30dc:	00002097          	auipc	ra,0x2
     30e0:	636080e7          	jalr	1590(ra) # 5712 <mkdir>
     30e4:	38051163          	bnez	a0,3466 <subdir+0x40e>
     30e8:	20200593          	li	a1,514
     30ec:	00004517          	auipc	a0,0x4
-    30f0:	16450513          	addi	a0,a0,356 # 7250 <malloc+0x1768>
+    30f0:	16c50513          	addi	a0,a0,364 # 7258 <malloc+0x1768>
     30f4:	00002097          	auipc	ra,0x2
     30f8:	5f6080e7          	jalr	1526(ra) # 56ea <open>
     30fc:	84aa                	mv	s1,a0
     30fe:	38054263          	bltz	a0,3482 <subdir+0x42a>
     3102:	4609                	li	a2,2
     3104:	00004597          	auipc	a1,0x4
-    3108:	17c58593          	addi	a1,a1,380 # 7280 <malloc+0x1798>
+    3108:	18458593          	addi	a1,a1,388 # 7288 <malloc+0x1798>
     310c:	00002097          	auipc	ra,0x2
     3110:	5be080e7          	jalr	1470(ra) # 56ca <write>
     3114:	8526                	mv	a0,s1
@@ -3948,73 +4846,73 @@ Disassembly of section .text:
     311a:	5bc080e7          	jalr	1468(ra) # 56d2 <close>
     311e:	4581                	li	a1,0
     3120:	00004517          	auipc	a0,0x4
-    3124:	16850513          	addi	a0,a0,360 # 7288 <malloc+0x17a0>
+    3124:	17050513          	addi	a0,a0,368 # 7290 <malloc+0x17a0>
     3128:	00002097          	auipc	ra,0x2
     312c:	5c2080e7          	jalr	1474(ra) # 56ea <open>
     3130:	84aa                	mv	s1,a0
     3132:	36054663          	bltz	a0,349e <subdir+0x446>
     3136:	660d                	lui	a2,0x3
     3138:	00009597          	auipc	a1,0x9
-    313c:	a4858593          	addi	a1,a1,-1464 # bb80 <buf>
+    313c:	a5058593          	addi	a1,a1,-1456 # bb88 <buf>
     3140:	00002097          	auipc	ra,0x2
     3144:	582080e7          	jalr	1410(ra) # 56c2 <read>
     3148:	4789                	li	a5,2
     314a:	36f51863          	bne	a0,a5,34ba <subdir+0x462>
     314e:	00009717          	auipc	a4,0x9
-    3152:	a3274703          	lbu	a4,-1486(a4) # bb80 <buf>
+    3152:	a3a74703          	lbu	a4,-1478(a4) # bb88 <buf>
     3156:	06600793          	li	a5,102
     315a:	36f71063          	bne	a4,a5,34ba <subdir+0x462>
     315e:	8526                	mv	a0,s1
     3160:	00002097          	auipc	ra,0x2
     3164:	572080e7          	jalr	1394(ra) # 56d2 <close>
     3168:	00004597          	auipc	a1,0x4
-    316c:	17058593          	addi	a1,a1,368 # 72d8 <malloc+0x17f0>
+    316c:	17858593          	addi	a1,a1,376 # 72e0 <malloc+0x17f0>
     3170:	00004517          	auipc	a0,0x4
-    3174:	0e050513          	addi	a0,a0,224 # 7250 <malloc+0x1768>
+    3174:	0e850513          	addi	a0,a0,232 # 7258 <malloc+0x1768>
     3178:	00002097          	auipc	ra,0x2
     317c:	592080e7          	jalr	1426(ra) # 570a <link>
     3180:	34051b63          	bnez	a0,34d6 <subdir+0x47e>
     3184:	00004517          	auipc	a0,0x4
-    3188:	0cc50513          	addi	a0,a0,204 # 7250 <malloc+0x1768>
+    3188:	0d450513          	addi	a0,a0,212 # 7258 <malloc+0x1768>
     318c:	00002097          	auipc	ra,0x2
     3190:	56e080e7          	jalr	1390(ra) # 56fa <unlink>
     3194:	34051f63          	bnez	a0,34f2 <subdir+0x49a>
     3198:	4581                	li	a1,0
     319a:	00004517          	auipc	a0,0x4
-    319e:	0b650513          	addi	a0,a0,182 # 7250 <malloc+0x1768>
+    319e:	0be50513          	addi	a0,a0,190 # 7258 <malloc+0x1768>
     31a2:	00002097          	auipc	ra,0x2
     31a6:	548080e7          	jalr	1352(ra) # 56ea <open>
     31aa:	36055263          	bgez	a0,350e <subdir+0x4b6>
     31ae:	00004517          	auipc	a0,0x4
-    31b2:	00250513          	addi	a0,a0,2 # 71b0 <malloc+0x16c8>
+    31b2:	00a50513          	addi	a0,a0,10 # 71b8 <malloc+0x16c8>
     31b6:	00002097          	auipc	ra,0x2
     31ba:	564080e7          	jalr	1380(ra) # 571a <chdir>
     31be:	36051663          	bnez	a0,352a <subdir+0x4d2>
     31c2:	00004517          	auipc	a0,0x4
-    31c6:	1ae50513          	addi	a0,a0,430 # 7370 <malloc+0x1888>
+    31c6:	1b650513          	addi	a0,a0,438 # 7378 <malloc+0x1888>
     31ca:	00002097          	auipc	ra,0x2
     31ce:	550080e7          	jalr	1360(ra) # 571a <chdir>
     31d2:	36051a63          	bnez	a0,3546 <subdir+0x4ee>
     31d6:	00004517          	auipc	a0,0x4
-    31da:	1ca50513          	addi	a0,a0,458 # 73a0 <malloc+0x18b8>
+    31da:	1d250513          	addi	a0,a0,466 # 73a8 <malloc+0x18b8>
     31de:	00002097          	auipc	ra,0x2
     31e2:	53c080e7          	jalr	1340(ra) # 571a <chdir>
     31e6:	36051e63          	bnez	a0,3562 <subdir+0x50a>
     31ea:	00004517          	auipc	a0,0x4
-    31ee:	1e650513          	addi	a0,a0,486 # 73d0 <malloc+0x18e8>
+    31ee:	1ee50513          	addi	a0,a0,494 # 73d8 <malloc+0x18e8>
     31f2:	00002097          	auipc	ra,0x2
     31f6:	528080e7          	jalr	1320(ra) # 571a <chdir>
     31fa:	38051263          	bnez	a0,357e <subdir+0x526>
     31fe:	4581                	li	a1,0
     3200:	00004517          	auipc	a0,0x4
-    3204:	0d850513          	addi	a0,a0,216 # 72d8 <malloc+0x17f0>
+    3204:	0e050513          	addi	a0,a0,224 # 72e0 <malloc+0x17f0>
     3208:	00002097          	auipc	ra,0x2
     320c:	4e2080e7          	jalr	1250(ra) # 56ea <open>
     3210:	84aa                	mv	s1,a0
     3212:	38054463          	bltz	a0,359a <subdir+0x542>
     3216:	660d                	lui	a2,0x3
     3218:	00009597          	auipc	a1,0x9
-    321c:	96858593          	addi	a1,a1,-1688 # bb80 <buf>
+    321c:	97058593          	addi	a1,a1,-1680 # bb88 <buf>
     3220:	00002097          	auipc	ra,0x2
     3224:	4a2080e7          	jalr	1186(ra) # 56c2 <read>
     3228:	4789                	li	a5,2
@@ -4024,118 +4922,118 @@ Disassembly of section .text:
     3234:	4a2080e7          	jalr	1186(ra) # 56d2 <close>
     3238:	4581                	li	a1,0
     323a:	00004517          	auipc	a0,0x4
-    323e:	01650513          	addi	a0,a0,22 # 7250 <malloc+0x1768>
+    323e:	01e50513          	addi	a0,a0,30 # 7258 <malloc+0x1768>
     3242:	00002097          	auipc	ra,0x2
     3246:	4a8080e7          	jalr	1192(ra) # 56ea <open>
     324a:	38055463          	bgez	a0,35d2 <subdir+0x57a>
     324e:	20200593          	li	a1,514
     3252:	00004517          	auipc	a0,0x4
-    3256:	20e50513          	addi	a0,a0,526 # 7460 <malloc+0x1978>
+    3256:	21650513          	addi	a0,a0,534 # 7468 <malloc+0x1978>
     325a:	00002097          	auipc	ra,0x2
     325e:	490080e7          	jalr	1168(ra) # 56ea <open>
     3262:	38055663          	bgez	a0,35ee <subdir+0x596>
     3266:	20200593          	li	a1,514
     326a:	00004517          	auipc	a0,0x4
-    326e:	22650513          	addi	a0,a0,550 # 7490 <malloc+0x19a8>
+    326e:	22e50513          	addi	a0,a0,558 # 7498 <malloc+0x19a8>
     3272:	00002097          	auipc	ra,0x2
     3276:	478080e7          	jalr	1144(ra) # 56ea <open>
     327a:	38055863          	bgez	a0,360a <subdir+0x5b2>
     327e:	20000593          	li	a1,512
     3282:	00004517          	auipc	a0,0x4
-    3286:	f2e50513          	addi	a0,a0,-210 # 71b0 <malloc+0x16c8>
+    3286:	f3650513          	addi	a0,a0,-202 # 71b8 <malloc+0x16c8>
     328a:	00002097          	auipc	ra,0x2
     328e:	460080e7          	jalr	1120(ra) # 56ea <open>
     3292:	38055a63          	bgez	a0,3626 <subdir+0x5ce>
     3296:	4589                	li	a1,2
     3298:	00004517          	auipc	a0,0x4
-    329c:	f1850513          	addi	a0,a0,-232 # 71b0 <malloc+0x16c8>
+    329c:	f2050513          	addi	a0,a0,-224 # 71b8 <malloc+0x16c8>
     32a0:	00002097          	auipc	ra,0x2
     32a4:	44a080e7          	jalr	1098(ra) # 56ea <open>
     32a8:	38055d63          	bgez	a0,3642 <subdir+0x5ea>
     32ac:	4585                	li	a1,1
     32ae:	00004517          	auipc	a0,0x4
-    32b2:	f0250513          	addi	a0,a0,-254 # 71b0 <malloc+0x16c8>
+    32b2:	f0a50513          	addi	a0,a0,-246 # 71b8 <malloc+0x16c8>
     32b6:	00002097          	auipc	ra,0x2
     32ba:	434080e7          	jalr	1076(ra) # 56ea <open>
     32be:	3a055063          	bgez	a0,365e <subdir+0x606>
     32c2:	00004597          	auipc	a1,0x4
-    32c6:	25e58593          	addi	a1,a1,606 # 7520 <malloc+0x1a38>
+    32c6:	26658593          	addi	a1,a1,614 # 7528 <malloc+0x1a38>
     32ca:	00004517          	auipc	a0,0x4
-    32ce:	19650513          	addi	a0,a0,406 # 7460 <malloc+0x1978>
+    32ce:	19e50513          	addi	a0,a0,414 # 7468 <malloc+0x1978>
     32d2:	00002097          	auipc	ra,0x2
     32d6:	438080e7          	jalr	1080(ra) # 570a <link>
     32da:	3a050063          	beqz	a0,367a <subdir+0x622>
     32de:	00004597          	auipc	a1,0x4
-    32e2:	24258593          	addi	a1,a1,578 # 7520 <malloc+0x1a38>
+    32e2:	24a58593          	addi	a1,a1,586 # 7528 <malloc+0x1a38>
     32e6:	00004517          	auipc	a0,0x4
-    32ea:	1aa50513          	addi	a0,a0,426 # 7490 <malloc+0x19a8>
+    32ea:	1b250513          	addi	a0,a0,434 # 7498 <malloc+0x19a8>
     32ee:	00002097          	auipc	ra,0x2
     32f2:	41c080e7          	jalr	1052(ra) # 570a <link>
     32f6:	3a050063          	beqz	a0,3696 <subdir+0x63e>
     32fa:	00004597          	auipc	a1,0x4
-    32fe:	fde58593          	addi	a1,a1,-34 # 72d8 <malloc+0x17f0>
+    32fe:	fe658593          	addi	a1,a1,-26 # 72e0 <malloc+0x17f0>
     3302:	00004517          	auipc	a0,0x4
-    3306:	ece50513          	addi	a0,a0,-306 # 71d0 <malloc+0x16e8>
+    3306:	ed650513          	addi	a0,a0,-298 # 71d8 <malloc+0x16e8>
     330a:	00002097          	auipc	ra,0x2
     330e:	400080e7          	jalr	1024(ra) # 570a <link>
     3312:	3a050063          	beqz	a0,36b2 <subdir+0x65a>
     3316:	00004517          	auipc	a0,0x4
-    331a:	14a50513          	addi	a0,a0,330 # 7460 <malloc+0x1978>
+    331a:	15250513          	addi	a0,a0,338 # 7468 <malloc+0x1978>
     331e:	00002097          	auipc	ra,0x2
     3322:	3f4080e7          	jalr	1012(ra) # 5712 <mkdir>
     3326:	3a050463          	beqz	a0,36ce <subdir+0x676>
     332a:	00004517          	auipc	a0,0x4
-    332e:	16650513          	addi	a0,a0,358 # 7490 <malloc+0x19a8>
+    332e:	16e50513          	addi	a0,a0,366 # 7498 <malloc+0x19a8>
     3332:	00002097          	auipc	ra,0x2
     3336:	3e0080e7          	jalr	992(ra) # 5712 <mkdir>
     333a:	3a050863          	beqz	a0,36ea <subdir+0x692>
     333e:	00004517          	auipc	a0,0x4
-    3342:	f9a50513          	addi	a0,a0,-102 # 72d8 <malloc+0x17f0>
+    3342:	fa250513          	addi	a0,a0,-94 # 72e0 <malloc+0x17f0>
     3346:	00002097          	auipc	ra,0x2
     334a:	3cc080e7          	jalr	972(ra) # 5712 <mkdir>
     334e:	3a050c63          	beqz	a0,3706 <subdir+0x6ae>
     3352:	00004517          	auipc	a0,0x4
-    3356:	13e50513          	addi	a0,a0,318 # 7490 <malloc+0x19a8>
+    3356:	14650513          	addi	a0,a0,326 # 7498 <malloc+0x19a8>
     335a:	00002097          	auipc	ra,0x2
     335e:	3a0080e7          	jalr	928(ra) # 56fa <unlink>
     3362:	3c050063          	beqz	a0,3722 <subdir+0x6ca>
     3366:	00004517          	auipc	a0,0x4
-    336a:	0fa50513          	addi	a0,a0,250 # 7460 <malloc+0x1978>
+    336a:	10250513          	addi	a0,a0,258 # 7468 <malloc+0x1978>
     336e:	00002097          	auipc	ra,0x2
     3372:	38c080e7          	jalr	908(ra) # 56fa <unlink>
     3376:	3c050463          	beqz	a0,373e <subdir+0x6e6>
     337a:	00004517          	auipc	a0,0x4
-    337e:	e5650513          	addi	a0,a0,-426 # 71d0 <malloc+0x16e8>
+    337e:	e5e50513          	addi	a0,a0,-418 # 71d8 <malloc+0x16e8>
     3382:	00002097          	auipc	ra,0x2
     3386:	398080e7          	jalr	920(ra) # 571a <chdir>
     338a:	3c050863          	beqz	a0,375a <subdir+0x702>
     338e:	00004517          	auipc	a0,0x4
-    3392:	2e250513          	addi	a0,a0,738 # 7670 <malloc+0x1b88>
+    3392:	2ea50513          	addi	a0,a0,746 # 7678 <malloc+0x1b88>
     3396:	00002097          	auipc	ra,0x2
     339a:	384080e7          	jalr	900(ra) # 571a <chdir>
     339e:	3c050c63          	beqz	a0,3776 <subdir+0x71e>
     33a2:	00004517          	auipc	a0,0x4
-    33a6:	f3650513          	addi	a0,a0,-202 # 72d8 <malloc+0x17f0>
+    33a6:	f3e50513          	addi	a0,a0,-194 # 72e0 <malloc+0x17f0>
     33aa:	00002097          	auipc	ra,0x2
     33ae:	350080e7          	jalr	848(ra) # 56fa <unlink>
     33b2:	3e051063          	bnez	a0,3792 <subdir+0x73a>
     33b6:	00004517          	auipc	a0,0x4
-    33ba:	e1a50513          	addi	a0,a0,-486 # 71d0 <malloc+0x16e8>
+    33ba:	e2250513          	addi	a0,a0,-478 # 71d8 <malloc+0x16e8>
     33be:	00002097          	auipc	ra,0x2
     33c2:	33c080e7          	jalr	828(ra) # 56fa <unlink>
     33c6:	3e051463          	bnez	a0,37ae <subdir+0x756>
     33ca:	00004517          	auipc	a0,0x4
-    33ce:	de650513          	addi	a0,a0,-538 # 71b0 <malloc+0x16c8>
+    33ce:	dee50513          	addi	a0,a0,-530 # 71b8 <malloc+0x16c8>
     33d2:	00002097          	auipc	ra,0x2
     33d6:	328080e7          	jalr	808(ra) # 56fa <unlink>
     33da:	3e050863          	beqz	a0,37ca <subdir+0x772>
     33de:	00004517          	auipc	a0,0x4
-    33e2:	30250513          	addi	a0,a0,770 # 76e0 <malloc+0x1bf8>
+    33e2:	30a50513          	addi	a0,a0,778 # 76e8 <malloc+0x1bf8>
     33e6:	00002097          	auipc	ra,0x2
     33ea:	314080e7          	jalr	788(ra) # 56fa <unlink>
     33ee:	3e054c63          	bltz	a0,37e6 <subdir+0x78e>
     33f2:	00004517          	auipc	a0,0x4
-    33f6:	dbe50513          	addi	a0,a0,-578 # 71b0 <malloc+0x16c8>
+    33f6:	dc650513          	addi	a0,a0,-570 # 71b8 <malloc+0x16c8>
     33fa:	00002097          	auipc	ra,0x2
     33fe:	300080e7          	jalr	768(ra) # 56fa <unlink>
     3402:	40054063          	bltz	a0,3802 <subdir+0x7aa>
@@ -4147,297 +5045,482 @@ Disassembly of section .text:
     3410:	8082                	ret
     3412:	85ca                	mv	a1,s2
     3414:	00004517          	auipc	a0,0x4
-    3418:	da450513          	addi	a0,a0,-604 # 71b8 <malloc+0x16d0>
+    3418:	dac50513          	addi	a0,a0,-596 # 71c0 <malloc+0x16d0>
     341c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3420:	60e080e7          	jalr	1550(ra) # 5a2a <printf>
+=======
+    3420:	616080e7          	jalr	1558(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3424:	4505                	li	a0,1
     3426:	00002097          	auipc	ra,0x2
     342a:	284080e7          	jalr	644(ra) # 56aa <exit>
     342e:	85ca                	mv	a1,s2
     3430:	00004517          	auipc	a0,0x4
-    3434:	da850513          	addi	a0,a0,-600 # 71d8 <malloc+0x16f0>
+    3434:	db050513          	addi	a0,a0,-592 # 71e0 <malloc+0x16f0>
     3438:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     343c:	5f2080e7          	jalr	1522(ra) # 5a2a <printf>
+=======
+    343c:	5fa080e7          	jalr	1530(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3440:	4505                	li	a0,1
     3442:	00002097          	auipc	ra,0x2
     3446:	268080e7          	jalr	616(ra) # 56aa <exit>
     344a:	85ca                	mv	a1,s2
     344c:	00004517          	auipc	a0,0x4
-    3450:	dac50513          	addi	a0,a0,-596 # 71f8 <malloc+0x1710>
+    3450:	db450513          	addi	a0,a0,-588 # 7200 <malloc+0x1710>
     3454:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3458:	5d6080e7          	jalr	1494(ra) # 5a2a <printf>
+=======
+    3458:	5de080e7          	jalr	1502(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     345c:	4505                	li	a0,1
     345e:	00002097          	auipc	ra,0x2
     3462:	24c080e7          	jalr	588(ra) # 56aa <exit>
     3466:	85ca                	mv	a1,s2
     3468:	00004517          	auipc	a0,0x4
-    346c:	dc850513          	addi	a0,a0,-568 # 7230 <malloc+0x1748>
+    346c:	dd050513          	addi	a0,a0,-560 # 7238 <malloc+0x1748>
     3470:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3474:	5ba080e7          	jalr	1466(ra) # 5a2a <printf>
+=======
+    3474:	5c2080e7          	jalr	1474(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3478:	4505                	li	a0,1
     347a:	00002097          	auipc	ra,0x2
     347e:	230080e7          	jalr	560(ra) # 56aa <exit>
     3482:	85ca                	mv	a1,s2
     3484:	00004517          	auipc	a0,0x4
-    3488:	ddc50513          	addi	a0,a0,-548 # 7260 <malloc+0x1778>
+    3488:	de450513          	addi	a0,a0,-540 # 7268 <malloc+0x1778>
     348c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3490:	59e080e7          	jalr	1438(ra) # 5a2a <printf>
+=======
+    3490:	5a6080e7          	jalr	1446(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3494:	4505                	li	a0,1
     3496:	00002097          	auipc	ra,0x2
     349a:	214080e7          	jalr	532(ra) # 56aa <exit>
     349e:	85ca                	mv	a1,s2
     34a0:	00004517          	auipc	a0,0x4
-    34a4:	df850513          	addi	a0,a0,-520 # 7298 <malloc+0x17b0>
+    34a4:	e0050513          	addi	a0,a0,-512 # 72a0 <malloc+0x17b0>
     34a8:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     34ac:	582080e7          	jalr	1410(ra) # 5a2a <printf>
+=======
+    34ac:	58a080e7          	jalr	1418(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     34b0:	4505                	li	a0,1
     34b2:	00002097          	auipc	ra,0x2
     34b6:	1f8080e7          	jalr	504(ra) # 56aa <exit>
     34ba:	85ca                	mv	a1,s2
     34bc:	00004517          	auipc	a0,0x4
-    34c0:	dfc50513          	addi	a0,a0,-516 # 72b8 <malloc+0x17d0>
+    34c0:	e0450513          	addi	a0,a0,-508 # 72c0 <malloc+0x17d0>
     34c4:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     34c8:	566080e7          	jalr	1382(ra) # 5a2a <printf>
+=======
+    34c8:	56e080e7          	jalr	1390(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     34cc:	4505                	li	a0,1
     34ce:	00002097          	auipc	ra,0x2
     34d2:	1dc080e7          	jalr	476(ra) # 56aa <exit>
     34d6:	85ca                	mv	a1,s2
     34d8:	00004517          	auipc	a0,0x4
-    34dc:	e1050513          	addi	a0,a0,-496 # 72e8 <malloc+0x1800>
+    34dc:	e1850513          	addi	a0,a0,-488 # 72f0 <malloc+0x1800>
     34e0:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     34e4:	54a080e7          	jalr	1354(ra) # 5a2a <printf>
+=======
+    34e4:	552080e7          	jalr	1362(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     34e8:	4505                	li	a0,1
     34ea:	00002097          	auipc	ra,0x2
     34ee:	1c0080e7          	jalr	448(ra) # 56aa <exit>
     34f2:	85ca                	mv	a1,s2
     34f4:	00004517          	auipc	a0,0x4
-    34f8:	e1c50513          	addi	a0,a0,-484 # 7310 <malloc+0x1828>
+    34f8:	e2450513          	addi	a0,a0,-476 # 7318 <malloc+0x1828>
     34fc:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3500:	52e080e7          	jalr	1326(ra) # 5a2a <printf>
+=======
+    3500:	536080e7          	jalr	1334(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3504:	4505                	li	a0,1
     3506:	00002097          	auipc	ra,0x2
     350a:	1a4080e7          	jalr	420(ra) # 56aa <exit>
     350e:	85ca                	mv	a1,s2
     3510:	00004517          	auipc	a0,0x4
-    3514:	e2050513          	addi	a0,a0,-480 # 7330 <malloc+0x1848>
+    3514:	e2850513          	addi	a0,a0,-472 # 7338 <malloc+0x1848>
     3518:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     351c:	512080e7          	jalr	1298(ra) # 5a2a <printf>
+=======
+    351c:	51a080e7          	jalr	1306(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3520:	4505                	li	a0,1
     3522:	00002097          	auipc	ra,0x2
     3526:	188080e7          	jalr	392(ra) # 56aa <exit>
     352a:	85ca                	mv	a1,s2
     352c:	00004517          	auipc	a0,0x4
-    3530:	e2c50513          	addi	a0,a0,-468 # 7358 <malloc+0x1870>
+    3530:	e3450513          	addi	a0,a0,-460 # 7360 <malloc+0x1870>
     3534:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3538:	4f6080e7          	jalr	1270(ra) # 5a2a <printf>
+=======
+    3538:	4fe080e7          	jalr	1278(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     353c:	4505                	li	a0,1
     353e:	00002097          	auipc	ra,0x2
     3542:	16c080e7          	jalr	364(ra) # 56aa <exit>
     3546:	85ca                	mv	a1,s2
     3548:	00004517          	auipc	a0,0x4
-    354c:	e3850513          	addi	a0,a0,-456 # 7380 <malloc+0x1898>
+    354c:	e4050513          	addi	a0,a0,-448 # 7388 <malloc+0x1898>
     3550:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3554:	4da080e7          	jalr	1242(ra) # 5a2a <printf>
+=======
+    3554:	4e2080e7          	jalr	1250(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3558:	4505                	li	a0,1
     355a:	00002097          	auipc	ra,0x2
     355e:	150080e7          	jalr	336(ra) # 56aa <exit>
     3562:	85ca                	mv	a1,s2
     3564:	00004517          	auipc	a0,0x4
-    3568:	e4c50513          	addi	a0,a0,-436 # 73b0 <malloc+0x18c8>
+    3568:	e5450513          	addi	a0,a0,-428 # 73b8 <malloc+0x18c8>
     356c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3570:	4be080e7          	jalr	1214(ra) # 5a2a <printf>
+=======
+    3570:	4c6080e7          	jalr	1222(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3574:	4505                	li	a0,1
     3576:	00002097          	auipc	ra,0x2
     357a:	134080e7          	jalr	308(ra) # 56aa <exit>
     357e:	85ca                	mv	a1,s2
     3580:	00004517          	auipc	a0,0x4
-    3584:	e5850513          	addi	a0,a0,-424 # 73d8 <malloc+0x18f0>
+    3584:	e6050513          	addi	a0,a0,-416 # 73e0 <malloc+0x18f0>
     3588:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     358c:	4a2080e7          	jalr	1186(ra) # 5a2a <printf>
+=======
+    358c:	4aa080e7          	jalr	1194(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3590:	4505                	li	a0,1
     3592:	00002097          	auipc	ra,0x2
     3596:	118080e7          	jalr	280(ra) # 56aa <exit>
     359a:	85ca                	mv	a1,s2
     359c:	00004517          	auipc	a0,0x4
-    35a0:	e5450513          	addi	a0,a0,-428 # 73f0 <malloc+0x1908>
+    35a0:	e5c50513          	addi	a0,a0,-420 # 73f8 <malloc+0x1908>
     35a4:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     35a8:	486080e7          	jalr	1158(ra) # 5a2a <printf>
+=======
+    35a8:	48e080e7          	jalr	1166(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     35ac:	4505                	li	a0,1
     35ae:	00002097          	auipc	ra,0x2
     35b2:	0fc080e7          	jalr	252(ra) # 56aa <exit>
     35b6:	85ca                	mv	a1,s2
     35b8:	00004517          	auipc	a0,0x4
-    35bc:	e5850513          	addi	a0,a0,-424 # 7410 <malloc+0x1928>
+    35bc:	e6050513          	addi	a0,a0,-416 # 7418 <malloc+0x1928>
     35c0:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     35c4:	46a080e7          	jalr	1130(ra) # 5a2a <printf>
+=======
+    35c4:	472080e7          	jalr	1138(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     35c8:	4505                	li	a0,1
     35ca:	00002097          	auipc	ra,0x2
     35ce:	0e0080e7          	jalr	224(ra) # 56aa <exit>
     35d2:	85ca                	mv	a1,s2
     35d4:	00004517          	auipc	a0,0x4
-    35d8:	e5c50513          	addi	a0,a0,-420 # 7430 <malloc+0x1948>
+    35d8:	e6450513          	addi	a0,a0,-412 # 7438 <malloc+0x1948>
     35dc:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     35e0:	44e080e7          	jalr	1102(ra) # 5a2a <printf>
+=======
+    35e0:	456080e7          	jalr	1110(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     35e4:	4505                	li	a0,1
     35e6:	00002097          	auipc	ra,0x2
     35ea:	0c4080e7          	jalr	196(ra) # 56aa <exit>
     35ee:	85ca                	mv	a1,s2
     35f0:	00004517          	auipc	a0,0x4
-    35f4:	e8050513          	addi	a0,a0,-384 # 7470 <malloc+0x1988>
+    35f4:	e8850513          	addi	a0,a0,-376 # 7478 <malloc+0x1988>
     35f8:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     35fc:	432080e7          	jalr	1074(ra) # 5a2a <printf>
+=======
+    35fc:	43a080e7          	jalr	1082(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3600:	4505                	li	a0,1
     3602:	00002097          	auipc	ra,0x2
     3606:	0a8080e7          	jalr	168(ra) # 56aa <exit>
     360a:	85ca                	mv	a1,s2
     360c:	00004517          	auipc	a0,0x4
-    3610:	e9450513          	addi	a0,a0,-364 # 74a0 <malloc+0x19b8>
+    3610:	e9c50513          	addi	a0,a0,-356 # 74a8 <malloc+0x19b8>
     3614:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3618:	416080e7          	jalr	1046(ra) # 5a2a <printf>
+=======
+    3618:	41e080e7          	jalr	1054(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     361c:	4505                	li	a0,1
     361e:	00002097          	auipc	ra,0x2
     3622:	08c080e7          	jalr	140(ra) # 56aa <exit>
     3626:	85ca                	mv	a1,s2
     3628:	00004517          	auipc	a0,0x4
-    362c:	e9850513          	addi	a0,a0,-360 # 74c0 <malloc+0x19d8>
+    362c:	ea050513          	addi	a0,a0,-352 # 74c8 <malloc+0x19d8>
     3630:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3634:	3fa080e7          	jalr	1018(ra) # 5a2a <printf>
+=======
+    3634:	402080e7          	jalr	1026(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3638:	4505                	li	a0,1
     363a:	00002097          	auipc	ra,0x2
     363e:	070080e7          	jalr	112(ra) # 56aa <exit>
     3642:	85ca                	mv	a1,s2
     3644:	00004517          	auipc	a0,0x4
-    3648:	e9c50513          	addi	a0,a0,-356 # 74e0 <malloc+0x19f8>
+    3648:	ea450513          	addi	a0,a0,-348 # 74e8 <malloc+0x19f8>
     364c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3650:	3de080e7          	jalr	990(ra) # 5a2a <printf>
+=======
+    3650:	3e6080e7          	jalr	998(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3654:	4505                	li	a0,1
     3656:	00002097          	auipc	ra,0x2
     365a:	054080e7          	jalr	84(ra) # 56aa <exit>
     365e:	85ca                	mv	a1,s2
     3660:	00004517          	auipc	a0,0x4
-    3664:	ea050513          	addi	a0,a0,-352 # 7500 <malloc+0x1a18>
+    3664:	ea850513          	addi	a0,a0,-344 # 7508 <malloc+0x1a18>
     3668:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     366c:	3c2080e7          	jalr	962(ra) # 5a2a <printf>
+=======
+    366c:	3ca080e7          	jalr	970(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3670:	4505                	li	a0,1
     3672:	00002097          	auipc	ra,0x2
     3676:	038080e7          	jalr	56(ra) # 56aa <exit>
     367a:	85ca                	mv	a1,s2
     367c:	00004517          	auipc	a0,0x4
-    3680:	eb450513          	addi	a0,a0,-332 # 7530 <malloc+0x1a48>
+    3680:	ebc50513          	addi	a0,a0,-324 # 7538 <malloc+0x1a48>
     3684:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3688:	3a6080e7          	jalr	934(ra) # 5a2a <printf>
+=======
+    3688:	3ae080e7          	jalr	942(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     368c:	4505                	li	a0,1
     368e:	00002097          	auipc	ra,0x2
     3692:	01c080e7          	jalr	28(ra) # 56aa <exit>
     3696:	85ca                	mv	a1,s2
     3698:	00004517          	auipc	a0,0x4
-    369c:	ec050513          	addi	a0,a0,-320 # 7558 <malloc+0x1a70>
+    369c:	ec850513          	addi	a0,a0,-312 # 7560 <malloc+0x1a70>
     36a0:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     36a4:	38a080e7          	jalr	906(ra) # 5a2a <printf>
+=======
+    36a4:	392080e7          	jalr	914(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     36a8:	4505                	li	a0,1
     36aa:	00002097          	auipc	ra,0x2
     36ae:	000080e7          	jalr	ra # 56aa <exit>
     36b2:	85ca                	mv	a1,s2
     36b4:	00004517          	auipc	a0,0x4
-    36b8:	ecc50513          	addi	a0,a0,-308 # 7580 <malloc+0x1a98>
+    36b8:	ed450513          	addi	a0,a0,-300 # 7588 <malloc+0x1a98>
     36bc:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     36c0:	36e080e7          	jalr	878(ra) # 5a2a <printf>
+=======
+    36c0:	376080e7          	jalr	886(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     36c4:	4505                	li	a0,1
     36c6:	00002097          	auipc	ra,0x2
     36ca:	fe4080e7          	jalr	-28(ra) # 56aa <exit>
     36ce:	85ca                	mv	a1,s2
     36d0:	00004517          	auipc	a0,0x4
-    36d4:	ed850513          	addi	a0,a0,-296 # 75a8 <malloc+0x1ac0>
+    36d4:	ee050513          	addi	a0,a0,-288 # 75b0 <malloc+0x1ac0>
     36d8:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     36dc:	352080e7          	jalr	850(ra) # 5a2a <printf>
+=======
+    36dc:	35a080e7          	jalr	858(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     36e0:	4505                	li	a0,1
     36e2:	00002097          	auipc	ra,0x2
     36e6:	fc8080e7          	jalr	-56(ra) # 56aa <exit>
     36ea:	85ca                	mv	a1,s2
     36ec:	00004517          	auipc	a0,0x4
-    36f0:	edc50513          	addi	a0,a0,-292 # 75c8 <malloc+0x1ae0>
+    36f0:	ee450513          	addi	a0,a0,-284 # 75d0 <malloc+0x1ae0>
     36f4:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     36f8:	336080e7          	jalr	822(ra) # 5a2a <printf>
+=======
+    36f8:	33e080e7          	jalr	830(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     36fc:	4505                	li	a0,1
     36fe:	00002097          	auipc	ra,0x2
     3702:	fac080e7          	jalr	-84(ra) # 56aa <exit>
     3706:	85ca                	mv	a1,s2
     3708:	00004517          	auipc	a0,0x4
-    370c:	ee050513          	addi	a0,a0,-288 # 75e8 <malloc+0x1b00>
+    370c:	ee850513          	addi	a0,a0,-280 # 75f0 <malloc+0x1b00>
     3710:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3714:	31a080e7          	jalr	794(ra) # 5a2a <printf>
+=======
+    3714:	322080e7          	jalr	802(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3718:	4505                	li	a0,1
     371a:	00002097          	auipc	ra,0x2
     371e:	f90080e7          	jalr	-112(ra) # 56aa <exit>
     3722:	85ca                	mv	a1,s2
     3724:	00004517          	auipc	a0,0x4
-    3728:	eec50513          	addi	a0,a0,-276 # 7610 <malloc+0x1b28>
+    3728:	ef450513          	addi	a0,a0,-268 # 7618 <malloc+0x1b28>
     372c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3730:	2fe080e7          	jalr	766(ra) # 5a2a <printf>
+=======
+    3730:	306080e7          	jalr	774(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3734:	4505                	li	a0,1
     3736:	00002097          	auipc	ra,0x2
     373a:	f74080e7          	jalr	-140(ra) # 56aa <exit>
     373e:	85ca                	mv	a1,s2
     3740:	00004517          	auipc	a0,0x4
-    3744:	ef050513          	addi	a0,a0,-272 # 7630 <malloc+0x1b48>
+    3744:	ef850513          	addi	a0,a0,-264 # 7638 <malloc+0x1b48>
     3748:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     374c:	2e2080e7          	jalr	738(ra) # 5a2a <printf>
+=======
+    374c:	2ea080e7          	jalr	746(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3750:	4505                	li	a0,1
     3752:	00002097          	auipc	ra,0x2
     3756:	f58080e7          	jalr	-168(ra) # 56aa <exit>
     375a:	85ca                	mv	a1,s2
     375c:	00004517          	auipc	a0,0x4
-    3760:	ef450513          	addi	a0,a0,-268 # 7650 <malloc+0x1b68>
+    3760:	efc50513          	addi	a0,a0,-260 # 7658 <malloc+0x1b68>
     3764:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3768:	2c6080e7          	jalr	710(ra) # 5a2a <printf>
+=======
+    3768:	2ce080e7          	jalr	718(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     376c:	4505                	li	a0,1
     376e:	00002097          	auipc	ra,0x2
     3772:	f3c080e7          	jalr	-196(ra) # 56aa <exit>
     3776:	85ca                	mv	a1,s2
     3778:	00004517          	auipc	a0,0x4
-    377c:	f0050513          	addi	a0,a0,-256 # 7678 <malloc+0x1b90>
+    377c:	f0850513          	addi	a0,a0,-248 # 7680 <malloc+0x1b90>
     3780:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3784:	2aa080e7          	jalr	682(ra) # 5a2a <printf>
+=======
+    3784:	2b2080e7          	jalr	690(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3788:	4505                	li	a0,1
     378a:	00002097          	auipc	ra,0x2
     378e:	f20080e7          	jalr	-224(ra) # 56aa <exit>
     3792:	85ca                	mv	a1,s2
     3794:	00004517          	auipc	a0,0x4
-    3798:	b7c50513          	addi	a0,a0,-1156 # 7310 <malloc+0x1828>
+    3798:	b8450513          	addi	a0,a0,-1148 # 7318 <malloc+0x1828>
     379c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     37a0:	28e080e7          	jalr	654(ra) # 5a2a <printf>
+=======
+    37a0:	296080e7          	jalr	662(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     37a4:	4505                	li	a0,1
     37a6:	00002097          	auipc	ra,0x2
     37aa:	f04080e7          	jalr	-252(ra) # 56aa <exit>
     37ae:	85ca                	mv	a1,s2
     37b0:	00004517          	auipc	a0,0x4
-    37b4:	ee850513          	addi	a0,a0,-280 # 7698 <malloc+0x1bb0>
+    37b4:	ef050513          	addi	a0,a0,-272 # 76a0 <malloc+0x1bb0>
     37b8:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     37bc:	272080e7          	jalr	626(ra) # 5a2a <printf>
+=======
+    37bc:	27a080e7          	jalr	634(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     37c0:	4505                	li	a0,1
     37c2:	00002097          	auipc	ra,0x2
     37c6:	ee8080e7          	jalr	-280(ra) # 56aa <exit>
     37ca:	85ca                	mv	a1,s2
     37cc:	00004517          	auipc	a0,0x4
-    37d0:	eec50513          	addi	a0,a0,-276 # 76b8 <malloc+0x1bd0>
+    37d0:	ef450513          	addi	a0,a0,-268 # 76c0 <malloc+0x1bd0>
     37d4:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     37d8:	256080e7          	jalr	598(ra) # 5a2a <printf>
+=======
+    37d8:	25e080e7          	jalr	606(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     37dc:	4505                	li	a0,1
     37de:	00002097          	auipc	ra,0x2
     37e2:	ecc080e7          	jalr	-308(ra) # 56aa <exit>
     37e6:	85ca                	mv	a1,s2
     37e8:	00004517          	auipc	a0,0x4
-    37ec:	f0050513          	addi	a0,a0,-256 # 76e8 <malloc+0x1c00>
+    37ec:	f0850513          	addi	a0,a0,-248 # 76f0 <malloc+0x1c00>
     37f0:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     37f4:	23a080e7          	jalr	570(ra) # 5a2a <printf>
+=======
+    37f4:	242080e7          	jalr	578(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     37f8:	4505                	li	a0,1
     37fa:	00002097          	auipc	ra,0x2
     37fe:	eb0080e7          	jalr	-336(ra) # 56aa <exit>
     3802:	85ca                	mv	a1,s2
     3804:	00004517          	auipc	a0,0x4
-    3808:	f0450513          	addi	a0,a0,-252 # 7708 <malloc+0x1c20>
+    3808:	f0c50513          	addi	a0,a0,-244 # 7710 <malloc+0x1c20>
     380c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3810:	21e080e7          	jalr	542(ra) # 5a2a <printf>
+=======
+    3810:	226080e7          	jalr	550(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3814:	4505                	li	a0,1
     3816:	00002097          	auipc	ra,0x2
     381a:	e94080e7          	jalr	-364(ra) # 56aa <exit>
@@ -4450,42 +5533,42 @@ Disassembly of section .text:
     3826:	1000                	addi	s0,sp,32
     3828:	84aa                	mv	s1,a0
     382a:	00004517          	auipc	a0,0x4
-    382e:	ef650513          	addi	a0,a0,-266 # 7720 <malloc+0x1c38>
+    382e:	efe50513          	addi	a0,a0,-258 # 7728 <malloc+0x1c38>
     3832:	00002097          	auipc	ra,0x2
     3836:	ee0080e7          	jalr	-288(ra) # 5712 <mkdir>
     383a:	e549                	bnez	a0,38c4 <rmdot+0xa6>
     383c:	00004517          	auipc	a0,0x4
-    3840:	ee450513          	addi	a0,a0,-284 # 7720 <malloc+0x1c38>
+    3840:	eec50513          	addi	a0,a0,-276 # 7728 <malloc+0x1c38>
     3844:	00002097          	auipc	ra,0x2
     3848:	ed6080e7          	jalr	-298(ra) # 571a <chdir>
     384c:	e951                	bnez	a0,38e0 <rmdot+0xc2>
     384e:	00003517          	auipc	a0,0x3
-    3852:	d8250513          	addi	a0,a0,-638 # 65d0 <malloc+0xae8>
+    3852:	d8a50513          	addi	a0,a0,-630 # 65d8 <malloc+0xae8>
     3856:	00002097          	auipc	ra,0x2
     385a:	ea4080e7          	jalr	-348(ra) # 56fa <unlink>
     385e:	cd59                	beqz	a0,38fc <rmdot+0xde>
     3860:	00004517          	auipc	a0,0x4
-    3864:	91850513          	addi	a0,a0,-1768 # 7178 <malloc+0x1690>
+    3864:	92050513          	addi	a0,a0,-1760 # 7180 <malloc+0x1690>
     3868:	00002097          	auipc	ra,0x2
     386c:	e92080e7          	jalr	-366(ra) # 56fa <unlink>
     3870:	c545                	beqz	a0,3918 <rmdot+0xfa>
     3872:	00004517          	auipc	a0,0x4
-    3876:	8ae50513          	addi	a0,a0,-1874 # 7120 <malloc+0x1638>
+    3876:	8b650513          	addi	a0,a0,-1866 # 7128 <malloc+0x1638>
     387a:	00002097          	auipc	ra,0x2
     387e:	ea0080e7          	jalr	-352(ra) # 571a <chdir>
     3882:	e94d                	bnez	a0,3934 <rmdot+0x116>
     3884:	00004517          	auipc	a0,0x4
-    3888:	f0450513          	addi	a0,a0,-252 # 7788 <malloc+0x1ca0>
+    3888:	f0c50513          	addi	a0,a0,-244 # 7790 <malloc+0x1ca0>
     388c:	00002097          	auipc	ra,0x2
     3890:	e6e080e7          	jalr	-402(ra) # 56fa <unlink>
     3894:	cd55                	beqz	a0,3950 <rmdot+0x132>
     3896:	00004517          	auipc	a0,0x4
-    389a:	f1a50513          	addi	a0,a0,-230 # 77b0 <malloc+0x1cc8>
+    389a:	f2250513          	addi	a0,a0,-222 # 77b8 <malloc+0x1cc8>
     389e:	00002097          	auipc	ra,0x2
     38a2:	e5c080e7          	jalr	-420(ra) # 56fa <unlink>
     38a6:	c179                	beqz	a0,396c <rmdot+0x14e>
     38a8:	00004517          	auipc	a0,0x4
-    38ac:	e7850513          	addi	a0,a0,-392 # 7720 <malloc+0x1c38>
+    38ac:	e8050513          	addi	a0,a0,-384 # 7728 <malloc+0x1c38>
     38b0:	00002097          	auipc	ra,0x2
     38b4:	e4a080e7          	jalr	-438(ra) # 56fa <unlink>
     38b8:	e961                	bnez	a0,3988 <rmdot+0x16a>
@@ -4496,65 +5579,105 @@ Disassembly of section .text:
     38c2:	8082                	ret
     38c4:	85a6                	mv	a1,s1
     38c6:	00004517          	auipc	a0,0x4
-    38ca:	e6250513          	addi	a0,a0,-414 # 7728 <malloc+0x1c40>
+    38ca:	e6a50513          	addi	a0,a0,-406 # 7730 <malloc+0x1c40>
     38ce:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     38d2:	15c080e7          	jalr	348(ra) # 5a2a <printf>
+=======
+    38d2:	164080e7          	jalr	356(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     38d6:	4505                	li	a0,1
     38d8:	00002097          	auipc	ra,0x2
     38dc:	dd2080e7          	jalr	-558(ra) # 56aa <exit>
     38e0:	85a6                	mv	a1,s1
     38e2:	00004517          	auipc	a0,0x4
-    38e6:	e5e50513          	addi	a0,a0,-418 # 7740 <malloc+0x1c58>
+    38e6:	e6650513          	addi	a0,a0,-410 # 7748 <malloc+0x1c58>
     38ea:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     38ee:	140080e7          	jalr	320(ra) # 5a2a <printf>
+=======
+    38ee:	148080e7          	jalr	328(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     38f2:	4505                	li	a0,1
     38f4:	00002097          	auipc	ra,0x2
     38f8:	db6080e7          	jalr	-586(ra) # 56aa <exit>
     38fc:	85a6                	mv	a1,s1
     38fe:	00004517          	auipc	a0,0x4
-    3902:	e5a50513          	addi	a0,a0,-422 # 7758 <malloc+0x1c70>
+    3902:	e6250513          	addi	a0,a0,-414 # 7760 <malloc+0x1c70>
     3906:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     390a:	124080e7          	jalr	292(ra) # 5a2a <printf>
+=======
+    390a:	12c080e7          	jalr	300(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     390e:	4505                	li	a0,1
     3910:	00002097          	auipc	ra,0x2
     3914:	d9a080e7          	jalr	-614(ra) # 56aa <exit>
     3918:	85a6                	mv	a1,s1
     391a:	00004517          	auipc	a0,0x4
-    391e:	e5650513          	addi	a0,a0,-426 # 7770 <malloc+0x1c88>
+    391e:	e5e50513          	addi	a0,a0,-418 # 7778 <malloc+0x1c88>
     3922:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3926:	108080e7          	jalr	264(ra) # 5a2a <printf>
+=======
+    3926:	110080e7          	jalr	272(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     392a:	4505                	li	a0,1
     392c:	00002097          	auipc	ra,0x2
     3930:	d7e080e7          	jalr	-642(ra) # 56aa <exit>
     3934:	85a6                	mv	a1,s1
     3936:	00003517          	auipc	a0,0x3
-    393a:	7f250513          	addi	a0,a0,2034 # 7128 <malloc+0x1640>
+    393a:	7fa50513          	addi	a0,a0,2042 # 7130 <malloc+0x1640>
     393e:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3942:	0ec080e7          	jalr	236(ra) # 5a2a <printf>
+=======
+    3942:	0f4080e7          	jalr	244(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3946:	4505                	li	a0,1
     3948:	00002097          	auipc	ra,0x2
     394c:	d62080e7          	jalr	-670(ra) # 56aa <exit>
     3950:	85a6                	mv	a1,s1
     3952:	00004517          	auipc	a0,0x4
-    3956:	e3e50513          	addi	a0,a0,-450 # 7790 <malloc+0x1ca8>
+    3956:	e4650513          	addi	a0,a0,-442 # 7798 <malloc+0x1ca8>
     395a:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     395e:	0d0080e7          	jalr	208(ra) # 5a2a <printf>
+=======
+    395e:	0d8080e7          	jalr	216(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3962:	4505                	li	a0,1
     3964:	00002097          	auipc	ra,0x2
     3968:	d46080e7          	jalr	-698(ra) # 56aa <exit>
     396c:	85a6                	mv	a1,s1
     396e:	00004517          	auipc	a0,0x4
-    3972:	e4a50513          	addi	a0,a0,-438 # 77b8 <malloc+0x1cd0>
+    3972:	e5250513          	addi	a0,a0,-430 # 77c0 <malloc+0x1cd0>
     3976:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     397a:	0b4080e7          	jalr	180(ra) # 5a2a <printf>
+=======
+    397a:	0bc080e7          	jalr	188(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     397e:	4505                	li	a0,1
     3980:	00002097          	auipc	ra,0x2
     3984:	d2a080e7          	jalr	-726(ra) # 56aa <exit>
     3988:	85a6                	mv	a1,s1
     398a:	00004517          	auipc	a0,0x4
-    398e:	e4e50513          	addi	a0,a0,-434 # 77d8 <malloc+0x1cf0>
+    398e:	e5650513          	addi	a0,a0,-426 # 77e0 <malloc+0x1cf0>
     3992:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3996:	098080e7          	jalr	152(ra) # 5a2a <printf>
+=======
+    3996:	0a0080e7          	jalr	160(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     399a:	4505                	li	a0,1
     399c:	00002097          	auipc	ra,0x2
     39a0:	d0e080e7          	jalr	-754(ra) # 56aa <exit>
@@ -4569,66 +5692,66 @@ Disassembly of section .text:
     39b0:	892a                	mv	s2,a0
     39b2:	20000593          	li	a1,512
     39b6:	00002517          	auipc	a0,0x2
-    39ba:	52250513          	addi	a0,a0,1314 # 5ed8 <malloc+0x3f0>
+    39ba:	52a50513          	addi	a0,a0,1322 # 5ee0 <malloc+0x3f0>
     39be:	00002097          	auipc	ra,0x2
     39c2:	d2c080e7          	jalr	-724(ra) # 56ea <open>
     39c6:	0e054d63          	bltz	a0,3ac0 <dirfile+0x11c>
     39ca:	00002097          	auipc	ra,0x2
     39ce:	d08080e7          	jalr	-760(ra) # 56d2 <close>
     39d2:	00002517          	auipc	a0,0x2
-    39d6:	50650513          	addi	a0,a0,1286 # 5ed8 <malloc+0x3f0>
+    39d6:	50e50513          	addi	a0,a0,1294 # 5ee0 <malloc+0x3f0>
     39da:	00002097          	auipc	ra,0x2
     39de:	d40080e7          	jalr	-704(ra) # 571a <chdir>
     39e2:	cd6d                	beqz	a0,3adc <dirfile+0x138>
     39e4:	4581                	li	a1,0
     39e6:	00004517          	auipc	a0,0x4
-    39ea:	e5250513          	addi	a0,a0,-430 # 7838 <malloc+0x1d50>
+    39ea:	e5a50513          	addi	a0,a0,-422 # 7840 <malloc+0x1d50>
     39ee:	00002097          	auipc	ra,0x2
     39f2:	cfc080e7          	jalr	-772(ra) # 56ea <open>
     39f6:	10055163          	bgez	a0,3af8 <dirfile+0x154>
     39fa:	20000593          	li	a1,512
     39fe:	00004517          	auipc	a0,0x4
-    3a02:	e3a50513          	addi	a0,a0,-454 # 7838 <malloc+0x1d50>
+    3a02:	e4250513          	addi	a0,a0,-446 # 7840 <malloc+0x1d50>
     3a06:	00002097          	auipc	ra,0x2
     3a0a:	ce4080e7          	jalr	-796(ra) # 56ea <open>
     3a0e:	10055363          	bgez	a0,3b14 <dirfile+0x170>
     3a12:	00004517          	auipc	a0,0x4
-    3a16:	e2650513          	addi	a0,a0,-474 # 7838 <malloc+0x1d50>
+    3a16:	e2e50513          	addi	a0,a0,-466 # 7840 <malloc+0x1d50>
     3a1a:	00002097          	auipc	ra,0x2
     3a1e:	cf8080e7          	jalr	-776(ra) # 5712 <mkdir>
     3a22:	10050763          	beqz	a0,3b30 <dirfile+0x18c>
     3a26:	00004517          	auipc	a0,0x4
-    3a2a:	e1250513          	addi	a0,a0,-494 # 7838 <malloc+0x1d50>
+    3a2a:	e1a50513          	addi	a0,a0,-486 # 7840 <malloc+0x1d50>
     3a2e:	00002097          	auipc	ra,0x2
     3a32:	ccc080e7          	jalr	-820(ra) # 56fa <unlink>
     3a36:	10050b63          	beqz	a0,3b4c <dirfile+0x1a8>
     3a3a:	00004597          	auipc	a1,0x4
-    3a3e:	dfe58593          	addi	a1,a1,-514 # 7838 <malloc+0x1d50>
+    3a3e:	e0658593          	addi	a1,a1,-506 # 7840 <malloc+0x1d50>
     3a42:	00002517          	auipc	a0,0x2
-    3a46:	68e50513          	addi	a0,a0,1678 # 60d0 <malloc+0x5e8>
+    3a46:	69650513          	addi	a0,a0,1686 # 60d8 <malloc+0x5e8>
     3a4a:	00002097          	auipc	ra,0x2
     3a4e:	cc0080e7          	jalr	-832(ra) # 570a <link>
     3a52:	10050b63          	beqz	a0,3b68 <dirfile+0x1c4>
     3a56:	00002517          	auipc	a0,0x2
-    3a5a:	48250513          	addi	a0,a0,1154 # 5ed8 <malloc+0x3f0>
+    3a5a:	48a50513          	addi	a0,a0,1162 # 5ee0 <malloc+0x3f0>
     3a5e:	00002097          	auipc	ra,0x2
     3a62:	c9c080e7          	jalr	-868(ra) # 56fa <unlink>
     3a66:	10051f63          	bnez	a0,3b84 <dirfile+0x1e0>
     3a6a:	4589                	li	a1,2
     3a6c:	00003517          	auipc	a0,0x3
-    3a70:	b6450513          	addi	a0,a0,-1180 # 65d0 <malloc+0xae8>
+    3a70:	b6c50513          	addi	a0,a0,-1172 # 65d8 <malloc+0xae8>
     3a74:	00002097          	auipc	ra,0x2
     3a78:	c76080e7          	jalr	-906(ra) # 56ea <open>
     3a7c:	12055263          	bgez	a0,3ba0 <dirfile+0x1fc>
     3a80:	4581                	li	a1,0
     3a82:	00003517          	auipc	a0,0x3
-    3a86:	b4e50513          	addi	a0,a0,-1202 # 65d0 <malloc+0xae8>
+    3a86:	b5650513          	addi	a0,a0,-1194 # 65d8 <malloc+0xae8>
     3a8a:	00002097          	auipc	ra,0x2
     3a8e:	c60080e7          	jalr	-928(ra) # 56ea <open>
     3a92:	84aa                	mv	s1,a0
     3a94:	4605                	li	a2,1
     3a96:	00002597          	auipc	a1,0x2
-    3a9a:	51258593          	addi	a1,a1,1298 # 5fa8 <malloc+0x4c0>
+    3a9a:	51a58593          	addi	a1,a1,1306 # 5fb0 <malloc+0x4c0>
     3a9e:	00002097          	auipc	ra,0x2
     3aa2:	c2c080e7          	jalr	-980(ra) # 56ca <write>
     3aa6:	10a04b63          	bgtz	a0,3bbc <dirfile+0x218>
@@ -4643,81 +5766,131 @@ Disassembly of section .text:
     3abe:	8082                	ret
     3ac0:	85ca                	mv	a1,s2
     3ac2:	00004517          	auipc	a0,0x4
-    3ac6:	d3650513          	addi	a0,a0,-714 # 77f8 <malloc+0x1d10>
+    3ac6:	d3e50513          	addi	a0,a0,-706 # 7800 <malloc+0x1d10>
     3aca:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3ace:	f60080e7          	jalr	-160(ra) # 5a2a <printf>
+=======
+    3ace:	f68080e7          	jalr	-152(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3ad2:	4505                	li	a0,1
     3ad4:	00002097          	auipc	ra,0x2
     3ad8:	bd6080e7          	jalr	-1066(ra) # 56aa <exit>
     3adc:	85ca                	mv	a1,s2
     3ade:	00004517          	auipc	a0,0x4
-    3ae2:	d3a50513          	addi	a0,a0,-710 # 7818 <malloc+0x1d30>
+    3ae2:	d4250513          	addi	a0,a0,-702 # 7820 <malloc+0x1d30>
     3ae6:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3aea:	f44080e7          	jalr	-188(ra) # 5a2a <printf>
+=======
+    3aea:	f4c080e7          	jalr	-180(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3aee:	4505                	li	a0,1
     3af0:	00002097          	auipc	ra,0x2
     3af4:	bba080e7          	jalr	-1094(ra) # 56aa <exit>
     3af8:	85ca                	mv	a1,s2
     3afa:	00004517          	auipc	a0,0x4
-    3afe:	d4e50513          	addi	a0,a0,-690 # 7848 <malloc+0x1d60>
+    3afe:	d5650513          	addi	a0,a0,-682 # 7850 <malloc+0x1d60>
     3b02:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3b06:	f28080e7          	jalr	-216(ra) # 5a2a <printf>
+=======
+    3b06:	f30080e7          	jalr	-208(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3b0a:	4505                	li	a0,1
     3b0c:	00002097          	auipc	ra,0x2
     3b10:	b9e080e7          	jalr	-1122(ra) # 56aa <exit>
     3b14:	85ca                	mv	a1,s2
     3b16:	00004517          	auipc	a0,0x4
-    3b1a:	d3250513          	addi	a0,a0,-718 # 7848 <malloc+0x1d60>
+    3b1a:	d3a50513          	addi	a0,a0,-710 # 7850 <malloc+0x1d60>
     3b1e:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3b22:	f0c080e7          	jalr	-244(ra) # 5a2a <printf>
+=======
+    3b22:	f14080e7          	jalr	-236(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3b26:	4505                	li	a0,1
     3b28:	00002097          	auipc	ra,0x2
     3b2c:	b82080e7          	jalr	-1150(ra) # 56aa <exit>
     3b30:	85ca                	mv	a1,s2
     3b32:	00004517          	auipc	a0,0x4
-    3b36:	d3e50513          	addi	a0,a0,-706 # 7870 <malloc+0x1d88>
+    3b36:	d4650513          	addi	a0,a0,-698 # 7878 <malloc+0x1d88>
     3b3a:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3b3e:	ef0080e7          	jalr	-272(ra) # 5a2a <printf>
+=======
+    3b3e:	ef8080e7          	jalr	-264(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3b42:	4505                	li	a0,1
     3b44:	00002097          	auipc	ra,0x2
     3b48:	b66080e7          	jalr	-1178(ra) # 56aa <exit>
     3b4c:	85ca                	mv	a1,s2
     3b4e:	00004517          	auipc	a0,0x4
-    3b52:	d4a50513          	addi	a0,a0,-694 # 7898 <malloc+0x1db0>
+    3b52:	d5250513          	addi	a0,a0,-686 # 78a0 <malloc+0x1db0>
     3b56:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3b5a:	ed4080e7          	jalr	-300(ra) # 5a2a <printf>
+=======
+    3b5a:	edc080e7          	jalr	-292(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3b5e:	4505                	li	a0,1
     3b60:	00002097          	auipc	ra,0x2
     3b64:	b4a080e7          	jalr	-1206(ra) # 56aa <exit>
     3b68:	85ca                	mv	a1,s2
     3b6a:	00004517          	auipc	a0,0x4
-    3b6e:	d5650513          	addi	a0,a0,-682 # 78c0 <malloc+0x1dd8>
+    3b6e:	d5e50513          	addi	a0,a0,-674 # 78c8 <malloc+0x1dd8>
     3b72:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3b76:	eb8080e7          	jalr	-328(ra) # 5a2a <printf>
+=======
+    3b76:	ec0080e7          	jalr	-320(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3b7a:	4505                	li	a0,1
     3b7c:	00002097          	auipc	ra,0x2
     3b80:	b2e080e7          	jalr	-1234(ra) # 56aa <exit>
     3b84:	85ca                	mv	a1,s2
     3b86:	00004517          	auipc	a0,0x4
-    3b8a:	d6250513          	addi	a0,a0,-670 # 78e8 <malloc+0x1e00>
+    3b8a:	d6a50513          	addi	a0,a0,-662 # 78f0 <malloc+0x1e00>
     3b8e:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3b92:	e9c080e7          	jalr	-356(ra) # 5a2a <printf>
+=======
+    3b92:	ea4080e7          	jalr	-348(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3b96:	4505                	li	a0,1
     3b98:	00002097          	auipc	ra,0x2
     3b9c:	b12080e7          	jalr	-1262(ra) # 56aa <exit>
     3ba0:	85ca                	mv	a1,s2
     3ba2:	00004517          	auipc	a0,0x4
-    3ba6:	d6650513          	addi	a0,a0,-666 # 7908 <malloc+0x1e20>
+    3ba6:	d6e50513          	addi	a0,a0,-658 # 7910 <malloc+0x1e20>
     3baa:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3bae:	e80080e7          	jalr	-384(ra) # 5a2a <printf>
+=======
+    3bae:	e88080e7          	jalr	-376(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3bb2:	4505                	li	a0,1
     3bb4:	00002097          	auipc	ra,0x2
     3bb8:	af6080e7          	jalr	-1290(ra) # 56aa <exit>
     3bbc:	85ca                	mv	a1,s2
     3bbe:	00004517          	auipc	a0,0x4
-    3bc2:	d7250513          	addi	a0,a0,-654 # 7930 <malloc+0x1e48>
+    3bc2:	d7a50513          	addi	a0,a0,-646 # 7938 <malloc+0x1e48>
     3bc6:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3bca:	e64080e7          	jalr	-412(ra) # 5a2a <printf>
+=======
+    3bca:	e6c080e7          	jalr	-404(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3bce:	4505                	li	a0,1
     3bd0:	00002097          	auipc	ra,0x2
     3bd4:	ada080e7          	jalr	-1318(ra) # 56aa <exit>
@@ -4736,27 +5909,48 @@ Disassembly of section .text:
     3bec:	8b2a                	mv	s6,a0
     3bee:	03300913          	li	s2,51
     3bf2:	00004a17          	auipc	s4,0x4
+<<<<<<< HEAD
     3bf6:	d56a0a13          	addi	s4,s4,-682 # 7948 <malloc+0x1e60>
     3bfa:	00004497          	auipc	s1,0x4
     3bfe:	85e48493          	addi	s1,s1,-1954 # 7458 <malloc+0x1970>
     3c02:	00002a97          	auipc	s5,0x2
     3c06:	4cea8a93          	addi	s5,s5,1230 # 60d0 <malloc+0x5e8>
+=======
+    3bf6:	d5ea0a13          	addi	s4,s4,-674 # 7950 <malloc+0x1e60>
+    mkdir("");
+    3bfa:	00004497          	auipc	s1,0x4
+    3bfe:	86648493          	addi	s1,s1,-1946 # 7460 <malloc+0x1970>
+    link("README", "");
+    3c02:	00002a97          	auipc	s5,0x2
+    3c06:	4d6a8a93          	addi	s5,s5,1238 # 60d8 <malloc+0x5e8>
+    fd = open("xx", O_CREATE);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3c0a:	00004997          	auipc	s3,0x4
-    3c0e:	c3698993          	addi	s3,s3,-970 # 7840 <malloc+0x1d58>
+    3c0e:	c3e98993          	addi	s3,s3,-962 # 7848 <malloc+0x1d58>
     3c12:	a891                	j	3c66 <iref+0x8e>
     3c14:	85da                	mv	a1,s6
     3c16:	00004517          	auipc	a0,0x4
-    3c1a:	d3a50513          	addi	a0,a0,-710 # 7950 <malloc+0x1e68>
+    3c1a:	d4250513          	addi	a0,a0,-702 # 7958 <malloc+0x1e68>
     3c1e:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3c22:	e0c080e7          	jalr	-500(ra) # 5a2a <printf>
+=======
+    3c22:	e14080e7          	jalr	-492(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3c26:	4505                	li	a0,1
     3c28:	00002097          	auipc	ra,0x2
     3c2c:	a82080e7          	jalr	-1406(ra) # 56aa <exit>
     3c30:	85da                	mv	a1,s6
     3c32:	00004517          	auipc	a0,0x4
-    3c36:	d3650513          	addi	a0,a0,-714 # 7968 <malloc+0x1e80>
+    3c36:	d3e50513          	addi	a0,a0,-706 # 7970 <malloc+0x1e80>
     3c3a:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3c3e:	df0080e7          	jalr	-528(ra) # 5a2a <printf>
+=======
+    3c3e:	df8080e7          	jalr	-520(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3c42:	4505                	li	a0,1
     3c44:	00002097          	auipc	ra,0x2
     3c48:	a66080e7          	jalr	-1434(ra) # 56aa <exit>
@@ -4798,9 +5992,17 @@ Disassembly of section .text:
     3cc0:	bf59                	j	3c56 <iref+0x7e>
     3cc2:	03300493          	li	s1,51
     3cc6:	00003997          	auipc	s3,0x3
+<<<<<<< HEAD
     3cca:	4b298993          	addi	s3,s3,1202 # 7178 <malloc+0x1690>
     3cce:	00004917          	auipc	s2,0x4
     3cd2:	c7a90913          	addi	s2,s2,-902 # 7948 <malloc+0x1e60>
+=======
+    3cca:	4ba98993          	addi	s3,s3,1210 # 7180 <malloc+0x1690>
+    unlink("irefd");
+    3cce:	00004917          	auipc	s2,0x4
+    3cd2:	c8290913          	addi	s2,s2,-894 # 7950 <malloc+0x1e60>
+    chdir("..");
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3cd6:	854e                	mv	a0,s3
     3cd8:	00002097          	auipc	ra,0x2
     3cdc:	a42080e7          	jalr	-1470(ra) # 571a <chdir>
@@ -4810,7 +6012,7 @@ Disassembly of section .text:
     3cea:	34fd                	addiw	s1,s1,-1
     3cec:	f4ed                	bnez	s1,3cd6 <iref+0xfe>
     3cee:	00003517          	auipc	a0,0x3
-    3cf2:	43250513          	addi	a0,a0,1074 # 7120 <malloc+0x1638>
+    3cf2:	43a50513          	addi	a0,a0,1082 # 7128 <malloc+0x1638>
     3cf6:	00002097          	auipc	ra,0x2
     3cfa:	a24080e7          	jalr	-1500(ra) # 571a <chdir>
     3cfe:	70e2                	ld	ra,56(sp)
@@ -4832,7 +6034,7 @@ Disassembly of section .text:
     3d1a:	1800                	addi	s0,sp,48
     3d1c:	84aa                	mv	s1,a0
     3d1e:	00004517          	auipc	a0,0x4
-    3d22:	c6250513          	addi	a0,a0,-926 # 7980 <malloc+0x1e98>
+    3d22:	c6a50513          	addi	a0,a0,-918 # 7988 <malloc+0x1e98>
     3d26:	00002097          	auipc	ra,0x2
     3d2a:	9ec080e7          	jalr	-1556(ra) # 5712 <mkdir>
     3d2e:	04054263          	bltz	a0,3d72 <openiputtest+0x60>
@@ -4842,31 +6044,46 @@ Disassembly of section .text:
     3d3e:	e93d                	bnez	a0,3db4 <openiputtest+0xa2>
     3d40:	4589                	li	a1,2
     3d42:	00004517          	auipc	a0,0x4
-    3d46:	c3e50513          	addi	a0,a0,-962 # 7980 <malloc+0x1e98>
+    3d46:	c4650513          	addi	a0,a0,-954 # 7988 <malloc+0x1e98>
     3d4a:	00002097          	auipc	ra,0x2
     3d4e:	9a0080e7          	jalr	-1632(ra) # 56ea <open>
     3d52:	04054c63          	bltz	a0,3daa <openiputtest+0x98>
     3d56:	85a6                	mv	a1,s1
     3d58:	00004517          	auipc	a0,0x4
-    3d5c:	c4850513          	addi	a0,a0,-952 # 79a0 <malloc+0x1eb8>
+    3d5c:	c5050513          	addi	a0,a0,-944 # 79a8 <malloc+0x1eb8>
     3d60:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3d64:	cca080e7          	jalr	-822(ra) # 5a2a <printf>
+=======
+    3d64:	cd2080e7          	jalr	-814(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3d68:	4505                	li	a0,1
     3d6a:	00002097          	auipc	ra,0x2
     3d6e:	940080e7          	jalr	-1728(ra) # 56aa <exit>
     3d72:	85a6                	mv	a1,s1
     3d74:	00004517          	auipc	a0,0x4
-    3d78:	c1450513          	addi	a0,a0,-1004 # 7988 <malloc+0x1ea0>
+    3d78:	c1c50513          	addi	a0,a0,-996 # 7990 <malloc+0x1ea0>
     3d7c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3d80:	cae080e7          	jalr	-850(ra) # 5a2a <printf>
+=======
+    3d80:	cb6080e7          	jalr	-842(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3d84:	4505                	li	a0,1
     3d86:	00002097          	auipc	ra,0x2
     3d8a:	924080e7          	jalr	-1756(ra) # 56aa <exit>
     3d8e:	85a6                	mv	a1,s1
     3d90:	00003517          	auipc	a0,0x3
-    3d94:	9e050513          	addi	a0,a0,-1568 # 6770 <malloc+0xc88>
+    3d94:	9e850513          	addi	a0,a0,-1560 # 6778 <malloc+0xc88>
     3d98:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3d9c:	c92080e7          	jalr	-878(ra) # 5a2a <printf>
+=======
+    3d9c:	c9a080e7          	jalr	-870(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3da0:	4505                	li	a0,1
     3da2:	00002097          	auipc	ra,0x2
     3da6:	908080e7          	jalr	-1784(ra) # 56aa <exit>
@@ -4877,15 +6094,20 @@ Disassembly of section .text:
     3db6:	00002097          	auipc	ra,0x2
     3dba:	984080e7          	jalr	-1660(ra) # 573a <sleep>
     3dbe:	00004517          	auipc	a0,0x4
-    3dc2:	bc250513          	addi	a0,a0,-1086 # 7980 <malloc+0x1e98>
+    3dc2:	bca50513          	addi	a0,a0,-1078 # 7988 <malloc+0x1e98>
     3dc6:	00002097          	auipc	ra,0x2
     3dca:	934080e7          	jalr	-1740(ra) # 56fa <unlink>
     3dce:	cd19                	beqz	a0,3dec <openiputtest+0xda>
     3dd0:	85a6                	mv	a1,s1
     3dd2:	00003517          	auipc	a0,0x3
-    3dd6:	b8e50513          	addi	a0,a0,-1138 # 6960 <malloc+0xe78>
+    3dd6:	b9650513          	addi	a0,a0,-1130 # 6968 <malloc+0xe78>
     3dda:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3dde:	c50080e7          	jalr	-944(ra) # 5a2a <printf>
+=======
+    3dde:	c58080e7          	jalr	-936(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3de2:	4505                	li	a0,1
     3de4:	00002097          	auipc	ra,0x2
     3de8:	8c6080e7          	jalr	-1850(ra) # 56aa <exit>
@@ -4904,7 +6126,7 @@ Disassembly of section .text:
     3e0c:	1000                	addi	s0,sp,32
     3e0e:	84aa                	mv	s1,a0
     3e10:	00004517          	auipc	a0,0x4
-    3e14:	bb850513          	addi	a0,a0,-1096 # 79c8 <malloc+0x1ee0>
+    3e14:	bc050513          	addi	a0,a0,-1088 # 79d0 <malloc+0x1ee0>
     3e18:	00002097          	auipc	ra,0x2
     3e1c:	8e2080e7          	jalr	-1822(ra) # 56fa <unlink>
     3e20:	00002097          	auipc	ra,0x2
@@ -4916,7 +6138,7 @@ Disassembly of section .text:
     3e34:	90a080e7          	jalr	-1782(ra) # 573a <sleep>
     3e38:	20200593          	li	a1,514
     3e3c:	00004517          	auipc	a0,0x4
-    3e40:	b8c50513          	addi	a0,a0,-1140 # 79c8 <malloc+0x1ee0>
+    3e40:	b9450513          	addi	a0,a0,-1132 # 79d0 <malloc+0x1ee0>
     3e44:	00002097          	auipc	ra,0x2
     3e48:	8a6080e7          	jalr	-1882(ra) # 56ea <open>
     3e4c:	00002097          	auipc	ra,0x2
@@ -4934,14 +6156,19 @@ Disassembly of section .text:
     3e70:	8082                	ret
     3e72:	85a6                	mv	a1,s1
     3e74:	00003517          	auipc	a0,0x3
-    3e78:	abc50513          	addi	a0,a0,-1348 # 6930 <malloc+0xe48>
+    3e78:	ac450513          	addi	a0,a0,-1340 # 6938 <malloc+0xe48>
     3e7c:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3e80:	bae080e7          	jalr	-1106(ra) # 5a2a <printf>
+=======
+    3e80:	bb6080e7          	jalr	-1098(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3e84:	4505                	li	a0,1
     3e86:	00002097          	auipc	ra,0x2
     3e8a:	824080e7          	jalr	-2012(ra) # 56aa <exit>
     3e8e:	00004497          	auipc	s1,0x4
-    3e92:	b3a48493          	addi	s1,s1,-1222 # 79c8 <malloc+0x1ee0>
+    3e92:	b4248493          	addi	s1,s1,-1214 # 79d0 <malloc+0x1ee0>
     3e96:	4581                	li	a1,0
     3e98:	8526                	mv	a0,s1
     3e9a:	00002097          	auipc	ra,0x2
@@ -4996,9 +6223,14 @@ Disassembly of section .text:
     3f30:	77e080e7          	jalr	1918(ra) # 56aa <exit>
     3f34:	85d2                	mv	a1,s4
     3f36:	00003517          	auipc	a0,0x3
-    3f3a:	83a50513          	addi	a0,a0,-1990 # 6770 <malloc+0xc88>
+    3f3a:	84250513          	addi	a0,a0,-1982 # 6778 <malloc+0xc88>
     3f3e:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3f42:	aec080e7          	jalr	-1300(ra) # 5a2a <printf>
+=======
+    3f42:	af4080e7          	jalr	-1292(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3f46:	4505                	li	a0,1
     3f48:	00001097          	auipc	ra,0x1
     3f4c:	762080e7          	jalr	1890(ra) # 56aa <exit>
@@ -5007,9 +6239,14 @@ Disassembly of section .text:
     3f58:	bfe5                	j	3f50 <killstatus+0x7c>
     3f5a:	85d2                	mv	a1,s4
     3f5c:	00004517          	auipc	a0,0x4
-    3f60:	a7c50513          	addi	a0,a0,-1412 # 79d8 <malloc+0x1ef0>
+    3f60:	a8450513          	addi	a0,a0,-1404 # 79e0 <malloc+0x1ef0>
     3f64:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3f68:	ac6080e7          	jalr	-1338(ra) # 5a2a <printf>
+=======
+    3f68:	ace080e7          	jalr	-1330(ra) # 5a32 <printf>
+       exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3f6c:	4505                	li	a0,1
     3f6e:	00001097          	auipc	ra,0x1
     3f72:	73c080e7          	jalr	1852(ra) # 56aa <exit>
@@ -5032,9 +6269,14 @@ Disassembly of section .text:
     3f98:	a001                	j	3f98 <preempt+0x22>
     3f9a:	85a6                	mv	a1,s1
     3f9c:	00003517          	auipc	a0,0x3
-    3fa0:	99450513          	addi	a0,a0,-1644 # 6930 <malloc+0xe48>
+    3fa0:	99c50513          	addi	a0,a0,-1636 # 6938 <malloc+0xe48>
     3fa4:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3fa8:	a86080e7          	jalr	-1402(ra) # 5a2a <printf>
+=======
+    3fa8:	a8e080e7          	jalr	-1394(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3fac:	4505                	li	a0,1
     3fae:	00001097          	auipc	ra,0x1
     3fb2:	6fc080e7          	jalr	1788(ra) # 56aa <exit>
@@ -5046,9 +6288,14 @@ Disassembly of section .text:
     3fc6:	a001                	j	3fc6 <preempt+0x50>
     3fc8:	85a6                	mv	a1,s1
     3fca:	00002517          	auipc	a0,0x2
-    3fce:	7a650513          	addi	a0,a0,1958 # 6770 <malloc+0xc88>
+    3fce:	7ae50513          	addi	a0,a0,1966 # 6778 <malloc+0xc88>
     3fd2:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     3fd6:	a58080e7          	jalr	-1448(ra) # 5a2a <printf>
+=======
+    3fd6:	a60080e7          	jalr	-1440(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     3fda:	4505                	li	a0,1
     3fdc:	00001097          	auipc	ra,0x1
     3fe0:	6ce080e7          	jalr	1742(ra) # 56aa <exit>
@@ -5065,7 +6312,7 @@ Disassembly of section .text:
     4008:	6ce080e7          	jalr	1742(ra) # 56d2 <close>
     400c:	4605                	li	a2,1
     400e:	00002597          	auipc	a1,0x2
-    4012:	f9a58593          	addi	a1,a1,-102 # 5fa8 <malloc+0x4c0>
+    4012:	fa258593          	addi	a1,a1,-94 # 5fb0 <malloc+0x4c0>
     4016:	fcc42503          	lw	a0,-52(s0)
     401a:	00001097          	auipc	ra,0x1
     401e:	6b0080e7          	jalr	1712(ra) # 56ca <write>
@@ -5077,24 +6324,29 @@ Disassembly of section .text:
     4034:	a001                	j	4034 <preempt+0xbe>
     4036:	85a6                	mv	a1,s1
     4038:	00002517          	auipc	a0,0x2
-    403c:	73850513          	addi	a0,a0,1848 # 6770 <malloc+0xc88>
+    403c:	74050513          	addi	a0,a0,1856 # 6778 <malloc+0xc88>
     4040:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     4044:	9ea080e7          	jalr	-1558(ra) # 5a2a <printf>
+=======
+    4044:	9f2080e7          	jalr	-1550(ra) # 5a32 <printf>
+     exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4048:	4505                	li	a0,1
     404a:	00001097          	auipc	ra,0x1
     404e:	660080e7          	jalr	1632(ra) # 56aa <exit>
     4052:	85a6                	mv	a1,s1
     4054:	00004517          	auipc	a0,0x4
-    4058:	9a450513          	addi	a0,a0,-1628 # 79f8 <malloc+0x1f10>
+    4058:	9ac50513          	addi	a0,a0,-1620 # 7a00 <malloc+0x1f10>
     405c:	00002097          	auipc	ra,0x2
-    4060:	9ce080e7          	jalr	-1586(ra) # 5a2a <printf>
+    4060:	9d6080e7          	jalr	-1578(ra) # 5a32 <printf>
     4064:	b7d1                	j	4028 <preempt+0xb2>
     4066:	fcc42503          	lw	a0,-52(s0)
     406a:	00001097          	auipc	ra,0x1
     406e:	668080e7          	jalr	1640(ra) # 56d2 <close>
     4072:	660d                	lui	a2,0x3
     4074:	00008597          	auipc	a1,0x8
-    4078:	b0c58593          	addi	a1,a1,-1268 # bb80 <buf>
+    4078:	b1458593          	addi	a1,a1,-1260 # bb88 <buf>
     407c:	fc842503          	lw	a0,-56(s0)
     4080:	00001097          	auipc	ra,0x1
     4084:	642080e7          	jalr	1602(ra) # 56c2 <read>
@@ -5102,9 +6354,14 @@ Disassembly of section .text:
     408a:	02f50363          	beq	a0,a5,40b0 <preempt+0x13a>
     408e:	85a6                	mv	a1,s1
     4090:	00004517          	auipc	a0,0x4
-    4094:	98050513          	addi	a0,a0,-1664 # 7a10 <malloc+0x1f28>
+    4094:	98850513          	addi	a0,a0,-1656 # 7a18 <malloc+0x1f28>
     4098:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     409c:	992080e7          	jalr	-1646(ra) # 5a2a <printf>
+=======
+    409c:	99a080e7          	jalr	-1638(ra) # 5a32 <printf>
+}
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     40a0:	70e2                	ld	ra,56(sp)
     40a2:	7442                	ld	s0,48(sp)
     40a4:	74a2                	ld	s1,40(sp)
@@ -5117,9 +6374,14 @@ Disassembly of section .text:
     40b4:	00001097          	auipc	ra,0x1
     40b8:	61e080e7          	jalr	1566(ra) # 56d2 <close>
     40bc:	00004517          	auipc	a0,0x4
-    40c0:	96c50513          	addi	a0,a0,-1684 # 7a28 <malloc+0x1f40>
+    40c0:	97450513          	addi	a0,a0,-1676 # 7a30 <malloc+0x1f40>
     40c4:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     40c8:	966080e7          	jalr	-1690(ra) # 5a2a <printf>
+=======
+    40c8:	96e080e7          	jalr	-1682(ra) # 5a32 <printf>
+  kill(pid1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     40cc:	8552                	mv	a0,s4
     40ce:	00001097          	auipc	ra,0x1
     40d2:	60c080e7          	jalr	1548(ra) # 56da <kill>
@@ -5130,9 +6392,14 @@ Disassembly of section .text:
     40e2:	00001097          	auipc	ra,0x1
     40e6:	5f8080e7          	jalr	1528(ra) # 56da <kill>
     40ea:	00004517          	auipc	a0,0x4
-    40ee:	94e50513          	addi	a0,a0,-1714 # 7a38 <malloc+0x1f50>
+    40ee:	95650513          	addi	a0,a0,-1706 # 7a40 <malloc+0x1f50>
     40f2:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     40f6:	938080e7          	jalr	-1736(ra) # 5a2a <printf>
+=======
+    40f6:	940080e7          	jalr	-1728(ra) # 5a32 <printf>
+  wait(0);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     40fa:	4501                	li	a0,0
     40fc:	00001097          	auipc	ra,0x1
     4100:	5b6080e7          	jalr	1462(ra) # 56b2 <wait>
@@ -5174,17 +6441,27 @@ Disassembly of section .text:
     4164:	54a080e7          	jalr	1354(ra) # 56aa <exit>
     4168:	85ce                	mv	a1,s3
     416a:	00002517          	auipc	a0,0x2
-    416e:	60650513          	addi	a0,a0,1542 # 6770 <malloc+0xc88>
+    416e:	60e50513          	addi	a0,a0,1550 # 6778 <malloc+0xc88>
     4172:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     4176:	8b8080e7          	jalr	-1864(ra) # 5a2a <printf>
+=======
+    4176:	8c0080e7          	jalr	-1856(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     417a:	4505                	li	a0,1
     417c:	00001097          	auipc	ra,0x1
     4180:	52e080e7          	jalr	1326(ra) # 56aa <exit>
     4184:	85ce                	mv	a1,s3
     4186:	00002517          	auipc	a0,0x2
-    418a:	77250513          	addi	a0,a0,1906 # 68f8 <malloc+0xe10>
+    418a:	77a50513          	addi	a0,a0,1914 # 6900 <malloc+0xe10>
     418e:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     4192:	89c080e7          	jalr	-1892(ra) # 5a2a <printf>
+=======
+    4192:	8a4080e7          	jalr	-1884(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4196:	4505                	li	a0,1
     4198:	00001097          	auipc	ra,0x1
     419c:	512080e7          	jalr	1298(ra) # 56aa <exit>
@@ -5223,9 +6500,14 @@ Disassembly of section .text:
     41f8:	a08d                	j	425a <sbrkfail+0x90>
     41fa:	85ca                	mv	a1,s2
     41fc:	00002517          	auipc	a0,0x2
-    4200:	67c50513          	addi	a0,a0,1660 # 6878 <malloc+0xd90>
+    4200:	68450513          	addi	a0,a0,1668 # 6880 <malloc+0xd90>
     4204:	00002097          	auipc	ra,0x2
+<<<<<<< HEAD
     4208:	826080e7          	jalr	-2010(ra) # 5a2a <printf>
+=======
+    4208:	82e080e7          	jalr	-2002(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     420c:	4505                	li	a0,1
     420e:	00001097          	auipc	ra,0x1
     4212:	49c080e7          	jalr	1180(ra) # 56aa <exit>
@@ -5238,7 +6520,7 @@ Disassembly of section .text:
     422c:	50a080e7          	jalr	1290(ra) # 5732 <sbrk>
     4230:	4605                	li	a2,1
     4232:	00002597          	auipc	a1,0x2
-    4236:	d7658593          	addi	a1,a1,-650 # 5fa8 <malloc+0x4c0>
+    4236:	d7e58593          	addi	a1,a1,-642 # 5fb0 <malloc+0x4c0>
     423a:	fb442503          	lw	a0,-76(s0)
     423e:	00001097          	auipc	ra,0x1
     4242:	48c080e7          	jalr	1164(ra) # 56ca <write>
@@ -5301,17 +6583,27 @@ Disassembly of section .text:
     42f2:	8082                	ret
     42f4:	85ca                	mv	a1,s2
     42f6:	00003517          	auipc	a0,0x3
-    42fa:	75250513          	addi	a0,a0,1874 # 7a48 <malloc+0x1f60>
+    42fa:	75a50513          	addi	a0,a0,1882 # 7a50 <malloc+0x1f60>
     42fe:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4302:	72c080e7          	jalr	1836(ra) # 5a2a <printf>
+=======
+    4302:	734080e7          	jalr	1844(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4306:	4505                	li	a0,1
     4308:	00001097          	auipc	ra,0x1
     430c:	3a2080e7          	jalr	930(ra) # 56aa <exit>
     4310:	85ca                	mv	a1,s2
     4312:	00002517          	auipc	a0,0x2
-    4316:	45e50513          	addi	a0,a0,1118 # 6770 <malloc+0xc88>
+    4316:	46650513          	addi	a0,a0,1126 # 6778 <malloc+0xc88>
     431a:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     431e:	710080e7          	jalr	1808(ra) # 5a2a <printf>
+=======
+    431e:	718080e7          	jalr	1816(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4322:	4505                	li	a0,1
     4324:	00001097          	auipc	ra,0x1
     4328:	386080e7          	jalr	902(ra) # 56aa <exit>
@@ -5333,9 +6625,14 @@ Disassembly of section .text:
     435a:	8626                	mv	a2,s1
     435c:	85ca                	mv	a1,s2
     435e:	00003517          	auipc	a0,0x3
-    4362:	70a50513          	addi	a0,a0,1802 # 7a68 <malloc+0x1f80>
+    4362:	71250513          	addi	a0,a0,1810 # 7a70 <malloc+0x1f80>
     4366:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     436a:	6c4080e7          	jalr	1732(ra) # 5a2a <printf>
+=======
+    436a:	6cc080e7          	jalr	1740(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     436e:	4505                	li	a0,1
     4370:	00001097          	auipc	ra,0x1
     4374:	33a080e7          	jalr	826(ra) # 56aa <exit>
@@ -5360,7 +6657,7 @@ Disassembly of section .text:
     43a2:	ed39                	bnez	a0,4400 <mem+0x7e>
     43a4:	854a                	mv	a0,s2
     43a6:	00001097          	auipc	ra,0x1
-    43aa:	742080e7          	jalr	1858(ra) # 5ae8 <malloc>
+    43aa:	74a080e7          	jalr	1866(ra) # 5af0 <malloc>
     43ae:	c501                	beqz	a0,43b6 <mem+0x34>
     43b0:	e104                	sd	s1,0(a0)
     43b2:	84aa                	mv	s1,a0
@@ -5369,22 +6666,42 @@ Disassembly of section .text:
     43b8:	8526                	mv	a0,s1
     43ba:	6084                	ld	s1,0(s1)
     43bc:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     43c0:	6a4080e7          	jalr	1700(ra) # 5a60 <free>
+=======
+    43c0:	6ac080e7          	jalr	1708(ra) # 5a68 <free>
+    while(m1){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     43c4:	f8f5                	bnez	s1,43b8 <mem+0x36>
     43c6:	6515                	lui	a0,0x5
     43c8:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     43cc:	720080e7          	jalr	1824(ra) # 5ae8 <malloc>
+=======
+    43cc:	728080e7          	jalr	1832(ra) # 5af0 <malloc>
+    if(m1 == 0){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     43d0:	c911                	beqz	a0,43e4 <mem+0x62>
     43d2:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     43d6:	68e080e7          	jalr	1678(ra) # 5a60 <free>
+=======
+    43d6:	696080e7          	jalr	1686(ra) # 5a68 <free>
+    exit(0);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     43da:	4501                	li	a0,0
     43dc:	00001097          	auipc	ra,0x1
     43e0:	2ce080e7          	jalr	718(ra) # 56aa <exit>
     43e4:	85ce                	mv	a1,s3
     43e6:	00003517          	auipc	a0,0x3
-    43ea:	6b250513          	addi	a0,a0,1714 # 7a98 <malloc+0x1fb0>
+    43ea:	6ba50513          	addi	a0,a0,1722 # 7aa0 <malloc+0x1fb0>
     43ee:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     43f2:	63c080e7          	jalr	1596(ra) # 5a2a <printf>
+=======
+    43f2:	644080e7          	jalr	1604(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     43f6:	4505                	li	a0,1
     43f8:	00001097          	auipc	ra,0x1
     43fc:	2b2080e7          	jalr	690(ra) # 56aa <exit>
@@ -5414,12 +6731,12 @@ Disassembly of section .text:
     443c:	1880                	addi	s0,sp,112
     443e:	8a2a                	mv	s4,a0
     4440:	00002517          	auipc	a0,0x2
-    4444:	92850513          	addi	a0,a0,-1752 # 5d68 <malloc+0x280>
+    4444:	93050513          	addi	a0,a0,-1744 # 5d70 <malloc+0x280>
     4448:	00001097          	auipc	ra,0x1
     444c:	2b2080e7          	jalr	690(ra) # 56fa <unlink>
     4450:	20200593          	li	a1,514
     4454:	00002517          	auipc	a0,0x2
-    4458:	91450513          	addi	a0,a0,-1772 # 5d68 <malloc+0x280>
+    4458:	91c50513          	addi	a0,a0,-1764 # 5d70 <malloc+0x280>
     445c:	00001097          	auipc	ra,0x1
     4460:	28e080e7          	jalr	654(ra) # 56ea <open>
     4464:	04054a63          	bltz	a0,44b8 <sharedfd+0x90>
@@ -5450,17 +6767,27 @@ Disassembly of section .text:
     44b4:	1fa080e7          	jalr	506(ra) # 56aa <exit>
     44b8:	85d2                	mv	a1,s4
     44ba:	00003517          	auipc	a0,0x3
-    44be:	5fe50513          	addi	a0,a0,1534 # 7ab8 <malloc+0x1fd0>
+    44be:	60650513          	addi	a0,a0,1542 # 7ac0 <malloc+0x1fd0>
     44c2:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     44c6:	568080e7          	jalr	1384(ra) # 5a2a <printf>
+=======
+    44c6:	570080e7          	jalr	1392(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     44ca:	4505                	li	a0,1
     44cc:	00001097          	auipc	ra,0x1
     44d0:	1de080e7          	jalr	478(ra) # 56aa <exit>
     44d4:	85d2                	mv	a1,s4
     44d6:	00003517          	auipc	a0,0x3
-    44da:	60a50513          	addi	a0,a0,1546 # 7ae0 <malloc+0x1ff8>
+    44da:	61250513          	addi	a0,a0,1554 # 7ae8 <malloc+0x1ff8>
     44de:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     44e2:	54c080e7          	jalr	1356(ra) # 5a2a <printf>
+=======
+    44e2:	554080e7          	jalr	1364(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     44e6:	4505                	li	a0,1
     44e8:	00001097          	auipc	ra,0x1
     44ec:	1c2080e7          	jalr	450(ra) # 56aa <exit>
@@ -5477,7 +6804,7 @@ Disassembly of section .text:
     4514:	1c2080e7          	jalr	450(ra) # 56d2 <close>
     4518:	4581                	li	a1,0
     451a:	00002517          	auipc	a0,0x2
-    451e:	84e50513          	addi	a0,a0,-1970 # 5d68 <malloc+0x280>
+    451e:	85650513          	addi	a0,a0,-1962 # 5d70 <malloc+0x280>
     4522:	00001097          	auipc	ra,0x1
     4526:	1c8080e7          	jalr	456(ra) # 56ea <open>
     452a:	8baa                	mv	s7,a0
@@ -5496,16 +6823,26 @@ Disassembly of section .text:
     4556:	a01d                	j	457c <sharedfd+0x154>
     4558:	85d2                	mv	a1,s4
     455a:	00003517          	auipc	a0,0x3
-    455e:	5a650513          	addi	a0,a0,1446 # 7b00 <malloc+0x2018>
+    455e:	5ae50513          	addi	a0,a0,1454 # 7b08 <malloc+0x2018>
     4562:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4566:	4c8080e7          	jalr	1224(ra) # 5a2a <printf>
+=======
+    4566:	4d0080e7          	jalr	1232(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     456a:	4505                	li	a0,1
     456c:	00001097          	auipc	ra,0x1
     4570:	13e080e7          	jalr	318(ra) # 56aa <exit>
     4574:	2985                	addiw	s3,s3,1
     4576:	0785                	addi	a5,a5,1
     4578:	fd2783e3          	beq	a5,s2,453e <sharedfd+0x116>
+<<<<<<< HEAD
     457c:	0007c703          	lbu	a4,0(a5) # 3e800000 <__BSS_END__+0x3e7f1470>
+=======
+      if(buf[i] == 'c')
+    457c:	0007c703          	lbu	a4,0(a5) # 3e800000 <__BSS_END__+0x3e7f1468>
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4580:	fe970ae3          	beq	a4,s1,4574 <sharedfd+0x14c>
     4584:	ff6719e3          	bne	a4,s6,4576 <sharedfd+0x14e>
     4588:	2a85                	addiw	s5,s5,1
@@ -5514,7 +6851,7 @@ Disassembly of section .text:
     458e:	00001097          	auipc	ra,0x1
     4592:	144080e7          	jalr	324(ra) # 56d2 <close>
     4596:	00001517          	auipc	a0,0x1
-    459a:	7d250513          	addi	a0,a0,2002 # 5d68 <malloc+0x280>
+    459a:	7da50513          	addi	a0,a0,2010 # 5d70 <malloc+0x280>
     459e:	00001097          	auipc	ra,0x1
     45a2:	15c080e7          	jalr	348(ra) # 56fa <unlink>
     45a6:	6789                	lui	a5,0x2
@@ -5525,9 +6862,14 @@ Disassembly of section .text:
     45b6:	02fa8063          	beq	s5,a5,45d6 <sharedfd+0x1ae>
     45ba:	85d2                	mv	a1,s4
     45bc:	00003517          	auipc	a0,0x3
-    45c0:	56c50513          	addi	a0,a0,1388 # 7b28 <malloc+0x2040>
+    45c0:	57450513          	addi	a0,a0,1396 # 7b30 <malloc+0x2040>
     45c4:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     45c8:	466080e7          	jalr	1126(ra) # 5a2a <printf>
+=======
+    45c8:	46e080e7          	jalr	1134(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     45cc:	4505                	li	a0,1
     45ce:	00001097          	auipc	ra,0x1
     45d2:	0dc080e7          	jalr	220(ra) # 56aa <exit>
@@ -5553,16 +6895,16 @@ Disassembly of section .text:
     45fc:	1900                	addi	s0,sp,176
     45fe:	8caa                	mv	s9,a0
     4600:	00001797          	auipc	a5,0x1
-    4604:	5d078793          	addi	a5,a5,1488 # 5bd0 <malloc+0xe8>
+    4604:	5d878793          	addi	a5,a5,1496 # 5bd8 <malloc+0xe8>
     4608:	f6f43823          	sd	a5,-144(s0)
     460c:	00001797          	auipc	a5,0x1
-    4610:	5cc78793          	addi	a5,a5,1484 # 5bd8 <malloc+0xf0>
+    4610:	5d478793          	addi	a5,a5,1492 # 5be0 <malloc+0xf0>
     4614:	f6f43c23          	sd	a5,-136(s0)
     4618:	00001797          	auipc	a5,0x1
-    461c:	5c878793          	addi	a5,a5,1480 # 5be0 <malloc+0xf8>
+    461c:	5d078793          	addi	a5,a5,1488 # 5be8 <malloc+0xf8>
     4620:	f8f43023          	sd	a5,-128(s0)
     4624:	00001797          	auipc	a5,0x1
-    4628:	5c478793          	addi	a5,a5,1476 # 5be8 <malloc+0x100>
+    4628:	5cc78793          	addi	a5,a5,1484 # 5bf0 <malloc+0x100>
     462c:	f8f43423          	sd	a5,-120(s0)
     4630:	f7040b93          	addi	s7,s0,-144
     4634:	895e                	mv	s2,s7
@@ -5590,18 +6932,28 @@ Disassembly of section .text:
     4676:	03000b13          	li	s6,48
     467a:	f4a43c23          	sd	a0,-168(s0)
     467e:	00007a17          	auipc	s4,0x7
-    4682:	502a0a13          	addi	s4,s4,1282 # bb80 <buf>
+    4682:	50aa0a13          	addi	s4,s4,1290 # bb88 <buf>
     4686:	00007a97          	auipc	s5,0x7
+<<<<<<< HEAD
     468a:	4fba8a93          	addi	s5,s5,1275 # bb81 <buf+0x1>
+=======
+    468a:	503a8a93          	addi	s5,s5,1283 # bb89 <buf+0x1>
+    if(total != N*SZ){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     468e:	6d05                	lui	s10,0x1
     4690:	770d0d13          	addi	s10,s10,1904 # 1770 <pipe1+0x32>
     4694:	03400d93          	li	s11,52
     4698:	a23d                	j	47c6 <fourfiles+0x1e6>
     469a:	85e6                	mv	a1,s9
     469c:	00002517          	auipc	a0,0x2
-    46a0:	4dc50513          	addi	a0,a0,1244 # 6b78 <malloc+0x1090>
+    46a0:	4e450513          	addi	a0,a0,1252 # 6b80 <malloc+0x1090>
     46a4:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     46a8:	386080e7          	jalr	902(ra) # 5a2a <printf>
+=======
+    46a8:	38e080e7          	jalr	910(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     46ac:	4505                	li	a0,1
     46ae:	00001097          	auipc	ra,0x1
     46b2:	ffc080e7          	jalr	-4(ra) # 56aa <exit>
@@ -5614,12 +6966,12 @@ Disassembly of section .text:
     46ca:	1f400613          	li	a2,500
     46ce:	0304859b          	addiw	a1,s1,48
     46d2:	00007517          	auipc	a0,0x7
-    46d6:	4ae50513          	addi	a0,a0,1198 # bb80 <buf>
+    46d6:	4b650513          	addi	a0,a0,1206 # bb88 <buf>
     46da:	00001097          	auipc	ra,0x1
     46de:	dcc080e7          	jalr	-564(ra) # 54a6 <memset>
     46e2:	44b1                	li	s1,12
     46e4:	00007997          	auipc	s3,0x7
-    46e8:	49c98993          	addi	s3,s3,1180 # bb80 <buf>
+    46e8:	4a498993          	addi	s3,s3,1188 # bb88 <buf>
     46ec:	1f400613          	li	a2,500
     46f0:	85ce                	mv	a1,s3
     46f2:	854a                	mv	a0,s2
@@ -5635,16 +6987,26 @@ Disassembly of section .text:
     4710:	f9e080e7          	jalr	-98(ra) # 56aa <exit>
     4714:	85e6                	mv	a1,s9
     4716:	00003517          	auipc	a0,0x3
-    471a:	42a50513          	addi	a0,a0,1066 # 7b40 <malloc+0x2058>
+    471a:	43250513          	addi	a0,a0,1074 # 7b48 <malloc+0x2058>
     471e:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4722:	30c080e7          	jalr	780(ra) # 5a2a <printf>
+=======
+    4722:	314080e7          	jalr	788(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4726:	4505                	li	a0,1
     4728:	00001097          	auipc	ra,0x1
     472c:	f82080e7          	jalr	-126(ra) # 56aa <exit>
     4730:	00003517          	auipc	a0,0x3
-    4734:	42050513          	addi	a0,a0,1056 # 7b50 <malloc+0x2068>
+    4734:	42850513          	addi	a0,a0,1064 # 7b58 <malloc+0x2068>
     4738:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     473c:	2f2080e7          	jalr	754(ra) # 5a2a <printf>
+=======
+    473c:	2fa080e7          	jalr	762(ra) # 5a32 <printf>
+          exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4740:	4505                	li	a0,1
     4742:	00001097          	auipc	ra,0x1
     4746:	f68080e7          	jalr	-152(ra) # 56aa <exit>
@@ -5652,9 +7014,14 @@ Disassembly of section .text:
     474e:	f60080e7          	jalr	-160(ra) # 56aa <exit>
     4752:	85e6                	mv	a1,s9
     4754:	00003517          	auipc	a0,0x3
-    4758:	41450513          	addi	a0,a0,1044 # 7b68 <malloc+0x2080>
+    4758:	41c50513          	addi	a0,a0,1052 # 7b70 <malloc+0x2080>
     475c:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4760:	2ce080e7          	jalr	718(ra) # 5a2a <printf>
+=======
+    4760:	2d6080e7          	jalr	726(ra) # 5a32 <printf>
+          exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4764:	4505                	li	a0,1
     4766:	00001097          	auipc	ra,0x1
     476a:	f44080e7          	jalr	-188(ra) # 56aa <exit>
@@ -5666,7 +7033,7 @@ Disassembly of section .text:
     477c:	f4a080e7          	jalr	-182(ra) # 56c2 <read>
     4780:	02a05363          	blez	a0,47a6 <fourfiles+0x1c6>
     4784:	00007797          	auipc	a5,0x7
-    4788:	3fc78793          	addi	a5,a5,1020 # bb80 <buf>
+    4788:	40478793          	addi	a5,a5,1028 # bb88 <buf>
     478c:	fff5069b          	addiw	a3,a0,-1
     4790:	1682                	slli	a3,a3,0x20
     4792:	9281                	srli	a3,a3,0x20
@@ -5697,9 +7064,14 @@ Disassembly of section .text:
     47e0:	bf49                	j	4772 <fourfiles+0x192>
     47e2:	85ca                	mv	a1,s2
     47e4:	00003517          	auipc	a0,0x3
-    47e8:	39450513          	addi	a0,a0,916 # 7b78 <malloc+0x2090>
+    47e8:	39c50513          	addi	a0,a0,924 # 7b80 <malloc+0x2090>
     47ec:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     47f0:	23e080e7          	jalr	574(ra) # 5a2a <printf>
+=======
+    47f0:	246080e7          	jalr	582(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     47f4:	4505                	li	a0,1
     47f6:	00001097          	auipc	ra,0x1
     47fa:	eb4080e7          	jalr	-332(ra) # 56aa <exit>
@@ -5739,7 +7111,12 @@ Disassembly of section .text:
     4842:	4b0d                	li	s6,3
     4844:	4a85                	li	s5,1
     4846:	00003b97          	auipc	s7,0x3
+<<<<<<< HEAD
     484a:	34ab8b93          	addi	s7,s7,842 # 7b90 <malloc+0x20a8>
+=======
+    484a:	352b8b93          	addi	s7,s7,850 # 7b98 <malloc+0x20a8>
+  for(i = 0; i < N; i++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     484e:	02800a13          	li	s4,40
     4852:	acc1                	j	4b22 <concreate+0x306>
     4854:	fa840593          	addi	a1,s0,-88
@@ -5758,15 +7135,20 @@ Disassembly of section .text:
     4880:	26055b63          	bgez	a0,4af6 <concreate+0x2da>
     4884:	fa840593          	addi	a1,s0,-88
     4888:	00003517          	auipc	a0,0x3
-    488c:	31050513          	addi	a0,a0,784 # 7b98 <malloc+0x20b0>
+    488c:	31850513          	addi	a0,a0,792 # 7ba0 <malloc+0x20b0>
     4890:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4894:	19a080e7          	jalr	410(ra) # 5a2a <printf>
+=======
+    4894:	1a2080e7          	jalr	418(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4898:	4505                	li	a0,1
     489a:	00001097          	auipc	ra,0x1
     489e:	e10080e7          	jalr	-496(ra) # 56aa <exit>
     48a2:	fa840593          	addi	a1,s0,-88
     48a6:	00003517          	auipc	a0,0x3
-    48aa:	2ea50513          	addi	a0,a0,746 # 7b90 <malloc+0x20a8>
+    48aa:	2f250513          	addi	a0,a0,754 # 7b98 <malloc+0x20a8>
     48ae:	00001097          	auipc	ra,0x1
     48b2:	e5c080e7          	jalr	-420(ra) # 570a <link>
     48b6:	4501                	li	a0,0
@@ -5782,7 +7164,7 @@ Disassembly of section .text:
     48d8:	bd2080e7          	jalr	-1070(ra) # 54a6 <memset>
     48dc:	4581                	li	a1,0
     48de:	00002517          	auipc	a0,0x2
-    48e2:	cf250513          	addi	a0,a0,-782 # 65d0 <malloc+0xae8>
+    48e2:	cfa50513          	addi	a0,a0,-774 # 65d8 <malloc+0xae8>
     48e6:	00001097          	auipc	ra,0x1
     48ea:	e04080e7          	jalr	-508(ra) # 56ea <open>
     48ee:	892a                	mv	s2,a0
@@ -5794,9 +7176,14 @@ Disassembly of section .text:
     48fe:	f7240613          	addi	a2,s0,-142
     4902:	85ce                	mv	a1,s3
     4904:	00003517          	auipc	a0,0x3
-    4908:	2b450513          	addi	a0,a0,692 # 7bb8 <malloc+0x20d0>
+    4908:	2bc50513          	addi	a0,a0,700 # 7bc0 <malloc+0x20d0>
     490c:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4910:	11e080e7          	jalr	286(ra) # 5a2a <printf>
+=======
+    4910:	126080e7          	jalr	294(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4914:	4505                	li	a0,1
     4916:	00001097          	auipc	ra,0x1
     491a:	d94080e7          	jalr	-620(ra) # 56aa <exit>
@@ -5827,9 +7214,14 @@ Disassembly of section .text:
     496e:	f7240613          	addi	a2,s0,-142
     4972:	85ce                	mv	a1,s3
     4974:	00003517          	auipc	a0,0x3
-    4978:	26450513          	addi	a0,a0,612 # 7bd8 <malloc+0x20f0>
+    4978:	26c50513          	addi	a0,a0,620 # 7be0 <malloc+0x20f0>
     497c:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4980:	0ae080e7          	jalr	174(ra) # 5a2a <printf>
+=======
+    4980:	0b6080e7          	jalr	182(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4984:	4505                	li	a0,1
     4986:	00001097          	auipc	ra,0x1
     498a:	d24080e7          	jalr	-732(ra) # 56aa <exit>
@@ -5844,17 +7236,27 @@ Disassembly of section .text:
     49a8:	a8c9                	j	4a7a <concreate+0x25e>
     49aa:	85ce                	mv	a1,s3
     49ac:	00003517          	auipc	a0,0x3
-    49b0:	25450513          	addi	a0,a0,596 # 7c00 <malloc+0x2118>
+    49b0:	25c50513          	addi	a0,a0,604 # 7c08 <malloc+0x2118>
     49b4:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     49b8:	076080e7          	jalr	118(ra) # 5a2a <printf>
+=======
+    49b8:	07e080e7          	jalr	126(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     49bc:	4505                	li	a0,1
     49be:	00001097          	auipc	ra,0x1
     49c2:	cec080e7          	jalr	-788(ra) # 56aa <exit>
     49c6:	85ce                	mv	a1,s3
     49c8:	00002517          	auipc	a0,0x2
-    49cc:	da850513          	addi	a0,a0,-600 # 6770 <malloc+0xc88>
+    49cc:	db050513          	addi	a0,a0,-592 # 6778 <malloc+0xc88>
     49d0:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     49d4:	05a080e7          	jalr	90(ra) # 5a2a <printf>
+=======
+    49d4:	062080e7          	jalr	98(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     49d8:	4505                	li	a0,1
     49da:	00001097          	auipc	ra,0x1
     49de:	cd0080e7          	jalr	-816(ra) # 56aa <exit>
@@ -5986,18 +7388,23 @@ Disassembly of section .text:
     4b86:	0080                	addi	s0,sp,64
     4b88:	8aaa                	mv	s5,a0
     4b8a:	00003517          	auipc	a0,0x3
-    4b8e:	0ae50513          	addi	a0,a0,174 # 7c38 <malloc+0x2150>
+    4b8e:	0b650513          	addi	a0,a0,182 # 7c40 <malloc+0x2150>
     4b92:	00001097          	auipc	ra,0x1
     4b96:	b68080e7          	jalr	-1176(ra) # 56fa <unlink>
     4b9a:	20200593          	li	a1,514
     4b9e:	00003517          	auipc	a0,0x3
-    4ba2:	09a50513          	addi	a0,a0,154 # 7c38 <malloc+0x2150>
+    4ba2:	0a250513          	addi	a0,a0,162 # 7c40 <malloc+0x2150>
     4ba6:	00001097          	auipc	ra,0x1
     4baa:	b44080e7          	jalr	-1212(ra) # 56ea <open>
     4bae:	89aa                	mv	s3,a0
     4bb0:	4481                	li	s1,0
     4bb2:	00007917          	auipc	s2,0x7
+<<<<<<< HEAD
     4bb6:	fce90913          	addi	s2,s2,-50 # bb80 <buf>
+=======
+    4bb6:	fd690913          	addi	s2,s2,-42 # bb88 <buf>
+  for(i = 0; i < N; i++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4bba:	4a51                	li	s4,20
     4bbc:	0a054063          	bltz	a0,4c5c <bigfile+0xe6>
     4bc0:	25800613          	li	a2,600
@@ -6019,14 +7426,19 @@ Disassembly of section .text:
     4bf4:	ae2080e7          	jalr	-1310(ra) # 56d2 <close>
     4bf8:	4581                	li	a1,0
     4bfa:	00003517          	auipc	a0,0x3
-    4bfe:	03e50513          	addi	a0,a0,62 # 7c38 <malloc+0x2150>
+    4bfe:	04650513          	addi	a0,a0,70 # 7c40 <malloc+0x2150>
     4c02:	00001097          	auipc	ra,0x1
     4c06:	ae8080e7          	jalr	-1304(ra) # 56ea <open>
     4c0a:	8a2a                	mv	s4,a0
     4c0c:	4981                	li	s3,0
     4c0e:	4481                	li	s1,0
     4c10:	00007917          	auipc	s2,0x7
+<<<<<<< HEAD
     4c14:	f7090913          	addi	s2,s2,-144 # bb80 <buf>
+=======
+    4c14:	f7890913          	addi	s2,s2,-136 # bb88 <buf>
+  if(fd < 0){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4c18:	06054e63          	bltz	a0,4c94 <bigfile+0x11e>
     4c1c:	12c00613          	li	a2,300
     4c20:	85ca                	mv	a1,s2
@@ -6049,49 +7461,79 @@ Disassembly of section .text:
     4c5a:	b7c9                	j	4c1c <bigfile+0xa6>
     4c5c:	85d6                	mv	a1,s5
     4c5e:	00003517          	auipc	a0,0x3
-    4c62:	fea50513          	addi	a0,a0,-22 # 7c48 <malloc+0x2160>
+    4c62:	ff250513          	addi	a0,a0,-14 # 7c50 <malloc+0x2160>
     4c66:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4c6a:	dc4080e7          	jalr	-572(ra) # 5a2a <printf>
+=======
+    4c6a:	dcc080e7          	jalr	-564(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4c6e:	4505                	li	a0,1
     4c70:	00001097          	auipc	ra,0x1
     4c74:	a3a080e7          	jalr	-1478(ra) # 56aa <exit>
     4c78:	85d6                	mv	a1,s5
     4c7a:	00003517          	auipc	a0,0x3
-    4c7e:	fee50513          	addi	a0,a0,-18 # 7c68 <malloc+0x2180>
+    4c7e:	ff650513          	addi	a0,a0,-10 # 7c70 <malloc+0x2180>
     4c82:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4c86:	da8080e7          	jalr	-600(ra) # 5a2a <printf>
+=======
+    4c86:	db0080e7          	jalr	-592(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4c8a:	4505                	li	a0,1
     4c8c:	00001097          	auipc	ra,0x1
     4c90:	a1e080e7          	jalr	-1506(ra) # 56aa <exit>
     4c94:	85d6                	mv	a1,s5
     4c96:	00003517          	auipc	a0,0x3
-    4c9a:	ff250513          	addi	a0,a0,-14 # 7c88 <malloc+0x21a0>
+    4c9a:	ffa50513          	addi	a0,a0,-6 # 7c90 <malloc+0x21a0>
     4c9e:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4ca2:	d8c080e7          	jalr	-628(ra) # 5a2a <printf>
+=======
+    4ca2:	d94080e7          	jalr	-620(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4ca6:	4505                	li	a0,1
     4ca8:	00001097          	auipc	ra,0x1
     4cac:	a02080e7          	jalr	-1534(ra) # 56aa <exit>
     4cb0:	85d6                	mv	a1,s5
     4cb2:	00003517          	auipc	a0,0x3
-    4cb6:	ff650513          	addi	a0,a0,-10 # 7ca8 <malloc+0x21c0>
+    4cb6:	ffe50513          	addi	a0,a0,-2 # 7cb0 <malloc+0x21c0>
     4cba:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4cbe:	d70080e7          	jalr	-656(ra) # 5a2a <printf>
+=======
+    4cbe:	d78080e7          	jalr	-648(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4cc2:	4505                	li	a0,1
     4cc4:	00001097          	auipc	ra,0x1
     4cc8:	9e6080e7          	jalr	-1562(ra) # 56aa <exit>
     4ccc:	85d6                	mv	a1,s5
     4cce:	00003517          	auipc	a0,0x3
-    4cd2:	ffa50513          	addi	a0,a0,-6 # 7cc8 <malloc+0x21e0>
+    4cd2:	00250513          	addi	a0,a0,2 # 7cd0 <malloc+0x21e0>
     4cd6:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4cda:	d54080e7          	jalr	-684(ra) # 5a2a <printf>
+=======
+    4cda:	d5c080e7          	jalr	-676(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4cde:	4505                	li	a0,1
     4ce0:	00001097          	auipc	ra,0x1
     4ce4:	9ca080e7          	jalr	-1590(ra) # 56aa <exit>
     4ce8:	85d6                	mv	a1,s5
     4cea:	00003517          	auipc	a0,0x3
-    4cee:	ff650513          	addi	a0,a0,-10 # 7ce0 <malloc+0x21f8>
+    4cee:	ffe50513          	addi	a0,a0,-2 # 7ce8 <malloc+0x21f8>
     4cf2:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4cf6:	d38080e7          	jalr	-712(ra) # 5a2a <printf>
+=======
+    4cf6:	d40080e7          	jalr	-704(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4cfa:	4505                	li	a0,1
     4cfc:	00001097          	auipc	ra,0x1
     4d00:	9ae080e7          	jalr	-1618(ra) # 56aa <exit>
@@ -6102,7 +7544,7 @@ Disassembly of section .text:
     4d10:	ee078793          	addi	a5,a5,-288 # 2ee0 <exitiputtest+0x46>
     4d14:	02f99363          	bne	s3,a5,4d3a <bigfile+0x1c4>
     4d18:	00003517          	auipc	a0,0x3
-    4d1c:	f2050513          	addi	a0,a0,-224 # 7c38 <malloc+0x2150>
+    4d1c:	f2850513          	addi	a0,a0,-216 # 7c40 <malloc+0x2150>
     4d20:	00001097          	auipc	ra,0x1
     4d24:	9da080e7          	jalr	-1574(ra) # 56fa <unlink>
     4d28:	70e2                	ld	ra,56(sp)
@@ -6116,9 +7558,14 @@ Disassembly of section .text:
     4d38:	8082                	ret
     4d3a:	85d6                	mv	a1,s5
     4d3c:	00003517          	auipc	a0,0x3
-    4d40:	fc450513          	addi	a0,a0,-60 # 7d00 <malloc+0x2218>
+    4d40:	fcc50513          	addi	a0,a0,-52 # 7d08 <malloc+0x2218>
     4d44:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4d48:	ce6080e7          	jalr	-794(ra) # 5a2a <printf>
+=======
+    4d48:	cee080e7          	jalr	-786(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4d4c:	4505                	li	a0,1
     4d4e:	00001097          	auipc	ra,0x1
     4d52:	95c080e7          	jalr	-1700(ra) # 56aa <exit>
@@ -6140,19 +7587,34 @@ Disassembly of section .text:
     4d70:	e4ee                	sd	s11,72(sp)
     4d72:	1900                	addi	s0,sp,176
     4d74:	00003517          	auipc	a0,0x3
-    4d78:	fac50513          	addi	a0,a0,-84 # 7d20 <malloc+0x2238>
+    4d78:	fb450513          	addi	a0,a0,-76 # 7d28 <malloc+0x2238>
     4d7c:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4d80:	cae080e7          	jalr	-850(ra) # 5a2a <printf>
+=======
+    4d80:	cb6080e7          	jalr	-842(ra) # 5a32 <printf>
+  for(nfiles = 0; ; nfiles++){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4d84:	4481                	li	s1,0
     4d86:	06600d13          	li	s10,102
     4d8a:	3e800c13          	li	s8,1000
     4d8e:	06400b93          	li	s7,100
     4d92:	4b29                	li	s6,10
     4d94:	00003c97          	auipc	s9,0x3
+<<<<<<< HEAD
     4d98:	f9cc8c93          	addi	s9,s9,-100 # 7d30 <malloc+0x2248>
+=======
+    4d98:	fa4c8c93          	addi	s9,s9,-92 # 7d38 <malloc+0x2248>
+    int total = 0;
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4d9c:	4d81                	li	s11,0
     4d9e:	00007a17          	auipc	s4,0x7
+<<<<<<< HEAD
     4da2:	de2a0a13          	addi	s4,s4,-542 # bb80 <buf>
+=======
+    4da2:	deaa0a13          	addi	s4,s4,-534 # bb88 <buf>
+    name[0] = 'f';
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4da6:	f5a40823          	sb	s10,-176(s0)
     4daa:	0384c7bb          	divw	a5,s1,s8
     4dae:	0307879b          	addiw	a5,a5,48
@@ -6172,7 +7634,12 @@ Disassembly of section .text:
     4de6:	f5040593          	addi	a1,s0,-176
     4dea:	8566                	mv	a0,s9
     4dec:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4df0:	c3e080e7          	jalr	-962(ra) # 5a2a <printf>
+=======
+    4df0:	c46080e7          	jalr	-954(ra) # 5a32 <printf>
+    int fd = open(name, O_CREATE|O_RDWR);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4df4:	20200593          	li	a1,514
     4df8:	f5040513          	addi	a0,s0,-176
     4dfc:	00001097          	auipc	ra,0x1
@@ -6181,9 +7648,14 @@ Disassembly of section .text:
     4e06:	0a055663          	bgez	a0,4eb2 <fsfull+0x15c>
     4e0a:	f5040593          	addi	a1,s0,-176
     4e0e:	00003517          	auipc	a0,0x3
-    4e12:	f3250513          	addi	a0,a0,-206 # 7d40 <malloc+0x2258>
+    4e12:	f3a50513          	addi	a0,a0,-198 # 7d48 <malloc+0x2258>
     4e16:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4e1a:	c14080e7          	jalr	-1004(ra) # 5a2a <printf>
+=======
+    4e1a:	c1c080e7          	jalr	-996(ra) # 5a32 <printf>
+  while(nfiles >= 0){
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4e1e:	0604c363          	bltz	s1,4e84 <fsfull+0x12e>
     4e22:	06600b13          	li	s6,102
     4e26:	3e800a13          	li	s4,1000
@@ -6212,9 +7684,14 @@ Disassembly of section .text:
     4e7e:	34fd                	addiw	s1,s1,-1
     4e80:	fb5499e3          	bne	s1,s5,4e32 <fsfull+0xdc>
     4e84:	00003517          	auipc	a0,0x3
-    4e88:	edc50513          	addi	a0,a0,-292 # 7d60 <malloc+0x2278>
+    4e88:	ee450513          	addi	a0,a0,-284 # 7d68 <malloc+0x2278>
     4e8c:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4e90:	b9e080e7          	jalr	-1122(ra) # 5a2a <printf>
+=======
+    4e90:	ba6080e7          	jalr	-1114(ra) # 5a32 <printf>
+}
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4e94:	70aa                	ld	ra,168(sp)
     4e96:	740a                	ld	s0,160(sp)
     4e98:	64ea                	ld	s1,152(sp)
@@ -6242,9 +7719,14 @@ Disassembly of section .text:
     4ed0:	b7e5                	j	4eb8 <fsfull+0x162>
     4ed2:	85ce                	mv	a1,s3
     4ed4:	00003517          	auipc	a0,0x3
-    4ed8:	e7c50513          	addi	a0,a0,-388 # 7d50 <malloc+0x2268>
+    4ed8:	e8450513          	addi	a0,a0,-380 # 7d58 <malloc+0x2268>
     4edc:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4ee0:	b4e080e7          	jalr	-1202(ra) # 5a2a <printf>
+=======
+    4ee0:	b56080e7          	jalr	-1194(ra) # 5a32 <printf>
+    close(fd);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4ee4:	854a                	mv	a0,s2
     4ee6:	00000097          	auipc	ra,0x0
     4eea:	7ec080e7          	jalr	2028(ra) # 56d2 <close>
@@ -6257,13 +7739,13 @@ Disassembly of section .text:
     4ef8:	e422                	sd	s0,8(sp)
     4efa:	0800                	addi	s0,sp,16
     4efc:	00003717          	auipc	a4,0x3
-    4f00:	45c70713          	addi	a4,a4,1116 # 8358 <randstate>
+    4f00:	46470713          	addi	a4,a4,1124 # 8360 <randstate>
     4f04:	6308                	ld	a0,0(a4)
     4f06:	001967b7          	lui	a5,0x196
-    4f0a:	60d78793          	addi	a5,a5,1549 # 19660d <__BSS_END__+0x187a7d>
+    4f0a:	60d78793          	addi	a5,a5,1549 # 19660d <__BSS_END__+0x187a75>
     4f0e:	02f50533          	mul	a0,a0,a5
     4f12:	3c6ef7b7          	lui	a5,0x3c6ef
-    4f16:	35f78793          	addi	a5,a5,863 # 3c6ef35f <__BSS_END__+0x3c6e07cf>
+    4f16:	35f78793          	addi	a5,a5,863 # 3c6ef35f <__BSS_END__+0x3c6e07c7>
     4f1a:	953e                	add	a0,a0,a5
     4f1c:	e308                	sd	a0,0(a4)
     4f1e:	2501                	sext.w	a0,a0
@@ -6281,12 +7763,17 @@ Disassembly of section .text:
     4f32:	e052                	sd	s4,0(sp)
     4f34:	1800                	addi	s0,sp,48
     4f36:	00003517          	auipc	a0,0x3
-    4f3a:	e4250513          	addi	a0,a0,-446 # 7d78 <malloc+0x2290>
+    4f3a:	e4a50513          	addi	a0,a0,-438 # 7d80 <malloc+0x2290>
     4f3e:	00000097          	auipc	ra,0x0
     4f42:	7bc080e7          	jalr	1980(ra) # 56fa <unlink>
     4f46:	25800913          	li	s2,600
     4f4a:	00003997          	auipc	s3,0x3
+<<<<<<< HEAD
     4f4e:	e2e98993          	addi	s3,s3,-466 # 7d78 <malloc+0x2290>
+=======
+    4f4e:	e3698993          	addi	s3,s3,-458 # 7d80 <malloc+0x2290>
+    write(fd, (char*)0xffffffffffL, 1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4f52:	5a7d                	li	s4,-1
     4f54:	018a5a13          	srli	s4,s4,0x18
     4f58:	20100593          	li	a1,513
@@ -6309,36 +7796,51 @@ Disassembly of section .text:
     4f8e:	fc0915e3          	bnez	s2,4f58 <badwrite+0x32>
     4f92:	20100593          	li	a1,513
     4f96:	00003517          	auipc	a0,0x3
-    4f9a:	de250513          	addi	a0,a0,-542 # 7d78 <malloc+0x2290>
+    4f9a:	dea50513          	addi	a0,a0,-534 # 7d80 <malloc+0x2290>
     4f9e:	00000097          	auipc	ra,0x0
     4fa2:	74c080e7          	jalr	1868(ra) # 56ea <open>
     4fa6:	84aa                	mv	s1,a0
     4fa8:	04054863          	bltz	a0,4ff8 <badwrite+0xd2>
     4fac:	4605                	li	a2,1
     4fae:	00001597          	auipc	a1,0x1
-    4fb2:	ffa58593          	addi	a1,a1,-6 # 5fa8 <malloc+0x4c0>
+    4fb2:	00258593          	addi	a1,a1,2 # 5fb0 <malloc+0x4c0>
     4fb6:	00000097          	auipc	ra,0x0
     4fba:	714080e7          	jalr	1812(ra) # 56ca <write>
     4fbe:	4785                	li	a5,1
     4fc0:	04f50963          	beq	a0,a5,5012 <badwrite+0xec>
     4fc4:	00003517          	auipc	a0,0x3
-    4fc8:	dd450513          	addi	a0,a0,-556 # 7d98 <malloc+0x22b0>
+    4fc8:	ddc50513          	addi	a0,a0,-548 # 7da0 <malloc+0x22b0>
     4fcc:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4fd0:	a5e080e7          	jalr	-1442(ra) # 5a2a <printf>
+=======
+    4fd0:	a66080e7          	jalr	-1434(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4fd4:	4505                	li	a0,1
     4fd6:	00000097          	auipc	ra,0x0
     4fda:	6d4080e7          	jalr	1748(ra) # 56aa <exit>
     4fde:	00003517          	auipc	a0,0x3
-    4fe2:	da250513          	addi	a0,a0,-606 # 7d80 <malloc+0x2298>
+    4fe2:	daa50513          	addi	a0,a0,-598 # 7d88 <malloc+0x2298>
     4fe6:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     4fea:	a44080e7          	jalr	-1468(ra) # 5a2a <printf>
+=======
+    4fea:	a4c080e7          	jalr	-1460(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     4fee:	4505                	li	a0,1
     4ff0:	00000097          	auipc	ra,0x0
     4ff4:	6ba080e7          	jalr	1722(ra) # 56aa <exit>
     4ff8:	00003517          	auipc	a0,0x3
-    4ffc:	d8850513          	addi	a0,a0,-632 # 7d80 <malloc+0x2298>
+    4ffc:	d9050513          	addi	a0,a0,-624 # 7d88 <malloc+0x2298>
     5000:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     5004:	a2a080e7          	jalr	-1494(ra) # 5a2a <printf>
+=======
+    5004:	a32080e7          	jalr	-1486(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     5008:	4505                	li	a0,1
     500a:	00000097          	auipc	ra,0x0
     500e:	6a0080e7          	jalr	1696(ra) # 56aa <exit>
@@ -6346,7 +7848,7 @@ Disassembly of section .text:
     5014:	00000097          	auipc	ra,0x0
     5018:	6be080e7          	jalr	1726(ra) # 56d2 <close>
     501c:	00003517          	auipc	a0,0x3
-    5020:	d5c50513          	addi	a0,a0,-676 # 7d78 <malloc+0x2290>
+    5020:	d6450513          	addi	a0,a0,-668 # 7d80 <malloc+0x2290>
     5024:	00000097          	auipc	ra,0x0
     5028:	6d6080e7          	jalr	1750(ra) # 56fa <unlink>
     502c:	4501                	li	a0,0
@@ -6375,7 +7877,12 @@ Disassembly of section .text:
     506e:	54fd                	li	s1,-1
     5070:	4985                	li	s3,1
     5072:	00001917          	auipc	s2,0x1
+<<<<<<< HEAD
     5076:	f3690913          	addi	s2,s2,-202 # 5fa8 <malloc+0x4c0>
+=======
+    5076:	f3e90913          	addi	s2,s2,-194 # 5fb0 <malloc+0x4c0>
+      uint64 a = (uint64) sbrk(4096);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     507a:	6505                	lui	a0,0x1
     507c:	00000097          	auipc	ra,0x0
     5080:	6b6080e7          	jalr	1718(ra) # 5732 <sbrk>
@@ -6391,23 +7898,38 @@ Disassembly of section .text:
     50a0:	4785                	li	a5,1
     50a2:	fcf50ce3          	beq	a0,a5,507a <countfree+0x44>
     50a6:	00003517          	auipc	a0,0x3
-    50aa:	d4250513          	addi	a0,a0,-702 # 7de8 <malloc+0x2300>
+    50aa:	d4a50513          	addi	a0,a0,-694 # 7df0 <malloc+0x2300>
     50ae:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     50b2:	97c080e7          	jalr	-1668(ra) # 5a2a <printf>
+=======
+    50b2:	984080e7          	jalr	-1660(ra) # 5a32 <printf>
+        exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     50b6:	4505                	li	a0,1
     50b8:	00000097          	auipc	ra,0x0
     50bc:	5f2080e7          	jalr	1522(ra) # 56aa <exit>
     50c0:	00003517          	auipc	a0,0x3
-    50c4:	ce850513          	addi	a0,a0,-792 # 7da8 <malloc+0x22c0>
+    50c4:	cf050513          	addi	a0,a0,-784 # 7db0 <malloc+0x22c0>
     50c8:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     50cc:	962080e7          	jalr	-1694(ra) # 5a2a <printf>
+=======
+    50cc:	96a080e7          	jalr	-1686(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     50d0:	4505                	li	a0,1
     50d2:	00000097          	auipc	ra,0x0
     50d6:	5d8080e7          	jalr	1496(ra) # 56aa <exit>
     50da:	00003517          	auipc	a0,0x3
-    50de:	cee50513          	addi	a0,a0,-786 # 7dc8 <malloc+0x22e0>
+    50de:	cf650513          	addi	a0,a0,-778 # 7dd0 <malloc+0x22e0>
     50e2:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     50e6:	948080e7          	jalr	-1720(ra) # 5a2a <printf>
+=======
+    50e6:	950080e7          	jalr	-1712(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     50ea:	4505                	li	a0,1
     50ec:	00000097          	auipc	ra,0x0
     50f0:	5be080e7          	jalr	1470(ra) # 56aa <exit>
@@ -6428,9 +7950,14 @@ Disassembly of section .text:
     5124:	2485                	addiw	s1,s1,1
     5126:	b7dd                	j	510c <countfree+0xd6>
     5128:	00003517          	auipc	a0,0x3
-    512c:	ce050513          	addi	a0,a0,-800 # 7e08 <malloc+0x2320>
+    512c:	ce850513          	addi	a0,a0,-792 # 7e10 <malloc+0x2320>
     5130:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     5134:	8fa080e7          	jalr	-1798(ra) # 5a2a <printf>
+=======
+    5134:	902080e7          	jalr	-1790(ra) # 5a32 <printf>
+      exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     5138:	4505                	li	a0,1
     513a:	00000097          	auipc	ra,0x0
     513e:	570080e7          	jalr	1392(ra) # 56aa <exit>
@@ -6459,9 +7986,14 @@ Disassembly of section .text:
     5174:	84aa                	mv	s1,a0
     5176:	892e                	mv	s2,a1
     5178:	00003517          	auipc	a0,0x3
-    517c:	cb050513          	addi	a0,a0,-848 # 7e28 <malloc+0x2340>
+    517c:	cb850513          	addi	a0,a0,-840 # 7e30 <malloc+0x2340>
     5180:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     5184:	8aa080e7          	jalr	-1878(ra) # 5a2a <printf>
+=======
+    5184:	8b2080e7          	jalr	-1870(ra) # 5a32 <printf>
+  if((pid = fork()) < 0) {
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     5188:	00000097          	auipc	ra,0x0
     518c:	51a080e7          	jalr	1306(ra) # 56a2 <fork>
     5190:	02054e63          	bltz	a0,51cc <run+0x64>
@@ -6472,9 +8004,16 @@ Disassembly of section .text:
     51a2:	fdc42783          	lw	a5,-36(s0)
     51a6:	c7b9                	beqz	a5,51f4 <run+0x8c>
     51a8:	00003517          	auipc	a0,0x3
-    51ac:	ca850513          	addi	a0,a0,-856 # 7e50 <malloc+0x2368>
+    51ac:	cb050513          	addi	a0,a0,-848 # 7e58 <malloc+0x2368>
     51b0:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     51b4:	87a080e7          	jalr	-1926(ra) # 5a2a <printf>
+=======
+    51b4:	882080e7          	jalr	-1918(ra) # 5a32 <printf>
+    else
+      printf("OK\n");
+    return xstatus == 0;
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     51b8:	fdc42503          	lw	a0,-36(s0)
     51bc:	00153513          	seqz	a0,a0
     51c0:	70a2                	ld	ra,40(sp)
@@ -6484,9 +8023,14 @@ Disassembly of section .text:
     51c8:	6145                	addi	sp,sp,48
     51ca:	8082                	ret
     51cc:	00003517          	auipc	a0,0x3
-    51d0:	c6c50513          	addi	a0,a0,-916 # 7e38 <malloc+0x2350>
+    51d0:	c7450513          	addi	a0,a0,-908 # 7e40 <malloc+0x2350>
     51d4:	00001097          	auipc	ra,0x1
+<<<<<<< HEAD
     51d8:	856080e7          	jalr	-1962(ra) # 5a2a <printf>
+=======
+    51d8:	85e080e7          	jalr	-1954(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     51dc:	4505                	li	a0,1
     51de:	00000097          	auipc	ra,0x0
     51e2:	4cc080e7          	jalr	1228(ra) # 56aa <exit>
@@ -6496,9 +8040,9 @@ Disassembly of section .text:
     51ec:	00000097          	auipc	ra,0x0
     51f0:	4be080e7          	jalr	1214(ra) # 56aa <exit>
     51f4:	00003517          	auipc	a0,0x3
-    51f8:	c6450513          	addi	a0,a0,-924 # 7e58 <malloc+0x2370>
+    51f8:	c6c50513          	addi	a0,a0,-916 # 7e60 <malloc+0x2370>
     51fc:	00001097          	auipc	ra,0x1
-    5200:	82e080e7          	jalr	-2002(ra) # 5a2a <printf>
+    5200:	836080e7          	jalr	-1994(ra) # 5a32 <printf>
     5204:	bf55                	j	51b8 <run+0x50>
 
 0000000000005206 <main>:
@@ -6519,10 +8063,10 @@ Disassembly of section .text:
     5238:	4901                	li	s2,0
     523a:	0ca7c163          	blt	a5,a0,52fc <main+0xf6>
     523e:	00003797          	auipc	a5,0x3
-    5242:	d3278793          	addi	a5,a5,-718 # 7f70 <malloc+0x2488>
+    5242:	d3a78793          	addi	a5,a5,-710 # 7f78 <malloc+0x2488>
     5246:	c0040713          	addi	a4,s0,-1024
     524a:	00003817          	auipc	a6,0x3
-    524e:	0e680813          	addi	a6,a6,230 # 8330 <malloc+0x2848>
+    524e:	0ee80813          	addi	a6,a6,238 # 8338 <malloc+0x2848>
     5252:	6388                	ld	a0,0(a5)
     5254:	678c                	ld	a1,8(a5)
     5256:	6b90                	ld	a2,16(a5)
@@ -6535,9 +8079,14 @@ Disassembly of section .text:
     5266:	02070713          	addi	a4,a4,32
     526a:	ff0794e3          	bne	a5,a6,5252 <main+0x4c>
     526e:	00003517          	auipc	a0,0x3
-    5272:	ca250513          	addi	a0,a0,-862 # 7f10 <malloc+0x2428>
+    5272:	caa50513          	addi	a0,a0,-854 # 7f18 <malloc+0x2428>
     5276:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     527a:	7b4080e7          	jalr	1972(ra) # 5a2a <printf>
+=======
+    527a:	7bc080e7          	jalr	1980(ra) # 5a32 <printf>
+  int free0 = countfree();
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     527e:	00000097          	auipc	ra,0x0
     5282:	db8080e7          	jalr	-584(ra) # 5036 <countfree>
     5286:	8a2a                	mv	s4,a0
@@ -6552,21 +8101,26 @@ Disassembly of section .text:
     52a0:	0f455163          	bge	a0,s4,5382 <main+0x17c>
     52a4:	8652                	mv	a2,s4
     52a6:	00003517          	auipc	a0,0x3
-    52aa:	c2250513          	addi	a0,a0,-990 # 7ec8 <malloc+0x23e0>
+    52aa:	c2a50513          	addi	a0,a0,-982 # 7ed0 <malloc+0x23e0>
     52ae:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     52b2:	77c080e7          	jalr	1916(ra) # 5a2a <printf>
+=======
+    52b2:	784080e7          	jalr	1924(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     52b6:	4505                	li	a0,1
     52b8:	00000097          	auipc	ra,0x0
     52bc:	3f2080e7          	jalr	1010(ra) # 56aa <exit>
     52c0:	84ae                	mv	s1,a1
     52c2:	00003597          	auipc	a1,0x3
-    52c6:	b9e58593          	addi	a1,a1,-1122 # 7e60 <malloc+0x2378>
+    52c6:	ba658593          	addi	a1,a1,-1114 # 7e68 <malloc+0x2378>
     52ca:	6488                	ld	a0,8(s1)
     52cc:	00000097          	auipc	ra,0x0
     52d0:	184080e7          	jalr	388(ra) # 5450 <strcmp>
     52d4:	10050563          	beqz	a0,53de <main+0x1d8>
     52d8:	00003597          	auipc	a1,0x3
-    52dc:	c7058593          	addi	a1,a1,-912 # 7f48 <malloc+0x2460>
+    52dc:	c7858593          	addi	a1,a1,-904 # 7f50 <malloc+0x2460>
     52e0:	6488                	ld	a0,8(s1)
     52e2:	00000097          	auipc	ra,0x0
     52e6:	16e080e7          	jalr	366(ra) # 5450 <strcmp>
@@ -6576,9 +8130,14 @@ Disassembly of section .text:
     52f4:	02d00793          	li	a5,45
     52f8:	f4f713e3          	bne	a4,a5,523e <main+0x38>
     52fc:	00003517          	auipc	a0,0x3
-    5300:	b6c50513          	addi	a0,a0,-1172 # 7e68 <malloc+0x2380>
+    5300:	b7450513          	addi	a0,a0,-1164 # 7e70 <malloc+0x2380>
     5304:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     5308:	726080e7          	jalr	1830(ra) # 5a2a <printf>
+=======
+    5308:	72e080e7          	jalr	1838(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     530c:	4505                	li	a0,1
     530e:	00000097          	auipc	ra,0x0
     5312:	39c080e7          	jalr	924(ra) # 56aa <exit>
@@ -6588,7 +8147,12 @@ Disassembly of section .text:
     5320:	40a905bb          	subw	a1,s2,a0
     5324:	855a                	mv	a0,s6
     5326:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     532a:	704080e7          	jalr	1796(ra) # 5a2a <printf>
+=======
+    532a:	70c080e7          	jalr	1804(ra) # 5a32 <printf>
+        if(continuous != 2)
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     532e:	09498463          	beq	s3,s4,53b6 <main+0x1b0>
     5332:	4505                	li	a0,1
     5334:	00000097          	auipc	ra,0x0
@@ -6610,22 +8174,37 @@ Disassembly of section .text:
     5362:	bfe9                	j	533c <main+0x136>
     5364:	f20989e3          	beqz	s3,5296 <main+0x90>
     5368:	00003517          	auipc	a0,0x3
-    536c:	b4850513          	addi	a0,a0,-1208 # 7eb0 <malloc+0x23c8>
+    536c:	b5050513          	addi	a0,a0,-1200 # 7eb8 <malloc+0x23c8>
     5370:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     5374:	6ba080e7          	jalr	1722(ra) # 5a2a <printf>
+=======
+    5374:	6c2080e7          	jalr	1730(ra) # 5a32 <printf>
+    exit(1);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     5378:	4505                	li	a0,1
     537a:	00000097          	auipc	ra,0x0
     537e:	330080e7          	jalr	816(ra) # 56aa <exit>
     5382:	00003517          	auipc	a0,0x3
-    5386:	b7650513          	addi	a0,a0,-1162 # 7ef8 <malloc+0x2410>
+    5386:	b7e50513          	addi	a0,a0,-1154 # 7f00 <malloc+0x2410>
     538a:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     538e:	6a0080e7          	jalr	1696(ra) # 5a2a <printf>
+=======
+    538e:	6a8080e7          	jalr	1704(ra) # 5a32 <printf>
+    exit(0);
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     5392:	4501                	li	a0,0
     5394:	00000097          	auipc	ra,0x0
     5398:	316080e7          	jalr	790(ra) # 56aa <exit>
     539c:	8556                	mv	a0,s5
     539e:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     53a2:	68c080e7          	jalr	1676(ra) # 5a2a <printf>
+=======
+    53a2:	694080e7          	jalr	1684(ra) # 5a32 <printf>
+        if(continuous != 2)
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     53a6:	f74998e3          	bne	s3,s4,5316 <main+0x110>
     53aa:	00000097          	auipc	ra,0x0
     53ae:	c8c080e7          	jalr	-884(ra) # 5036 <countfree>
@@ -6646,10 +8225,10 @@ Disassembly of section .text:
     53dc:	b7f9                	j	53aa <main+0x1a4>
     53de:	4985                	li	s3,1
     53e0:	00003797          	auipc	a5,0x3
-    53e4:	b9078793          	addi	a5,a5,-1136 # 7f70 <malloc+0x2488>
+    53e4:	b9878793          	addi	a5,a5,-1128 # 7f78 <malloc+0x2488>
     53e8:	c0040713          	addi	a4,s0,-1024
     53ec:	00003817          	auipc	a6,0x3
-    53f0:	f4480813          	addi	a6,a6,-188 # 8330 <malloc+0x2848>
+    53f0:	f4c80813          	addi	a6,a6,-180 # 8338 <malloc+0x2848>
     53f4:	6388                	ld	a0,0(a5)
     53f6:	678c                	ld	a1,8(a5)
     53f8:	6b90                	ld	a2,16(a5)
@@ -6662,14 +8241,22 @@ Disassembly of section .text:
     5408:	02070713          	addi	a4,a4,32
     540c:	ff0794e3          	bne	a5,a6,53f4 <main+0x1ee>
     5410:	00003517          	auipc	a0,0x3
-    5414:	b1850513          	addi	a0,a0,-1256 # 7f28 <malloc+0x2440>
+    5414:	b2050513          	addi	a0,a0,-1248 # 7f30 <malloc+0x2440>
     5418:	00000097          	auipc	ra,0x0
+<<<<<<< HEAD
     541c:	612080e7          	jalr	1554(ra) # 5a2a <printf>
     5420:	00003a97          	auipc	s5,0x3
     5424:	a90a8a93          	addi	s5,s5,-1392 # 7eb0 <malloc+0x23c8>
+=======
+    541c:	61a080e7          	jalr	1562(ra) # 5a32 <printf>
+        printf("SOME TESTS FAILED\n");
+    5420:	00003a97          	auipc	s5,0x3
+    5424:	a98a8a93          	addi	s5,s5,-1384 # 7eb8 <malloc+0x23c8>
+        if(continuous != 2)
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
     5428:	4a09                	li	s4,2
     542a:	00003b17          	auipc	s6,0x3
-    542e:	a66b0b13          	addi	s6,s6,-1434 # 7e90 <malloc+0x23a8>
+    542e:	a6eb0b13          	addi	s6,s6,-1426 # 7e98 <malloc+0x23a8>
     5432:	b751                	j	53b6 <main+0x1b0>
 
 0000000000005434 <strcpy>:
@@ -7049,437 +8636,448 @@ Disassembly of section .text:
     574c:	00000073          	ecall
     5750:	8082                	ret
 
-0000000000005752 <putc>:
+0000000000005752 <setbkg>:
+.global setbkg
+setbkg:
+ li a7, SYS_setbkg
+    5752:	48dd                	li	a7,23
+ ecall
+    5754:	00000073          	ecall
+ ret
+    5758:	8082                	ret
+
+000000000000575a <putc>:
 
 static char digits[] = "0123456789ABCDEF";
 
 static void
 putc(int fd, char c)
 {
-    5752:	1101                	addi	sp,sp,-32
-    5754:	ec06                	sd	ra,24(sp)
-    5756:	e822                	sd	s0,16(sp)
-    5758:	1000                	addi	s0,sp,32
-    575a:	feb407a3          	sb	a1,-17(s0)
+    575a:	1101                	addi	sp,sp,-32
+    575c:	ec06                	sd	ra,24(sp)
+    575e:	e822                	sd	s0,16(sp)
+    5760:	1000                	addi	s0,sp,32
+    5762:	feb407a3          	sb	a1,-17(s0)
   write(fd, &c, 1);
-    575e:	4605                	li	a2,1
-    5760:	fef40593          	addi	a1,s0,-17
-    5764:	00000097          	auipc	ra,0x0
-    5768:	f66080e7          	jalr	-154(ra) # 56ca <write>
+    5766:	4605                	li	a2,1
+    5768:	fef40593          	addi	a1,s0,-17
+    576c:	00000097          	auipc	ra,0x0
+    5770:	f5e080e7          	jalr	-162(ra) # 56ca <write>
 }
-    576c:	60e2                	ld	ra,24(sp)
-    576e:	6442                	ld	s0,16(sp)
-    5770:	6105                	addi	sp,sp,32
-    5772:	8082                	ret
+    5774:	60e2                	ld	ra,24(sp)
+    5776:	6442                	ld	s0,16(sp)
+    5778:	6105                	addi	sp,sp,32
+    577a:	8082                	ret
 
-0000000000005774 <printint>:
+000000000000577c <printint>:
 
 static void
 printint(int fd, int xx, int base, int sgn)
 {
-    5774:	7139                	addi	sp,sp,-64
-    5776:	fc06                	sd	ra,56(sp)
-    5778:	f822                	sd	s0,48(sp)
-    577a:	f426                	sd	s1,40(sp)
-    577c:	f04a                	sd	s2,32(sp)
-    577e:	ec4e                	sd	s3,24(sp)
-    5780:	0080                	addi	s0,sp,64
-    5782:	84aa                	mv	s1,a0
+    577c:	7139                	addi	sp,sp,-64
+    577e:	fc06                	sd	ra,56(sp)
+    5780:	f822                	sd	s0,48(sp)
+    5782:	f426                	sd	s1,40(sp)
+    5784:	f04a                	sd	s2,32(sp)
+    5786:	ec4e                	sd	s3,24(sp)
+    5788:	0080                	addi	s0,sp,64
+    578a:	84aa                	mv	s1,a0
   char buf[16];
   int i, neg;
   uint x;
 
   neg = 0;
   if(sgn && xx < 0){
-    5784:	c299                	beqz	a3,578a <printint+0x16>
-    5786:	0805c863          	bltz	a1,5816 <printint+0xa2>
+    578c:	c299                	beqz	a3,5792 <printint+0x16>
+    578e:	0805c863          	bltz	a1,581e <printint+0xa2>
     neg = 1;
     x = -xx;
   } else {
     x = xx;
-    578a:	2581                	sext.w	a1,a1
+    5792:	2581                	sext.w	a1,a1
   neg = 0;
-    578c:	4881                	li	a7,0
-    578e:	fc040693          	addi	a3,s0,-64
+    5794:	4881                	li	a7,0
+    5796:	fc040693          	addi	a3,s0,-64
   }
 
   i = 0;
-    5792:	4701                	li	a4,0
+    579a:	4701                	li	a4,0
   do{
     buf[i++] = digits[x % base];
-    5794:	2601                	sext.w	a2,a2
-    5796:	00003517          	auipc	a0,0x3
-    579a:	ba250513          	addi	a0,a0,-1118 # 8338 <digits>
-    579e:	883a                	mv	a6,a4
-    57a0:	2705                	addiw	a4,a4,1
-    57a2:	02c5f7bb          	remuw	a5,a1,a2
-    57a6:	1782                	slli	a5,a5,0x20
-    57a8:	9381                	srli	a5,a5,0x20
-    57aa:	97aa                	add	a5,a5,a0
-    57ac:	0007c783          	lbu	a5,0(a5)
-    57b0:	00f68023          	sb	a5,0(a3)
+    579c:	2601                	sext.w	a2,a2
+    579e:	00003517          	auipc	a0,0x3
+    57a2:	ba250513          	addi	a0,a0,-1118 # 8340 <digits>
+    57a6:	883a                	mv	a6,a4
+    57a8:	2705                	addiw	a4,a4,1
+    57aa:	02c5f7bb          	remuw	a5,a1,a2
+    57ae:	1782                	slli	a5,a5,0x20
+    57b0:	9381                	srli	a5,a5,0x20
+    57b2:	97aa                	add	a5,a5,a0
+    57b4:	0007c783          	lbu	a5,0(a5)
+    57b8:	00f68023          	sb	a5,0(a3)
   }while((x /= base) != 0);
-    57b4:	0005879b          	sext.w	a5,a1
-    57b8:	02c5d5bb          	divuw	a1,a1,a2
-    57bc:	0685                	addi	a3,a3,1
-    57be:	fec7f0e3          	bgeu	a5,a2,579e <printint+0x2a>
+    57bc:	0005879b          	sext.w	a5,a1
+    57c0:	02c5d5bb          	divuw	a1,a1,a2
+    57c4:	0685                	addi	a3,a3,1
+    57c6:	fec7f0e3          	bgeu	a5,a2,57a6 <printint+0x2a>
   if(neg)
-    57c2:	00088b63          	beqz	a7,57d8 <printint+0x64>
+    57ca:	00088b63          	beqz	a7,57e0 <printint+0x64>
     buf[i++] = '-';
-    57c6:	fd040793          	addi	a5,s0,-48
-    57ca:	973e                	add	a4,a4,a5
-    57cc:	02d00793          	li	a5,45
-    57d0:	fef70823          	sb	a5,-16(a4)
-    57d4:	0028071b          	addiw	a4,a6,2
+    57ce:	fd040793          	addi	a5,s0,-48
+    57d2:	973e                	add	a4,a4,a5
+    57d4:	02d00793          	li	a5,45
+    57d8:	fef70823          	sb	a5,-16(a4)
+    57dc:	0028071b          	addiw	a4,a6,2
 
   while(--i >= 0)
-    57d8:	02e05863          	blez	a4,5808 <printint+0x94>
-    57dc:	fc040793          	addi	a5,s0,-64
-    57e0:	00e78933          	add	s2,a5,a4
-    57e4:	fff78993          	addi	s3,a5,-1
-    57e8:	99ba                	add	s3,s3,a4
-    57ea:	377d                	addiw	a4,a4,-1
-    57ec:	1702                	slli	a4,a4,0x20
-    57ee:	9301                	srli	a4,a4,0x20
-    57f0:	40e989b3          	sub	s3,s3,a4
+    57e0:	02e05863          	blez	a4,5810 <printint+0x94>
+    57e4:	fc040793          	addi	a5,s0,-64
+    57e8:	00e78933          	add	s2,a5,a4
+    57ec:	fff78993          	addi	s3,a5,-1
+    57f0:	99ba                	add	s3,s3,a4
+    57f2:	377d                	addiw	a4,a4,-1
+    57f4:	1702                	slli	a4,a4,0x20
+    57f6:	9301                	srli	a4,a4,0x20
+    57f8:	40e989b3          	sub	s3,s3,a4
     putc(fd, buf[i]);
-    57f4:	fff94583          	lbu	a1,-1(s2)
-    57f8:	8526                	mv	a0,s1
-    57fa:	00000097          	auipc	ra,0x0
-    57fe:	f58080e7          	jalr	-168(ra) # 5752 <putc>
+    57fc:	fff94583          	lbu	a1,-1(s2)
+    5800:	8526                	mv	a0,s1
+    5802:	00000097          	auipc	ra,0x0
+    5806:	f58080e7          	jalr	-168(ra) # 575a <putc>
   while(--i >= 0)
-    5802:	197d                	addi	s2,s2,-1
-    5804:	ff3918e3          	bne	s2,s3,57f4 <printint+0x80>
+    580a:	197d                	addi	s2,s2,-1
+    580c:	ff3918e3          	bne	s2,s3,57fc <printint+0x80>
 }
-    5808:	70e2                	ld	ra,56(sp)
-    580a:	7442                	ld	s0,48(sp)
-    580c:	74a2                	ld	s1,40(sp)
-    580e:	7902                	ld	s2,32(sp)
-    5810:	69e2                	ld	s3,24(sp)
-    5812:	6121                	addi	sp,sp,64
-    5814:	8082                	ret
+    5810:	70e2                	ld	ra,56(sp)
+    5812:	7442                	ld	s0,48(sp)
+    5814:	74a2                	ld	s1,40(sp)
+    5816:	7902                	ld	s2,32(sp)
+    5818:	69e2                	ld	s3,24(sp)
+    581a:	6121                	addi	sp,sp,64
+    581c:	8082                	ret
     x = -xx;
-    5816:	40b005bb          	negw	a1,a1
+    581e:	40b005bb          	negw	a1,a1
     neg = 1;
-    581a:	4885                	li	a7,1
+    5822:	4885                	li	a7,1
     x = -xx;
-    581c:	bf8d                	j	578e <printint+0x1a>
+    5824:	bf8d                	j	5796 <printint+0x1a>
 
-000000000000581e <vprintf>:
+0000000000005826 <vprintf>:
 }
 
 // Print to the given fd. Only understands %d, %x, %p, %s.
 void
 vprintf(int fd, const char *fmt, va_list ap)
 {
-    581e:	7119                	addi	sp,sp,-128
-    5820:	fc86                	sd	ra,120(sp)
-    5822:	f8a2                	sd	s0,112(sp)
-    5824:	f4a6                	sd	s1,104(sp)
-    5826:	f0ca                	sd	s2,96(sp)
-    5828:	ecce                	sd	s3,88(sp)
-    582a:	e8d2                	sd	s4,80(sp)
-    582c:	e4d6                	sd	s5,72(sp)
-    582e:	e0da                	sd	s6,64(sp)
-    5830:	fc5e                	sd	s7,56(sp)
-    5832:	f862                	sd	s8,48(sp)
-    5834:	f466                	sd	s9,40(sp)
-    5836:	f06a                	sd	s10,32(sp)
-    5838:	ec6e                	sd	s11,24(sp)
-    583a:	0100                	addi	s0,sp,128
+    5826:	7119                	addi	sp,sp,-128
+    5828:	fc86                	sd	ra,120(sp)
+    582a:	f8a2                	sd	s0,112(sp)
+    582c:	f4a6                	sd	s1,104(sp)
+    582e:	f0ca                	sd	s2,96(sp)
+    5830:	ecce                	sd	s3,88(sp)
+    5832:	e8d2                	sd	s4,80(sp)
+    5834:	e4d6                	sd	s5,72(sp)
+    5836:	e0da                	sd	s6,64(sp)
+    5838:	fc5e                	sd	s7,56(sp)
+    583a:	f862                	sd	s8,48(sp)
+    583c:	f466                	sd	s9,40(sp)
+    583e:	f06a                	sd	s10,32(sp)
+    5840:	ec6e                	sd	s11,24(sp)
+    5842:	0100                	addi	s0,sp,128
   char *s;
   int c, i, state;
 
   state = 0;
   for(i = 0; fmt[i]; i++){
-    583c:	0005c903          	lbu	s2,0(a1)
-    5840:	18090f63          	beqz	s2,59de <vprintf+0x1c0>
-    5844:	8aaa                	mv	s5,a0
-    5846:	8b32                	mv	s6,a2
-    5848:	00158493          	addi	s1,a1,1
+    5844:	0005c903          	lbu	s2,0(a1)
+    5848:	18090f63          	beqz	s2,59e6 <vprintf+0x1c0>
+    584c:	8aaa                	mv	s5,a0
+    584e:	8b32                	mv	s6,a2
+    5850:	00158493          	addi	s1,a1,1
   state = 0;
-    584c:	4981                	li	s3,0
+    5854:	4981                	li	s3,0
       if(c == '%'){
         state = '%';
       } else {
         putc(fd, c);
       }
     } else if(state == '%'){
-    584e:	02500a13          	li	s4,37
+    5856:	02500a13          	li	s4,37
       if(c == 'd'){
-    5852:	06400c13          	li	s8,100
+    585a:	06400c13          	li	s8,100
         printint(fd, va_arg(ap, int), 10, 1);
       } else if(c == 'l') {
-    5856:	06c00c93          	li	s9,108
+    585e:	06c00c93          	li	s9,108
         printint(fd, va_arg(ap, uint64), 10, 0);
       } else if(c == 'x') {
-    585a:	07800d13          	li	s10,120
+    5862:	07800d13          	li	s10,120
         printint(fd, va_arg(ap, int), 16, 0);
       } else if(c == 'p') {
-    585e:	07000d93          	li	s11,112
+    5866:	07000d93          	li	s11,112
     putc(fd, digits[x >> (sizeof(uint64) * 8 - 4)]);
-    5862:	00003b97          	auipc	s7,0x3
-    5866:	ad6b8b93          	addi	s7,s7,-1322 # 8338 <digits>
-    586a:	a839                	j	5888 <vprintf+0x6a>
+    586a:	00003b97          	auipc	s7,0x3
+    586e:	ad6b8b93          	addi	s7,s7,-1322 # 8340 <digits>
+    5872:	a839                	j	5890 <vprintf+0x6a>
         putc(fd, c);
-    586c:	85ca                	mv	a1,s2
-    586e:	8556                	mv	a0,s5
-    5870:	00000097          	auipc	ra,0x0
-    5874:	ee2080e7          	jalr	-286(ra) # 5752 <putc>
-    5878:	a019                	j	587e <vprintf+0x60>
+    5874:	85ca                	mv	a1,s2
+    5876:	8556                	mv	a0,s5
+    5878:	00000097          	auipc	ra,0x0
+    587c:	ee2080e7          	jalr	-286(ra) # 575a <putc>
+    5880:	a019                	j	5886 <vprintf+0x60>
     } else if(state == '%'){
-    587a:	01498f63          	beq	s3,s4,5898 <vprintf+0x7a>
+    5882:	01498f63          	beq	s3,s4,58a0 <vprintf+0x7a>
   for(i = 0; fmt[i]; i++){
-    587e:	0485                	addi	s1,s1,1
-    5880:	fff4c903          	lbu	s2,-1(s1)
-    5884:	14090d63          	beqz	s2,59de <vprintf+0x1c0>
+    5886:	0485                	addi	s1,s1,1
+    5888:	fff4c903          	lbu	s2,-1(s1)
+    588c:	14090d63          	beqz	s2,59e6 <vprintf+0x1c0>
     c = fmt[i] & 0xff;
-    5888:	0009079b          	sext.w	a5,s2
+    5890:	0009079b          	sext.w	a5,s2
     if(state == 0){
-    588c:	fe0997e3          	bnez	s3,587a <vprintf+0x5c>
+    5894:	fe0997e3          	bnez	s3,5882 <vprintf+0x5c>
       if(c == '%'){
-    5890:	fd479ee3          	bne	a5,s4,586c <vprintf+0x4e>
+    5898:	fd479ee3          	bne	a5,s4,5874 <vprintf+0x4e>
         state = '%';
-    5894:	89be                	mv	s3,a5
-    5896:	b7e5                	j	587e <vprintf+0x60>
+    589c:	89be                	mv	s3,a5
+    589e:	b7e5                	j	5886 <vprintf+0x60>
       if(c == 'd'){
-    5898:	05878063          	beq	a5,s8,58d8 <vprintf+0xba>
+    58a0:	05878063          	beq	a5,s8,58e0 <vprintf+0xba>
       } else if(c == 'l') {
-    589c:	05978c63          	beq	a5,s9,58f4 <vprintf+0xd6>
+    58a4:	05978c63          	beq	a5,s9,58fc <vprintf+0xd6>
       } else if(c == 'x') {
-    58a0:	07a78863          	beq	a5,s10,5910 <vprintf+0xf2>
+    58a8:	07a78863          	beq	a5,s10,5918 <vprintf+0xf2>
       } else if(c == 'p') {
-    58a4:	09b78463          	beq	a5,s11,592c <vprintf+0x10e>
+    58ac:	09b78463          	beq	a5,s11,5934 <vprintf+0x10e>
         printptr(fd, va_arg(ap, uint64));
       } else if(c == 's'){
-    58a8:	07300713          	li	a4,115
-    58ac:	0ce78663          	beq	a5,a4,5978 <vprintf+0x15a>
+    58b0:	07300713          	li	a4,115
+    58b4:	0ce78663          	beq	a5,a4,5980 <vprintf+0x15a>
           s = "(null)";
         while(*s != 0){
           putc(fd, *s);
           s++;
         }
       } else if(c == 'c'){
-    58b0:	06300713          	li	a4,99
-    58b4:	0ee78e63          	beq	a5,a4,59b0 <vprintf+0x192>
+    58b8:	06300713          	li	a4,99
+    58bc:	0ee78e63          	beq	a5,a4,59b8 <vprintf+0x192>
         putc(fd, va_arg(ap, uint));
       } else if(c == '%'){
-    58b8:	11478863          	beq	a5,s4,59c8 <vprintf+0x1aa>
+    58c0:	11478863          	beq	a5,s4,59d0 <vprintf+0x1aa>
         putc(fd, c);
       } else {
         // Unknown % sequence.  Print it to draw attention.
         putc(fd, '%');
-    58bc:	85d2                	mv	a1,s4
-    58be:	8556                	mv	a0,s5
-    58c0:	00000097          	auipc	ra,0x0
-    58c4:	e92080e7          	jalr	-366(ra) # 5752 <putc>
+    58c4:	85d2                	mv	a1,s4
+    58c6:	8556                	mv	a0,s5
+    58c8:	00000097          	auipc	ra,0x0
+    58cc:	e92080e7          	jalr	-366(ra) # 575a <putc>
         putc(fd, c);
-    58c8:	85ca                	mv	a1,s2
-    58ca:	8556                	mv	a0,s5
-    58cc:	00000097          	auipc	ra,0x0
-    58d0:	e86080e7          	jalr	-378(ra) # 5752 <putc>
+    58d0:	85ca                	mv	a1,s2
+    58d2:	8556                	mv	a0,s5
+    58d4:	00000097          	auipc	ra,0x0
+    58d8:	e86080e7          	jalr	-378(ra) # 575a <putc>
       }
       state = 0;
-    58d4:	4981                	li	s3,0
-    58d6:	b765                	j	587e <vprintf+0x60>
+    58dc:	4981                	li	s3,0
+    58de:	b765                	j	5886 <vprintf+0x60>
         printint(fd, va_arg(ap, int), 10, 1);
-    58d8:	008b0913          	addi	s2,s6,8
-    58dc:	4685                	li	a3,1
-    58de:	4629                	li	a2,10
-    58e0:	000b2583          	lw	a1,0(s6)
-    58e4:	8556                	mv	a0,s5
-    58e6:	00000097          	auipc	ra,0x0
-    58ea:	e8e080e7          	jalr	-370(ra) # 5774 <printint>
-    58ee:	8b4a                	mv	s6,s2
+    58e0:	008b0913          	addi	s2,s6,8
+    58e4:	4685                	li	a3,1
+    58e6:	4629                	li	a2,10
+    58e8:	000b2583          	lw	a1,0(s6)
+    58ec:	8556                	mv	a0,s5
+    58ee:	00000097          	auipc	ra,0x0
+    58f2:	e8e080e7          	jalr	-370(ra) # 577c <printint>
+    58f6:	8b4a                	mv	s6,s2
       state = 0;
-    58f0:	4981                	li	s3,0
-    58f2:	b771                	j	587e <vprintf+0x60>
+    58f8:	4981                	li	s3,0
+    58fa:	b771                	j	5886 <vprintf+0x60>
         printint(fd, va_arg(ap, uint64), 10, 0);
-    58f4:	008b0913          	addi	s2,s6,8
-    58f8:	4681                	li	a3,0
-    58fa:	4629                	li	a2,10
-    58fc:	000b2583          	lw	a1,0(s6)
-    5900:	8556                	mv	a0,s5
-    5902:	00000097          	auipc	ra,0x0
-    5906:	e72080e7          	jalr	-398(ra) # 5774 <printint>
-    590a:	8b4a                	mv	s6,s2
+    58fc:	008b0913          	addi	s2,s6,8
+    5900:	4681                	li	a3,0
+    5902:	4629                	li	a2,10
+    5904:	000b2583          	lw	a1,0(s6)
+    5908:	8556                	mv	a0,s5
+    590a:	00000097          	auipc	ra,0x0
+    590e:	e72080e7          	jalr	-398(ra) # 577c <printint>
+    5912:	8b4a                	mv	s6,s2
       state = 0;
-    590c:	4981                	li	s3,0
-    590e:	bf85                	j	587e <vprintf+0x60>
+    5914:	4981                	li	s3,0
+    5916:	bf85                	j	5886 <vprintf+0x60>
         printint(fd, va_arg(ap, int), 16, 0);
-    5910:	008b0913          	addi	s2,s6,8
-    5914:	4681                	li	a3,0
-    5916:	4641                	li	a2,16
-    5918:	000b2583          	lw	a1,0(s6)
-    591c:	8556                	mv	a0,s5
-    591e:	00000097          	auipc	ra,0x0
-    5922:	e56080e7          	jalr	-426(ra) # 5774 <printint>
-    5926:	8b4a                	mv	s6,s2
+    5918:	008b0913          	addi	s2,s6,8
+    591c:	4681                	li	a3,0
+    591e:	4641                	li	a2,16
+    5920:	000b2583          	lw	a1,0(s6)
+    5924:	8556                	mv	a0,s5
+    5926:	00000097          	auipc	ra,0x0
+    592a:	e56080e7          	jalr	-426(ra) # 577c <printint>
+    592e:	8b4a                	mv	s6,s2
       state = 0;
-    5928:	4981                	li	s3,0
-    592a:	bf91                	j	587e <vprintf+0x60>
+    5930:	4981                	li	s3,0
+    5932:	bf91                	j	5886 <vprintf+0x60>
         printptr(fd, va_arg(ap, uint64));
-    592c:	008b0793          	addi	a5,s6,8
-    5930:	f8f43423          	sd	a5,-120(s0)
-    5934:	000b3983          	ld	s3,0(s6)
+    5934:	008b0793          	addi	a5,s6,8
+    5938:	f8f43423          	sd	a5,-120(s0)
+    593c:	000b3983          	ld	s3,0(s6)
   putc(fd, '0');
-    5938:	03000593          	li	a1,48
-    593c:	8556                	mv	a0,s5
-    593e:	00000097          	auipc	ra,0x0
-    5942:	e14080e7          	jalr	-492(ra) # 5752 <putc>
+    5940:	03000593          	li	a1,48
+    5944:	8556                	mv	a0,s5
+    5946:	00000097          	auipc	ra,0x0
+    594a:	e14080e7          	jalr	-492(ra) # 575a <putc>
   putc(fd, 'x');
-    5946:	85ea                	mv	a1,s10
-    5948:	8556                	mv	a0,s5
-    594a:	00000097          	auipc	ra,0x0
-    594e:	e08080e7          	jalr	-504(ra) # 5752 <putc>
-    5952:	4941                	li	s2,16
+    594e:	85ea                	mv	a1,s10
+    5950:	8556                	mv	a0,s5
+    5952:	00000097          	auipc	ra,0x0
+    5956:	e08080e7          	jalr	-504(ra) # 575a <putc>
+    595a:	4941                	li	s2,16
     putc(fd, digits[x >> (sizeof(uint64) * 8 - 4)]);
-    5954:	03c9d793          	srli	a5,s3,0x3c
-    5958:	97de                	add	a5,a5,s7
-    595a:	0007c583          	lbu	a1,0(a5)
-    595e:	8556                	mv	a0,s5
-    5960:	00000097          	auipc	ra,0x0
-    5964:	df2080e7          	jalr	-526(ra) # 5752 <putc>
+    595c:	03c9d793          	srli	a5,s3,0x3c
+    5960:	97de                	add	a5,a5,s7
+    5962:	0007c583          	lbu	a1,0(a5)
+    5966:	8556                	mv	a0,s5
+    5968:	00000097          	auipc	ra,0x0
+    596c:	df2080e7          	jalr	-526(ra) # 575a <putc>
   for (i = 0; i < (sizeof(uint64) * 2); i++, x <<= 4)
-    5968:	0992                	slli	s3,s3,0x4
-    596a:	397d                	addiw	s2,s2,-1
-    596c:	fe0914e3          	bnez	s2,5954 <vprintf+0x136>
+    5970:	0992                	slli	s3,s3,0x4
+    5972:	397d                	addiw	s2,s2,-1
+    5974:	fe0914e3          	bnez	s2,595c <vprintf+0x136>
         printptr(fd, va_arg(ap, uint64));
-    5970:	f8843b03          	ld	s6,-120(s0)
+    5978:	f8843b03          	ld	s6,-120(s0)
       state = 0;
-    5974:	4981                	li	s3,0
-    5976:	b721                	j	587e <vprintf+0x60>
+    597c:	4981                	li	s3,0
+    597e:	b721                	j	5886 <vprintf+0x60>
         s = va_arg(ap, char*);
-    5978:	008b0993          	addi	s3,s6,8
-    597c:	000b3903          	ld	s2,0(s6)
+    5980:	008b0993          	addi	s3,s6,8
+    5984:	000b3903          	ld	s2,0(s6)
         if(s == 0)
-    5980:	02090163          	beqz	s2,59a2 <vprintf+0x184>
+    5988:	02090163          	beqz	s2,59aa <vprintf+0x184>
         while(*s != 0){
-    5984:	00094583          	lbu	a1,0(s2)
-    5988:	c9a1                	beqz	a1,59d8 <vprintf+0x1ba>
+    598c:	00094583          	lbu	a1,0(s2)
+    5990:	c9a1                	beqz	a1,59e0 <vprintf+0x1ba>
           putc(fd, *s);
-    598a:	8556                	mv	a0,s5
-    598c:	00000097          	auipc	ra,0x0
-    5990:	dc6080e7          	jalr	-570(ra) # 5752 <putc>
+    5992:	8556                	mv	a0,s5
+    5994:	00000097          	auipc	ra,0x0
+    5998:	dc6080e7          	jalr	-570(ra) # 575a <putc>
           s++;
-    5994:	0905                	addi	s2,s2,1
+    599c:	0905                	addi	s2,s2,1
         while(*s != 0){
-    5996:	00094583          	lbu	a1,0(s2)
-    599a:	f9e5                	bnez	a1,598a <vprintf+0x16c>
+    599e:	00094583          	lbu	a1,0(s2)
+    59a2:	f9e5                	bnez	a1,5992 <vprintf+0x16c>
         s = va_arg(ap, char*);
-    599c:	8b4e                	mv	s6,s3
+    59a4:	8b4e                	mv	s6,s3
       state = 0;
-    599e:	4981                	li	s3,0
-    59a0:	bdf9                	j	587e <vprintf+0x60>
+    59a6:	4981                	li	s3,0
+    59a8:	bdf9                	j	5886 <vprintf+0x60>
           s = "(null)";
-    59a2:	00003917          	auipc	s2,0x3
-    59a6:	98e90913          	addi	s2,s2,-1650 # 8330 <malloc+0x2848>
+    59aa:	00003917          	auipc	s2,0x3
+    59ae:	98e90913          	addi	s2,s2,-1650 # 8338 <malloc+0x2848>
         while(*s != 0){
-    59aa:	02800593          	li	a1,40
-    59ae:	bff1                	j	598a <vprintf+0x16c>
+    59b2:	02800593          	li	a1,40
+    59b6:	bff1                	j	5992 <vprintf+0x16c>
         putc(fd, va_arg(ap, uint));
-    59b0:	008b0913          	addi	s2,s6,8
-    59b4:	000b4583          	lbu	a1,0(s6)
-    59b8:	8556                	mv	a0,s5
-    59ba:	00000097          	auipc	ra,0x0
-    59be:	d98080e7          	jalr	-616(ra) # 5752 <putc>
-    59c2:	8b4a                	mv	s6,s2
+    59b8:	008b0913          	addi	s2,s6,8
+    59bc:	000b4583          	lbu	a1,0(s6)
+    59c0:	8556                	mv	a0,s5
+    59c2:	00000097          	auipc	ra,0x0
+    59c6:	d98080e7          	jalr	-616(ra) # 575a <putc>
+    59ca:	8b4a                	mv	s6,s2
       state = 0;
-    59c4:	4981                	li	s3,0
-    59c6:	bd65                	j	587e <vprintf+0x60>
+    59cc:	4981                	li	s3,0
+    59ce:	bd65                	j	5886 <vprintf+0x60>
         putc(fd, c);
-    59c8:	85d2                	mv	a1,s4
-    59ca:	8556                	mv	a0,s5
-    59cc:	00000097          	auipc	ra,0x0
-    59d0:	d86080e7          	jalr	-634(ra) # 5752 <putc>
+    59d0:	85d2                	mv	a1,s4
+    59d2:	8556                	mv	a0,s5
+    59d4:	00000097          	auipc	ra,0x0
+    59d8:	d86080e7          	jalr	-634(ra) # 575a <putc>
       state = 0;
-    59d4:	4981                	li	s3,0
-    59d6:	b565                	j	587e <vprintf+0x60>
+    59dc:	4981                	li	s3,0
+    59de:	b565                	j	5886 <vprintf+0x60>
         s = va_arg(ap, char*);
-    59d8:	8b4e                	mv	s6,s3
+    59e0:	8b4e                	mv	s6,s3
       state = 0;
-    59da:	4981                	li	s3,0
-    59dc:	b54d                	j	587e <vprintf+0x60>
+    59e2:	4981                	li	s3,0
+    59e4:	b54d                	j	5886 <vprintf+0x60>
     }
   }
 }
-    59de:	70e6                	ld	ra,120(sp)
-    59e0:	7446                	ld	s0,112(sp)
-    59e2:	74a6                	ld	s1,104(sp)
-    59e4:	7906                	ld	s2,96(sp)
-    59e6:	69e6                	ld	s3,88(sp)
-    59e8:	6a46                	ld	s4,80(sp)
-    59ea:	6aa6                	ld	s5,72(sp)
-    59ec:	6b06                	ld	s6,64(sp)
-    59ee:	7be2                	ld	s7,56(sp)
-    59f0:	7c42                	ld	s8,48(sp)
-    59f2:	7ca2                	ld	s9,40(sp)
-    59f4:	7d02                	ld	s10,32(sp)
-    59f6:	6de2                	ld	s11,24(sp)
-    59f8:	6109                	addi	sp,sp,128
-    59fa:	8082                	ret
+    59e6:	70e6                	ld	ra,120(sp)
+    59e8:	7446                	ld	s0,112(sp)
+    59ea:	74a6                	ld	s1,104(sp)
+    59ec:	7906                	ld	s2,96(sp)
+    59ee:	69e6                	ld	s3,88(sp)
+    59f0:	6a46                	ld	s4,80(sp)
+    59f2:	6aa6                	ld	s5,72(sp)
+    59f4:	6b06                	ld	s6,64(sp)
+    59f6:	7be2                	ld	s7,56(sp)
+    59f8:	7c42                	ld	s8,48(sp)
+    59fa:	7ca2                	ld	s9,40(sp)
+    59fc:	7d02                	ld	s10,32(sp)
+    59fe:	6de2                	ld	s11,24(sp)
+    5a00:	6109                	addi	sp,sp,128
+    5a02:	8082                	ret
 
-00000000000059fc <fprintf>:
+0000000000005a04 <fprintf>:
 
 void
 fprintf(int fd, const char *fmt, ...)
 {
-    59fc:	715d                	addi	sp,sp,-80
-    59fe:	ec06                	sd	ra,24(sp)
-    5a00:	e822                	sd	s0,16(sp)
-    5a02:	1000                	addi	s0,sp,32
-    5a04:	e010                	sd	a2,0(s0)
-    5a06:	e414                	sd	a3,8(s0)
-    5a08:	e818                	sd	a4,16(s0)
-    5a0a:	ec1c                	sd	a5,24(s0)
-    5a0c:	03043023          	sd	a6,32(s0)
-    5a10:	03143423          	sd	a7,40(s0)
+    5a04:	715d                	addi	sp,sp,-80
+    5a06:	ec06                	sd	ra,24(sp)
+    5a08:	e822                	sd	s0,16(sp)
+    5a0a:	1000                	addi	s0,sp,32
+    5a0c:	e010                	sd	a2,0(s0)
+    5a0e:	e414                	sd	a3,8(s0)
+    5a10:	e818                	sd	a4,16(s0)
+    5a12:	ec1c                	sd	a5,24(s0)
+    5a14:	03043023          	sd	a6,32(s0)
+    5a18:	03143423          	sd	a7,40(s0)
   va_list ap;
 
   va_start(ap, fmt);
-    5a14:	fe843423          	sd	s0,-24(s0)
+    5a1c:	fe843423          	sd	s0,-24(s0)
   vprintf(fd, fmt, ap);
-    5a18:	8622                	mv	a2,s0
-    5a1a:	00000097          	auipc	ra,0x0
-    5a1e:	e04080e7          	jalr	-508(ra) # 581e <vprintf>
+    5a20:	8622                	mv	a2,s0
+    5a22:	00000097          	auipc	ra,0x0
+    5a26:	e04080e7          	jalr	-508(ra) # 5826 <vprintf>
 }
-    5a22:	60e2                	ld	ra,24(sp)
-    5a24:	6442                	ld	s0,16(sp)
-    5a26:	6161                	addi	sp,sp,80
-    5a28:	8082                	ret
+    5a2a:	60e2                	ld	ra,24(sp)
+    5a2c:	6442                	ld	s0,16(sp)
+    5a2e:	6161                	addi	sp,sp,80
+    5a30:	8082                	ret
 
-0000000000005a2a <printf>:
+0000000000005a32 <printf>:
 
 void
 printf(const char *fmt, ...)
 {
-    5a2a:	711d                	addi	sp,sp,-96
-    5a2c:	ec06                	sd	ra,24(sp)
-    5a2e:	e822                	sd	s0,16(sp)
-    5a30:	1000                	addi	s0,sp,32
-    5a32:	e40c                	sd	a1,8(s0)
-    5a34:	e810                	sd	a2,16(s0)
-    5a36:	ec14                	sd	a3,24(s0)
-    5a38:	f018                	sd	a4,32(s0)
-    5a3a:	f41c                	sd	a5,40(s0)
-    5a3c:	03043823          	sd	a6,48(s0)
-    5a40:	03143c23          	sd	a7,56(s0)
+    5a32:	711d                	addi	sp,sp,-96
+    5a34:	ec06                	sd	ra,24(sp)
+    5a36:	e822                	sd	s0,16(sp)
+    5a38:	1000                	addi	s0,sp,32
+    5a3a:	e40c                	sd	a1,8(s0)
+    5a3c:	e810                	sd	a2,16(s0)
+    5a3e:	ec14                	sd	a3,24(s0)
+    5a40:	f018                	sd	a4,32(s0)
+    5a42:	f41c                	sd	a5,40(s0)
+    5a44:	03043823          	sd	a6,48(s0)
+    5a48:	03143c23          	sd	a7,56(s0)
   va_list ap;
 
   va_start(ap, fmt);
-    5a44:	00840613          	addi	a2,s0,8
-    5a48:	fec43423          	sd	a2,-24(s0)
+    5a4c:	00840613          	addi	a2,s0,8
+    5a50:	fec43423          	sd	a2,-24(s0)
   vprintf(1, fmt, ap);
-    5a4c:	85aa                	mv	a1,a0
-    5a4e:	4505                	li	a0,1
-    5a50:	00000097          	auipc	ra,0x0
-    5a54:	dce080e7          	jalr	-562(ra) # 581e <vprintf>
+    5a54:	85aa                	mv	a1,a0
+    5a56:	4505                	li	a0,1
+    5a58:	00000097          	auipc	ra,0x0
+    5a5c:	dce080e7          	jalr	-562(ra) # 5826 <vprintf>
 }
-    5a58:	60e2                	ld	ra,24(sp)
-    5a5a:	6442                	ld	s0,16(sp)
-    5a5c:	6125                	addi	sp,sp,96
-    5a5e:	8082                	ret
+    5a60:	60e2                	ld	ra,24(sp)
+    5a62:	6442                	ld	s0,16(sp)
+    5a64:	6125                	addi	sp,sp,96
+    5a66:	8082                	ret
 
+<<<<<<< HEAD
 0000000000005a60 <free>:
     5a60:	1141                	addi	sp,sp,-16
     5a62:	e422                	sd	s0,8(sp)
@@ -7613,3 +9211,217 @@ printf(const char *fmt, ...)
     5bc4:	fd5518e3          	bne	a0,s5,5b94 <malloc+0xac>
     5bc8:	4501                	li	a0,0
     5bca:	bf45                	j	5b7a <malloc+0x92>
+=======
+0000000000005a68 <free>:
+static Header base;
+static Header *freep;
+
+void
+free(void *ap)
+{
+    5a68:	1141                	addi	sp,sp,-16
+    5a6a:	e422                	sd	s0,8(sp)
+    5a6c:	0800                	addi	s0,sp,16
+  Header *bp, *p;
+
+  bp = (Header*)ap - 1;
+    5a6e:	ff050693          	addi	a3,a0,-16
+  for(p = freep; !(bp > p && bp < p->s.ptr); p = p->s.ptr)
+    5a72:	00003797          	auipc	a5,0x3
+    5a76:	8f67b783          	ld	a5,-1802(a5) # 8368 <freep>
+    5a7a:	a805                	j	5aaa <free+0x42>
+    if(p >= p->s.ptr && (bp > p || bp < p->s.ptr))
+      break;
+  if(bp + bp->s.size == p->s.ptr){
+    bp->s.size += p->s.ptr->s.size;
+    5a7c:	4618                	lw	a4,8(a2)
+    5a7e:	9db9                	addw	a1,a1,a4
+    5a80:	feb52c23          	sw	a1,-8(a0)
+    bp->s.ptr = p->s.ptr->s.ptr;
+    5a84:	6398                	ld	a4,0(a5)
+    5a86:	6318                	ld	a4,0(a4)
+    5a88:	fee53823          	sd	a4,-16(a0)
+    5a8c:	a091                	j	5ad0 <free+0x68>
+  } else
+    bp->s.ptr = p->s.ptr;
+  if(p + p->s.size == bp){
+    p->s.size += bp->s.size;
+    5a8e:	ff852703          	lw	a4,-8(a0)
+    5a92:	9e39                	addw	a2,a2,a4
+    5a94:	c790                	sw	a2,8(a5)
+    p->s.ptr = bp->s.ptr;
+    5a96:	ff053703          	ld	a4,-16(a0)
+    5a9a:	e398                	sd	a4,0(a5)
+    5a9c:	a099                	j	5ae2 <free+0x7a>
+    if(p >= p->s.ptr && (bp > p || bp < p->s.ptr))
+    5a9e:	6398                	ld	a4,0(a5)
+    5aa0:	00e7e463          	bltu	a5,a4,5aa8 <free+0x40>
+    5aa4:	00e6ea63          	bltu	a3,a4,5ab8 <free+0x50>
+{
+    5aa8:	87ba                	mv	a5,a4
+  for(p = freep; !(bp > p && bp < p->s.ptr); p = p->s.ptr)
+    5aaa:	fed7fae3          	bgeu	a5,a3,5a9e <free+0x36>
+    5aae:	6398                	ld	a4,0(a5)
+    5ab0:	00e6e463          	bltu	a3,a4,5ab8 <free+0x50>
+    if(p >= p->s.ptr && (bp > p || bp < p->s.ptr))
+    5ab4:	fee7eae3          	bltu	a5,a4,5aa8 <free+0x40>
+  if(bp + bp->s.size == p->s.ptr){
+    5ab8:	ff852583          	lw	a1,-8(a0)
+    5abc:	6390                	ld	a2,0(a5)
+    5abe:	02059713          	slli	a4,a1,0x20
+    5ac2:	9301                	srli	a4,a4,0x20
+    5ac4:	0712                	slli	a4,a4,0x4
+    5ac6:	9736                	add	a4,a4,a3
+    5ac8:	fae60ae3          	beq	a2,a4,5a7c <free+0x14>
+    bp->s.ptr = p->s.ptr;
+    5acc:	fec53823          	sd	a2,-16(a0)
+  if(p + p->s.size == bp){
+    5ad0:	4790                	lw	a2,8(a5)
+    5ad2:	02061713          	slli	a4,a2,0x20
+    5ad6:	9301                	srli	a4,a4,0x20
+    5ad8:	0712                	slli	a4,a4,0x4
+    5ada:	973e                	add	a4,a4,a5
+    5adc:	fae689e3          	beq	a3,a4,5a8e <free+0x26>
+  } else
+    p->s.ptr = bp;
+    5ae0:	e394                	sd	a3,0(a5)
+  freep = p;
+    5ae2:	00003717          	auipc	a4,0x3
+    5ae6:	88f73323          	sd	a5,-1914(a4) # 8368 <freep>
+}
+    5aea:	6422                	ld	s0,8(sp)
+    5aec:	0141                	addi	sp,sp,16
+    5aee:	8082                	ret
+
+0000000000005af0 <malloc>:
+  return freep;
+}
+
+void*
+malloc(uint nbytes)
+{
+    5af0:	7139                	addi	sp,sp,-64
+    5af2:	fc06                	sd	ra,56(sp)
+    5af4:	f822                	sd	s0,48(sp)
+    5af6:	f426                	sd	s1,40(sp)
+    5af8:	f04a                	sd	s2,32(sp)
+    5afa:	ec4e                	sd	s3,24(sp)
+    5afc:	e852                	sd	s4,16(sp)
+    5afe:	e456                	sd	s5,8(sp)
+    5b00:	e05a                	sd	s6,0(sp)
+    5b02:	0080                	addi	s0,sp,64
+  Header *p, *prevp;
+  uint nunits;
+
+  nunits = (nbytes + sizeof(Header) - 1)/sizeof(Header) + 1;
+    5b04:	02051493          	slli	s1,a0,0x20
+    5b08:	9081                	srli	s1,s1,0x20
+    5b0a:	04bd                	addi	s1,s1,15
+    5b0c:	8091                	srli	s1,s1,0x4
+    5b0e:	0014899b          	addiw	s3,s1,1
+    5b12:	0485                	addi	s1,s1,1
+  if((prevp = freep) == 0){
+    5b14:	00003517          	auipc	a0,0x3
+    5b18:	85453503          	ld	a0,-1964(a0) # 8368 <freep>
+    5b1c:	c515                	beqz	a0,5b48 <malloc+0x58>
+    base.s.ptr = freep = prevp = &base;
+    base.s.size = 0;
+  }
+  for(p = prevp->s.ptr; ; prevp = p, p = p->s.ptr){
+    5b1e:	611c                	ld	a5,0(a0)
+    if(p->s.size >= nunits){
+    5b20:	4798                	lw	a4,8(a5)
+    5b22:	02977f63          	bgeu	a4,s1,5b60 <malloc+0x70>
+    5b26:	8a4e                	mv	s4,s3
+    5b28:	0009871b          	sext.w	a4,s3
+    5b2c:	6685                	lui	a3,0x1
+    5b2e:	00d77363          	bgeu	a4,a3,5b34 <malloc+0x44>
+    5b32:	6a05                	lui	s4,0x1
+    5b34:	000a0b1b          	sext.w	s6,s4
+  p = sbrk(nu * sizeof(Header));
+    5b38:	004a1a1b          	slliw	s4,s4,0x4
+        p->s.size = nunits;
+      }
+      freep = prevp;
+      return (void*)(p + 1);
+    }
+    if(p == freep)
+    5b3c:	00003917          	auipc	s2,0x3
+    5b40:	82c90913          	addi	s2,s2,-2004 # 8368 <freep>
+  if(p == (char*)-1)
+    5b44:	5afd                	li	s5,-1
+    5b46:	a88d                	j	5bb8 <malloc+0xc8>
+    base.s.ptr = freep = prevp = &base;
+    5b48:	00009797          	auipc	a5,0x9
+    5b4c:	04078793          	addi	a5,a5,64 # eb88 <base>
+    5b50:	00003717          	auipc	a4,0x3
+    5b54:	80f73c23          	sd	a5,-2024(a4) # 8368 <freep>
+    5b58:	e39c                	sd	a5,0(a5)
+    base.s.size = 0;
+    5b5a:	0007a423          	sw	zero,8(a5)
+    if(p->s.size >= nunits){
+    5b5e:	b7e1                	j	5b26 <malloc+0x36>
+      if(p->s.size == nunits)
+    5b60:	02e48b63          	beq	s1,a4,5b96 <malloc+0xa6>
+        p->s.size -= nunits;
+    5b64:	4137073b          	subw	a4,a4,s3
+    5b68:	c798                	sw	a4,8(a5)
+        p += p->s.size;
+    5b6a:	1702                	slli	a4,a4,0x20
+    5b6c:	9301                	srli	a4,a4,0x20
+    5b6e:	0712                	slli	a4,a4,0x4
+    5b70:	97ba                	add	a5,a5,a4
+        p->s.size = nunits;
+    5b72:	0137a423          	sw	s3,8(a5)
+      freep = prevp;
+    5b76:	00002717          	auipc	a4,0x2
+    5b7a:	7ea73923          	sd	a0,2034(a4) # 8368 <freep>
+      return (void*)(p + 1);
+    5b7e:	01078513          	addi	a0,a5,16
+      if((p = morecore(nunits)) == 0)
+        return 0;
+  }
+}
+    5b82:	70e2                	ld	ra,56(sp)
+    5b84:	7442                	ld	s0,48(sp)
+    5b86:	74a2                	ld	s1,40(sp)
+    5b88:	7902                	ld	s2,32(sp)
+    5b8a:	69e2                	ld	s3,24(sp)
+    5b8c:	6a42                	ld	s4,16(sp)
+    5b8e:	6aa2                	ld	s5,8(sp)
+    5b90:	6b02                	ld	s6,0(sp)
+    5b92:	6121                	addi	sp,sp,64
+    5b94:	8082                	ret
+        prevp->s.ptr = p->s.ptr;
+    5b96:	6398                	ld	a4,0(a5)
+    5b98:	e118                	sd	a4,0(a0)
+    5b9a:	bff1                	j	5b76 <malloc+0x86>
+  hp->s.size = nu;
+    5b9c:	01652423          	sw	s6,8(a0)
+  free((void*)(hp + 1));
+    5ba0:	0541                	addi	a0,a0,16
+    5ba2:	00000097          	auipc	ra,0x0
+    5ba6:	ec6080e7          	jalr	-314(ra) # 5a68 <free>
+  return freep;
+    5baa:	00093503          	ld	a0,0(s2)
+      if((p = morecore(nunits)) == 0)
+    5bae:	d971                	beqz	a0,5b82 <malloc+0x92>
+  for(p = prevp->s.ptr; ; prevp = p, p = p->s.ptr){
+    5bb0:	611c                	ld	a5,0(a0)
+    if(p->s.size >= nunits){
+    5bb2:	4798                	lw	a4,8(a5)
+    5bb4:	fa9776e3          	bgeu	a4,s1,5b60 <malloc+0x70>
+    if(p == freep)
+    5bb8:	00093703          	ld	a4,0(s2)
+    5bbc:	853e                	mv	a0,a5
+    5bbe:	fef719e3          	bne	a4,a5,5bb0 <malloc+0xc0>
+  p = sbrk(nu * sizeof(Header));
+    5bc2:	8552                	mv	a0,s4
+    5bc4:	00000097          	auipc	ra,0x0
+    5bc8:	b6e080e7          	jalr	-1170(ra) # 5732 <sbrk>
+  if(p == (char*)-1)
+    5bcc:	fd5518e3          	bne	a0,s5,5b9c <malloc+0xac>
+        return 0;
+    5bd0:	4501                	li	a0,0
+    5bd2:	bf45                	j	5b82 <malloc+0x92>
+>>>>>>> 355fddefdb805d91072b3597f4cbd2b4e7481a8e
